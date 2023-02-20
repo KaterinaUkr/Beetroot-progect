@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Semantica</title>
+</head>
+
+<body>
+
+    <h1>HTML5 Семантичні елементи</h1>
+    <p>Семантичний елемент чітко описує його значення як для браузера, так і для розробника.</p>
+    <p>Приклади не <span class="text">семантичних</span> елементів: &lt;div&gt; і &lt;span&gt;- нічого не говорить про
+        його вміст.</p>
+    <p>Приклади <span class="text">семантичних</span> елементів: &lt;form&gt;, &lt;table&gt; і &lt;article&gt;- чітко
+        визначає його зміст.</p>
+
+    <h2><a id="1">Підтримка браузерів</a></h2>
+    <div class="image-browser">
+        <img src="image/chrome.png" alt="chrome">
+        <img src="image/internet-explorer.png" alt="internet-explorera">
+        <img src="image/mozilla.png" alt="mozilla">
+        <img src="image/safari.png" alt="safari">
+        <img src="image/opera.png" alt="opera">
+    </div>
+
+    <p>Семантичні елементи HTML5 підтримуються у всіх сучасних браузерах.</p>
+    <p>Крім того, ви можете "навчити" старих браузерів, як обробляти "невідомі
+        елементи".</p>
+    <p>Прочитайте про це в <a href="#">підтримці браузера HTML5.</a></p>
+
+    <h2><a id="2">Нові семантичні елементи в HTML5</a></h2>
+    <p>HTML5 пропонує нові семантичні елементи для визначення різних частин веб-сторінки:</p>
+    <ul>
+        <li>&lt;section&gt;</li>
+        <li>&lt;article&gt;</li>
+        <li>&lt;header&gt;</li>
+        <li>&lt;footer&gt;</li>
+    </ul>
+
+    <h2><a id="3">HTML5 &lt;section&gt; елемент</a></h2>
+    <p>Елемент &lt;section&gt; визначає розділ в документі.</p>
+    <p>Згідно з документацією в3к'с HTML5: "розділ представляє собою тематичну угруповання контенту, зазвичай з
+        заголовком".</p>
+    <p>Домашня сторінка зазвичай може бути розділена на розділи для ознайомлення, змісту і контактної інформації.</p>
+    <section>
+        <h4>Приклад</h4>
+        <pre class="example"><code>
+            &lt;section&gt;
+                &lt;h1&gt;WWF&lt;/h1&gt;
+                &lt;p&gt;The World Wide Fund for Nature (WWF) is...&lt;/p&gt;
+            &lt;/section&gt;
+            </code></pre>
+    </section>
+
+
+    <h2><a id="4">HTML5 &lt;article&gt; елемент</a></h2>
+    <p>Елемент &lt;article&gt; визначає незалежний, автономний вміст.</p>
+    <p>Стаття повинна мати сенс самостійно, і вона повинна мати можливість читати його незалежно від іншої частини
+        веб-сайту.</p>
+    <p>Приклади того, де можна використовувати елемент &lt;article&gt;:</p>
+    <ul>
+        <li>Повідомлення на форумі</li>
+        <li>блозі</li>
+        <li>Газетна стаття</li>
+    </ul>
+    <section>
+        <h4>Приклад</h4>
+        <pre class="example"><code>
+            &lt;article&gt;
+                &lt;h1&gt;Lorem Ipsum&lt;h1&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aperiam quia! Sed quaerat a ut facilis vitae. &lt;/p&gt;
+            &lt;/article&gt;
+            </code></pre>
+
+    </section>
+
+
+    <h2><a id="5">HTML5 &lt;header&gt; елемент</a></h2>
+    <p>Елемент &lt;header&gt; задає заголовок для документа або розділу.</p>
+    <p>Елемент &lt;header&gt; повинен використовуватися в якості контейнера для вступного змісту.</p>
+    <p>В одному документі може бути кілька елементів &lt;header&gt;.</p>
+    <p>У наступному прикладі визначається заголовок для статті:</p>
+    <section>
+        <h4>Приклад</h4>
+        <pre class="example"><code>
+            &lt;article&gt;
+                &lt;header&gt;
+                    &lt;h1&gt;Lorem Ipsum&lt;h1&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+                &lt;/header&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat fuga sequi eum assumenda nihil sit, error quas asperiores.&lt;/p&gt;
+            &lt;/article&gt;
+            </code></pre>
+    </section>
+
+    <h2><a id="6">HTML5 &lt;footer&gt; елемент</a></h2>
+    <p>Елемент &lt;footer&gt; вказує нижній колонтитул для документа або розділу.</p>
+    <p>Нижній колонтитул зазвичай містить автора документа, інформацію про авторське право, посилання на умови
+        використання, контактні дані і т.д.</p>
+    <p>В одному документі може бути кілька елементів &lt;footer&gt;.</p>
+    <section>
+        <h4>Приклад</h4>
+        <pre class="example"><code>   
+            &lt;footer&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+                &lt;p&gt;Contact information:&lt;a href=&quot;mailto:mail@gmail.com&quot;&gt;mail@gmail.com&lt;/a&gt;&lt;/p&gt;
+            &lt;/footer&gt;
+            </code></pre>
+    </section>
+    <h3>Швидкий перехід</h3>
+    <nav id="navigat">
+        <ul>
+            <li><a href="#1">Підтримка браузерів</a></li>
+            <li><a href="#2">Нові семантичні елементи в HTML5</a></li>
+            <li><a href="#3">HTML5 &lt;section&gt; елемент</a></li>
+            <li><a href="#4">HTML5 &lt;article&gt; елемент</a></li>
+            <li><a href="#5">HTML5 &lt;header&gt; елемент</a></li>
+            <li><a href="#6">HTML5 &lt;footer&gt; елемент</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!--<video  controls>
+    <source src="https://www.youtube.com/watch?v=dEBVe8Ij7JU&list=PLytQ0YczAfcdj-OUqWO20vPsr0ix0M1Us&ab_channel=BeetrootAcademy">
+    <p>
+        Your browser doesn't support HTML video. Here is a
+        <a href="https://www.youtube.com/watch?v=dEBVe8Ij7JU&list=PLytQ0YczAfcdj-OUqWO20vPsr0ix0M1Us&ab_channel=BeetrootAcademy">link to the video</a> instead.
+    </p>
+</video>-->
+    <br>
+    <iframe src="https://github.com/KaterinaUkr/Beetroot/tree/lesson-two" title="Resume"></iframe>
+
+</body>
+
+</html>
