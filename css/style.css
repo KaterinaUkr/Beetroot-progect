@@ -21,3 +21,7 @@ section {
 #navigat ul {
     list-style-type: none;
 }
+iframe {
+    width: 700px;
+    height: 400px;
+}
