@@ -1,0 +1,23 @@
+/*body {
+    max-width: 980px;
+}*/
+#text {
+    font-weight: bold;
+}
+
+.image-browser img {
+    width: 30px;
+}
+
+.example {
+    background-color: rgb(199, 193, 193);
+
+}
+
+section {
+    background-color: rgb(233, 235, 235);
+}
+
+#navigat ul {
+    list-style-type: none;
+}
