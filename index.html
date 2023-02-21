@@ -12,23 +12,35 @@
 <body>
 
 <form action="#">
-
-    <label for="fullname">Повне ім'я</label>
+    <div class="col-25">
+        <label for="fullname">Повне ім'я</label>  
+    </div>    
     <input type="text" maxlength="20" id="fullname" name="fullname" placeholder="Enter your full name" required><br>
-    <label for="email">Email</label>
+    <div class="col-25">
+        <label for="email">Email</label>
+    </div>    
     <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
-    <label for="pwd">Пароль</label>
+    <div class="col-25">
+        <label for="pwd">Пароль</label>
+    </div>        
     <input type="password" id="pwd" name="pwd" placeholder="Enter your password" required><br>
-    <label for="pwd2">Пароль ще раз</label>
+    <div class="col-25">
+        <label for="pwd2">Пароль ще раз</label>
+    </div>        
     <input type="password" id="pwd2" name="pwd" placeholder="Enter your password again" required><br>
     <legend>Стать</legend>
-    <input type="radio" id="men" name="gender" checked required>
-    <label for="men">чоловіча</label>
-    <input type="radio" id="women" name="gender" required>
-    <label for="women">жіноча</label><br>
-    <label for="age">Вік</label>
+        <input type="radio" id="men" name="gender" checked required>
+        <label for="men">чоловіча</label>
+        <input type="radio" id="women" name="gender" required>
+        <label for="women">жіноча</label><br>
+    <div class="col-25">
+        <label for="age">Вік</label>
+    </div>
     <input type="number" id="age" name="age" max="99" placeholder="How old are you" required><br>
-    <label for="course">Курс</label>
+    <div class="col-25">
+        <label for="course">Курс</label>
+    </div>
+    
     <select type="text" id="course" name="course">
         <option value="choice" selected>Виберіть курс</option>
         <option value="frontend">Front-End Розробка</option>
@@ -38,7 +50,9 @@
         <option value="management">Project Management</option>
         <option value="hr">HR Generalist в IT</option>
     </select><br>
-    <label for="adress">Повна адреса</label>
+    <div class="col-25">
+        <label for="adress">Повна адреса</label>
+    </div>    
     <textarea name="message" id="adress" rows="4" cols="20" placeholder="Країна, регіон, місто/селище, вулиця"></textarea><br>
     <label>
         <input type="checkbox" name="conditions" value="agree" required> Я погоджуюсь з обробкою персональних даних
