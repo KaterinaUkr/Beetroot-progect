@@ -4,10 +4,6 @@ form {
     background-color: rgb(218, 236, 234);
     padding: 10px;
 }
-.col-25 {
-    float: left;
-    width: 110px;
-}
 button {
     margin-top: 10px;
 }
