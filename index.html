@@ -6,10 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    
+
     <title>Document</title>
 </head>
 <body>
+
+<form action="#">
+
+    <label for="fullname">Повне ім'я</label>
+    <input type="text" maxlength="20" id="fullname" name="fullname" placeholder="Enter your full name" required><br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+    <label for="pwd">Пароль</label>
+    <input type="password" id="pwd" name="pwd" placeholder="Enter your password" required><br>
+    <label for="pwd2">Пароль ще раз</label>
+    <input type="password" id="pwd2" name="pwd" placeholder="Enter your password again" required><br>
+    <legend>Стать</legend>
+    <input type="radio" id="men" name="gender" checked required>
+    <label for="men">чоловіча</label>
+    <input type="radio" id="women" name="gender" required>
+    <label for="women">жіноча</label><br>
+    <label for="age">Вік</label>
+    <input type="number" id="age" name="age" max="99" placeholder="How old are you" required><br>
+    <label for="course">Курс</label>
+    <select type="text" id="course" name="course">
+        <option value="choice" selected>Виберіть курс</option>
+        <option value="frontend">Front-End Розробка</option>
+        <option value="python">Python Розробка</option>
+        <option value="qa">QA Manual</option>
+        <option value="backend">Back-End</option>
+        <option value="management">Project Management</option>
+        <option value="hr">HR Generalist в IT</option>
+    </select><br>
+    <label for="adress">Повна адреса</label>
+    <textarea name="message" id="adress" rows="4" cols="20" placeholder="Країна, регіон, місто/селище, вулиця"></textarea><br>
+    <label>
+        <input type="checkbox" name="conditions" value="agree" required> Я погоджуюсь з обробкою персональних даних
+    </label><br>
+    
+    <button type="reset">Очистити форму</button>
+    <button type="submit">Зареєструватися</button>
+
+</form>
+
     
 </body>
 </html>
