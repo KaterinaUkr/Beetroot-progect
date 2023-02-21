@@ -11,3 +11,7 @@ form {
 button {
     margin-top: 10px;
 }
+.col {
+    float: left;
+    width: 110px;
+}
