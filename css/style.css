@@ -23,6 +23,10 @@ header nav a {
 header nav a:last-child {
    margin-right: 0;
 }
+header nav a:hover {
+    color: #070707;
+    font-weight: 700;
+}
 
 #main {
     max-width: 970px;
@@ -114,6 +118,7 @@ h2 {
 }
 .skill-block img:last-child {
     width: 170px;    
+    height: 26px;
 }
 
 #Portfolio {
@@ -145,6 +150,9 @@ h2 {
 
 footer {
     text-align: center;
+    width: 970px;
+    height: 600px;
+    margin: 0 auto;
 }
 footer p {
     font-weight: 400;
@@ -176,4 +184,8 @@ footer .social {
 footer .social img {
     width: 40px;
     height: 40px;
+}
+.messendger {
+    width: 200px;
+    margin: 0 auto;
 }
