@@ -187,5 +187,10 @@ footer .social img {
 }
 .messendger {
     width: 200px;
-    margin: 0 auto;
+    margin: 0 auto;    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #828282;
 }
