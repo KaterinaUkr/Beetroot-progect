@@ -10,9 +10,16 @@ header {
 }
 header nav {
     margin: 28px auto;
+    width: 496px;    
 }
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0;
+}
+        
 header nav a {
-    margin-right: 40px;  
     padding-top: 28px;
     padding-bottom: 28px;
     text-decoration: none;
@@ -20,9 +27,7 @@ header nav a {
     font-weight: 400;
     font-size: 18px;    
 }
-header nav a:last-child {
-   margin-right: 0;
-}
+
 header nav a:hover {
     color: #070707;
     font-weight: 700;
