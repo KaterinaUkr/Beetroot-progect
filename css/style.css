@@ -1,3 +1,4 @@
+@import "./reset.css";
 body {
     font-style: normal;
     font-family: 'Open Sans'; 
@@ -17,8 +18,7 @@ header nav ul {
     justify-content: space-between;
     list-style-type: none;
     padding-left: 0;
-}
-        
+}        
 header nav a {
     padding-top: 28px;
     padding-bottom: 28px;
@@ -27,12 +27,10 @@ header nav a {
     font-weight: 400;
     font-size: 18px;    
 }
-
 header nav a:hover {
     color: #070707;
     font-weight: 700;
 }
-
 #main {
     max-width: 970px;
     margin: 0 auto;
@@ -47,7 +45,6 @@ header nav a:hover {
 #main img {
     width: 100%;
 }
-
 h2 {
     padding-top: 100px;
     margin: 0;    
@@ -57,35 +54,37 @@ h2 {
     text-align: center;
     color: #070707;
 }
-
-#about_me {
+.about_me {
     max-width: 1440px;
-    height: 500px;
+    /*height: 500px;*/
     background-color: #F6F6F6;
     margin: 0 auto;
 }
-#about_me p {
+.about_me_block {
     max-width: 480px;
     margin: 0 auto;
     text-align: center;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
+    padding-bottom: 70px;
+}
+.about_me_block p {    
     margin-bottom: 30px;
 }
-#about_me h2 {
+.about_me h2 {
     margin-bottom: 50px;    
 }
 
-#main-skill{
+.main-skill{
     max-width: 970px;
     height: 564px;
     margin: 0 auto;
 }
-#skills h2 {
+.skills h2 {
     margin-bottom: 20px;
 }
-#skills p {
+.skills p {
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
@@ -125,38 +124,40 @@ h2 {
     width: 170px;    
     height: 26px;
 }
-
-#Portfolio {
+.Portfolio {
     max-width: 1440px;
-    height: 2268px;
+    /*height: 2268px;*/
     margin: 0 auto;
     background-color: #F6F6F6;
     text-align: center;
 }
-#Portfolio h2 {
+.Portfolio h2 {
     margin-bottom: 50px;
 }
-#Portfolio img {
+.Portfolio img {
     max-width: 970px;
     height: 540px;
     margin-bottom: 40px;
 }
-#Portfolio div {
+.Portfolio div {
     width: 260px;
     margin: 0 auto;
     margin-bottom: 70px;    
 }
-#Portfolio div a {
+.Portfolio div:last-child {
+    padding-bottom: 100px;
+    margin-bottom: 0px;
+}
+.Portfolio div a {
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
     color: #070707;
 }
-
 footer {
     text-align: center;
     width: 970px;
-    height: 600px;
+    /*height: 600px;*/
     margin: 0 auto;
 }
 footer p {
@@ -177,7 +178,6 @@ footer button {
     line-height: 25px;    
     letter-spacing: 0.1em;
     border-radius: 22px;
-
 }
 footer .social {
     width: 310px;
@@ -198,4 +198,5 @@ footer .social img {
     line-height: 19px;
     text-align: center;
     color: #828282;
+    padding-bottom: 100px;
 }
