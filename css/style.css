@@ -55,10 +55,10 @@ h2 {
     color: #070707;
 }
 .about_me {
-    max-width: 1440px;
+    /* max-width: 1440px;*/
     /*height: 500px;*/
     background-color: #F6F6F6;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 .about_me_block {
     max-width: 480px;
@@ -125,9 +125,9 @@ h2 {
     height: 26px;
 }
 .Portfolio {
-    max-width: 1440px;
-    /*height: 2268px;*/
-    margin: 0 auto;
+    /*max-width: 1440px;
+    height: 2268px;
+    margin: 0 auto;*/
     background-color: #F6F6F6;
     text-align: center;
 }
