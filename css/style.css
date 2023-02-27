@@ -1,0 +1,29 @@
+@import "./style/style.css";
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #070707;
+}
+
+body {
+    background: #fff;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 34px;
+}
+a, a:active {
+    color: #070707;
+}
+
+.bacground-grey {
+    background: #E5E5E5;
+}
