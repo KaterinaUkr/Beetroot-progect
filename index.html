@@ -4,48 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link href="css/style.css" rel="stylesheet" type="text/css">
     
     <title>Shopping List</title>
 </head>
 <body>
-<header>
-    <h1>CSS Dinner Shopping List</h1>
-    <h2>Let’s go to the mall!</h2>
-</header>
+<div class="wrapper">
+    <header>
+        <h1>CSS Dinner Shopping List</h1>
+        <h2>Let’s go to the mall!</h2>
+    </header>
     <form>
-        <label>
-            <input type="checkbox" name="list" value="pickles">
-            A lot of pickles (for the next lessons about CSS)
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="list" value="apple">
-            10 apples (for more CSS manipulations)
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="list" value="orange">
-            20 oranges (because they are awesome)
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="list" value="plate">
-            13 plates (hm... they always dissapear)
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="list" value="bento">
-            15 bentos
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="list" value="sake">
-            1 bottle of Sake (for my friends)
-        </label>
+        <div>
+            <label>
+            <input type="checkbox" name="list" value="pickles"><span></span>
+            <span class="list">A lot of pickles</span> <sup>for the next lessons about CSS</sup>
+            </label>
+        </div>
+        <div>
+            <label>
+            <input type="checkbox" name="list" value="apple"><span></span>
+            <span class="list">10 apples</span> <sup>for more CSS manipulations</sup>
+            </label>
+        </div>
+        <div>
+            <label>
+            <input type="checkbox" name="list" value="orange"><span></span>
+            <span class="list">20 oranges</span> <sup>because they are awesome</sup>
+            </label>
+        </div>
+        <div>
+            <label>
+            <input type="checkbox" name="list" value="plate"><span></span>
+            <span class="list">13 plates</span> <sup>hm... they always dissapear</sup>
+            </label>
+        </div>
+        <div>
+            <label>
+            <input type="checkbox" name="list" value="bento"><span></span>
+            <span class="list">15 bentos</span>
+            </label>
+        </div>
+        <div>
+           <label>
+            <input type="checkbox" name="list" value="sake"><span></span>
+            <span class="list">1 bottle of Sake</span> <sup>for my friends</sup>
+            </label> 
+        </div>
+        
     </form>
-           
+
+    <footer>
+        <div>Bon appetit :)</div>
+    </footer>
+
+</div>           
 
 </body>
 </html>
