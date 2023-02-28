@@ -35,8 +35,7 @@ form {
     margin: 20px auto 45px;
 }
 
-form div {
-    list-style-type: none;
+form div.check-container {
     font-size: 18px;
     padding-top: 11px;
     padding-bottom: 13px;
@@ -44,13 +43,15 @@ form div {
     cursor: pointer;
 }
 
-div:nth-child(odd) {
+div.check-container:nth-child(odd) {
     background-color: #88839E;;
 }
-div:nth-child(2n) {
+div.check-container:nth-child(2n) {
     background-color: #7A7593;
 }
-div:hover, div:nth-child(odd):hover, div:nth-child(2n):hover {
+div.check-container:hover, 
+div.check-container:nth-child(odd):hover, 
+div.check-container:nth-child(2n):hover {
     background: #625E77;
     border-top: 3px solid #FFFFFF;
     border-bottom: 3px solid #FFFFFF;
