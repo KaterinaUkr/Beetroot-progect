@@ -27,3 +27,37 @@ a, a:active {
 .bacground-grey {
     background: #E5E5E5;
 }
+
+section:not(bio). footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+}
+
+
+/*Header*/
+
+
+/*Rating*/
+.rating {
+    text-align: left;
+}
+.rating .rating_wrapper {
+   direction: rtl;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating .star {
+    font-size: 26px;
+    cursor: pointer;
+    color: #E5E5E5;
+}
+.rating .star:hover, 
+.rating .star:hover ~.star,
+.rating input:checked ~ .star
+.rating input:checked + .star {
+    color: #070707;
+}
