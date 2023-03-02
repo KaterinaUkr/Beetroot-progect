@@ -1,0 +1,7 @@
+@import url(reset.css);
+@import url(weather-icons-wind.min.css);
+
+
+.wrapper {
+    background: #3399CC;
+}
