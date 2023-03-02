@@ -46,6 +46,11 @@ main {
     font-size: 22px;
     padding-top: 26px;
     padding-bottom: 39px;
+    cursor: pointer;
+    opacity: 60%;
+}
+.table-cities li:hover {
+    opacity: 100%;
 }
 .table-cities i{
     font-size: 42px;
