@@ -10,7 +10,7 @@ body{
     font-family: Lucida Sans Unicode;
     color: #FFFFFF;
     font-size: 0;    
-    
+    transition: all .1s ease-in;
 }
 .wrapper {
     max-width: 1440px;
@@ -23,6 +23,9 @@ header {
     margin: 0 auto;
     font-size: 21px;    
     margin-top: 66px;
+}
+header .wi {
+    font-size: 27px;    
 }
 footer {
     width: 81%;
@@ -48,6 +51,9 @@ main {
     padding-bottom: 39px;
     cursor: pointer;
     opacity: 60%;
+}
+.degree {
+    opacity: 70%;
 }
 .table-cities li:hover {
     opacity: 100%;
