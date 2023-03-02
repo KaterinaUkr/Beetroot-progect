@@ -40,7 +40,11 @@ main {
     text-align: center;
     margin-top: 37px;
     margin-bottom: 35px;
+    opacity: 100%;
 } 
+.table-cities:hover {
+   opacity: 60%; 
+}
 .table-cities li {
     display: inline-block;
     box-sizing: border-box;
@@ -49,8 +53,7 @@ main {
     font-size: 22px;
     padding-top: 26px;
     padding-bottom: 39px;
-    cursor: pointer;
-    opacity: 60%;
+    cursor: pointer;    
 }
 .degree {
     opacity: 70%;
@@ -63,19 +66,14 @@ main {
     line-height: 61px;
     vertical-align: middle;
 }
-.city-second li, 
-.paris, 
-.belgrade {
+.cities li {
     width: 25%;    
 }
-.city-third li:not(.francisco) {
-    width: 25%;
-}
-.francisco {
+li.francisco {
     width: 50%;
     background-color: #CC6699;
 }
-.lisbon {
+li.lisbon  {
     width: 50%;
     background-color: #3399CC;
 }
@@ -103,7 +101,7 @@ main {
 .tokyo {
     background-color: #339966;
 }
-.sydney {
+li.sydney {
     width: 100%;
     background-color: #666699;
     padding-top: 26px;
