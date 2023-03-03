@@ -42,9 +42,10 @@ main {
     margin-bottom: 35px;
     opacity: 100%;
 } 
-.table-cities:hover {
-   opacity: 60%; 
-}
+.degree {
+    opacity: 70%;
+}    
+
 .table-cities li {
     display: inline-block;
     box-sizing: border-box;
@@ -55,8 +56,8 @@ main {
     padding-bottom: 39px;
     cursor: pointer;    
 }
-.degree {
-    opacity: 70%;
+.table-cities:hover li {
+   opacity: 60%; 
 }
 .table-cities li:hover {
     opacity: 100%;
