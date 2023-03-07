@@ -1,1 +1,44 @@
 @import url(./reset.css);
+@import url(/assets/fonts/stylesheet.css);
+
+body {
+    color: black;
+    background-color: #C9C9C9;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+h2 {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;    
+    text-transform: uppercase;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+.chapter {
+    font-family: 'Farro';
+    font-size: 30px;
+    font-weight: 300;
+    vertical-align: super;
+    text-transform: none;
+    margin-left: 10px;
+}
+p {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    margin-bottom: 40px;
+}
+.bold {
+        font-weight: 700;
+}
