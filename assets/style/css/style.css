@@ -139,7 +139,6 @@ img {
     margin-bottom: 20px;
     width: 100%;    
 }
-
 .author {
     float: left;
     width: 50%;
@@ -149,7 +148,6 @@ img {
     font-family: 'Roboto';
     color: #FFFFFF;    
 }
-
 .data {
     float: right;
     width: 50%;
@@ -158,8 +156,7 @@ img {
     font-weight: 400;
     font-family: 'Roboto';
     color: #E0E0E0;
-    font-style: normal;
-    
+    font-style: normal;    
 }
 
 .head {
@@ -169,7 +166,6 @@ img {
     justify-content: space-between;
     margin-top: 20px;
 }
-
 .head img {
     width: 20px;
     height: 20px;
@@ -180,11 +176,9 @@ img {
     padding: 10px;
     opacity: 0;
 }
-
 .gradient:hover .head img {
     opacity: 0.5;
 }
-
 .gradient:hover .head img:hover {
     opacity: 1;
 }
