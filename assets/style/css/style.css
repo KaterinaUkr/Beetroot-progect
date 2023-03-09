@@ -12,6 +12,31 @@ body {
     background-color: white;
     padding-left: 120px;
     padding-right: 120px;
+    padding-bottom: 90px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0;
+}
+.header-left {
+    display: inline-flex;
+    margin: auto 0;
+}
+.header-left div:nth-child(1) {
+    font-family: 'Tourney';
+    font-weight: 600;
+    font-size: 22px;
+    margin-right: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.header-left div:nth-child(2) {
+    font-family: 'Staatliches';
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 2px;
 }
 
 h2 {
@@ -25,7 +50,7 @@ h2 {
 }
 .chapter {
     font-family: 'Farro';
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
     vertical-align: super;
     text-transform: none;
@@ -40,5 +65,14 @@ p {
     margin-bottom: 40px;
 }
 .bold {
-        font-weight: 700;
+    font-weight: 700;
+}
+.cursive {
+    font-style: italic;
+}
+.line {
+   text-decoration: underline; 
+}
+.grey {
+    background-color: #C9C9C9;
 }
