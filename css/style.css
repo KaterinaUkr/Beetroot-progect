@@ -1,7 +1,10 @@
 @import "./reset.css";
+@import url(../assets/font/stylesheet.css);
+ 
+
 body {
     font-style: normal;
-    font-family: 'Open Sans'; 
+    font-family: 'Gilroy'; 
 }
 header {
     max-width: 970px;
@@ -11,7 +14,7 @@ header {
 }
 header nav {
     margin: 28px auto;
-    width: 496px;    
+    /*width: 496px;  */  
 }
 header nav ul {
     display: flex;
@@ -26,6 +29,7 @@ header nav a {
     color:#828282;
     font-weight: 400;
     font-size: 18px;    
+    font-family: 'Gilroy';
 }
 header nav a:hover {
     color: #070707;
@@ -41,6 +45,7 @@ header nav a:hover {
     line-height: 65px;    
     color: #070707;
     margin: 0 0 50px;
+    font-family: 'Gilroy';  
 }
 #main img {
     width: 100%;
@@ -53,6 +58,7 @@ h2 {
     line-height: 46px;
     text-align: center;
     color: #070707;
+    font-family: 'Gilroy';
 }
 .about_me {
     /* max-width: 1440px;*/
@@ -71,6 +77,7 @@ h2 {
 }
 .about_me_block p {    
     margin-bottom: 30px;
+    font-family: 'Gilroy';
 }
 .about_me h2 {
     margin-bottom: 50px;    
