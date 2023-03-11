@@ -27,7 +27,7 @@ body {
 
 .header-block {
     position: fixed;
-    /*z-index: 1;*/
+    z-index: 1;
 }
 header {
     display: flex;
@@ -35,6 +35,7 @@ header {
     width: 1200px;
     padding: 13px 0;
     margin-bottom: 70px;
+    background-color: white;
 }
 .header-left {
     display: inline-flex;
