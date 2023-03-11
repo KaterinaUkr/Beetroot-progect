@@ -136,3 +136,22 @@ p {
 .grey {
     background-color: #DADADA;
 }
+
+/*.social {
+    width: 270px;
+    height: 180px;
+    background-color: #E6E6E6;
+    border-radius: 8px;
+    position: relative;
+}
+.social img {
+    position: absolute;
+    top: 35%;
+    left: 18%    
+}
+.social:hover {
+    background-color: #000000;
+}
+.social:hover img img-svg {
+    fill: white;
+}*/
