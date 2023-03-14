@@ -6,35 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="/assets/style/css/style.css" rel="stylesheet" type="text/css">
-    
+    <link rel="stylesheet" href="/assets/font/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
         <h1>Create an Account</h1>
-        <form action="#">
-            <label for="name">First Name</label>
-                <input id="name" type="text" name="first_name">
-            <label for="last-name">Last Name</label>
-                <input id="last-name" type="text" name="last_name">
-            <label for="email">E-mail</label>
+        <form class="form_register" action="#">
+            <div class="form-two">
+                <div>
+                    <label for="name">First Name</label></br>
+                    <input id="name" type="text" name="first_name"></br>
+                </div>
+                <div>
+                    <label for="last-name">Last Name</label></br>
+                    <input id="last-name" type="text" name="last_name"></br>
+                </div>
+                
+            </div>
+            
+            <label for="email">E-mail</label></br>
                 <input id="email" type="email" name="email">
-                <p>We'll never share your email with anyone else.</p>
+                <div class="email">We'll never share your email with anyone else.</div>
             
-                <input type="radio" id="male" name="sex" value="male" checked>
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="sex" value="female">
-                <label for="female">Female</label>
-
-            <label for="country">Country</label>
-                <input id="country" type="text" name="country" placeholder="Select">
-            <label for="city">City</label>
-                <input id="city" type="text" name="city">
+                <input class="radio" type="radio" id="male" name="sex" value="male" checked>
+                <label class="radiobox" for="male">Male</label>
+                <input class="radio" type="radio" id="female" name="sex" value="female">
+                <label for="female">Female</label></br>
+            <div class="form-two">
+                <div>
+                    <label for="country">Country</label></br>
+                    <input id="country" type="text" name="country" placeholder="Select"></br>
+                </div>
+                <div>
+                    <label for="city">City</label></br>
+                    <input id="city" type="text" name="city"></br>
+                </div>
+            </div>
+                       
             
-                <button type="submit">Sign Up</button>
-                <div>By clicking the 'Sign Up' button, you confirm that you accept our and .</div>
-                <div>Have an account? Log In</div>
+                <button class="sign" type="submit" value="subm">Sign Up</button>
+                <div class="text">By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a>
+                and <a href="#">Privacy Policy</a>.</div>
+                
         </form>
+        
+        <footer>
+            <div class="login">
+                <div>
+                    Have an account?
+                </div>
+                <div><a href="#">Log In</a></div> 
+                
+            </div>
+        </footer>
         
     </div>
     

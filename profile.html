@@ -6,28 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="/assets/style/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/assets/font/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/assets/font/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/assets/font/fontawesome/css/solid.css" rel="stylesheet">
 
+    <link href="/assets/style/css/style.css" rel="stylesheet" type="text/css">
+    
+    
     <title>Document</title>
 </head>
 
 <body>
     <div class="wrapper">
         <h1>Profile</h1>
+        <div class="about_me">
+            <div class="foto">
+                <img src="/assets/image/foto.png" alt="">
+            </div>
+            <div class="upload_foto">
+                <input id="file-input" type="text" name="file"><br>
+                <label class="text" for="file-input">Up to 1 MB (300x300 px)</label>
+            </div>
+            <button class="btn-delete" type="button">
+                <i class="fas fa-trash"></i>
+            </button>
+            
+        </div>
         <form action="#">
-            <label for="name">Name</label>
-                <input id="name" type="text" name="name">
-            <label for="email">E-mail</label>
-                <input id="email" type="email" name="email">
-            <label for="country">Country</label>
-                <input id="country" type="text" name="country" placeholder="Select">
-            <label for="city">City</label>
-                <input id="city" type="text" name="city">            
-            <label for="code">Zip Code</label>
-                <input id="code" type="number" name="code">
-            <label for="phone">Phone Number</label>
-                <input id="phone" type="number" name="phone" placeholder="Select">
-            <button type="submit">Update</button>
+            <div class="form-two">
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name">
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email">
+                </div>
+            </div>
+            <div class="form-two">
+                <div>
+                    <label for="country">Country</label>
+                    <input id="country" type="text" name="country" placeholder="Select">
+                </div>
+                <div>
+                    <label for="city">City</label>
+                    <input id="city" type="text" name="city">  
+                </div>
+            </div>
+            
+            <div class="form-two">
+                <div>
+                    <label for="code">Zip Code</label>
+                    <input id="code" type="number" name="code">
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="number" name="phone">
+                </div>
+            </div>        
+            
+            <button class="pr_update" type="submit">Update</button>
             
         </form>
 
