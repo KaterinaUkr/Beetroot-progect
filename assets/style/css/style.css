@@ -1,3 +1,120 @@
 @import url(./reset.css);
-@import url(./font.css);
+@import url(../../fonts/font.css);
 
+body {
+    background-color: #E5E5E5;
+}
+.wrapper {
+    max-width: 1440px;
+    background-color: #FFFFFF; 
+    margin: 0 auto;
+}
+header {
+    border-bottom: 1px solid #EFEEF3;
+}
+
+.logo {
+    width: 82%;
+    margin: 0 auto;
+    display: flex;    
+    padding-top: 22px;
+    padding-bottom: 23px;
+    font-family: 'Quicksand';
+    font-size: 35px;
+    font-weight: 500;
+}
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+}
+
+.service {
+    width: 82%;
+    margin: 100px auto;   
+}
+.service h2 {
+    color: #7690A8;
+    font: 400 16px 'Roboto';
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.service h3 {
+    color: #16133D;
+    font: 600 40px 'Nunito';
+    margin-bottom: 40px;
+}
+.service h4 {
+    color: #16133D;
+    font: 400 24px 'Roboto';
+    margin-bottom: 15px;
+}
+.service svg {
+    height: 36px;
+    margin-bottom: 30px;
+    padding: 14px;
+    cursor: pointer;
+}
+.service svg:hover .conture {
+    fill: #52C29D;
+}
+.service svg:hover .middle {
+    fill: #CAEFF2;
+}
+.service svg:hover .light {
+    fill: #E1F4F5;
+}
+.service-block {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.cards {
+    max-width: 25%;
+    padding: 40px;    
+}
+.cards p {
+    color: #16133D;
+    font: 400 16px 'Roboto';
+    margin-bottom: 30px;
+    line-height: 28px;
+    padding-right: 15px;
+}
+.cards a {
+    color: #3DB370;
+    font: 600 16px 'Roboto';
+    text-decoration: none;
+}
+footer {    
+    background-color: #16133D;
+    color: #FFFFFF;
+}
+.social-media {
+    width: 82%;
+    margin: 0 auto;
+}
+.social {
+    width: 82%;   
+    display: flex;
+    width: 230px;
+    justify-content: space-between;   
+    list-style-type: none;   
+    padding-bottom: 40px;       
+}
+.social__link {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background-color: #EFEEF3;
+    border-radius: 5px;
+    position: relative;
+}
+svg.social-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
