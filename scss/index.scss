@@ -1,0 +1,179 @@
+@use 'variable';
+@use "sass:math";
+
+@import url(/assets/style/css/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway:wght@400;500&family=Roboto:wght@900&display=swap');
+
+
+body {
+    background-color: #E5E5E5;
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 1170px;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    padding: 121px 135px;    
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 60px;
+        color: variable.$gold;
+        margin-bottom: 100px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #898F8F;
+        margin-bottom: 15px;
+    }
+}
+
+.section-about {
+    display: flex;
+    width: math.div(1030px, 1170px) * 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    
+    .section-image {
+        position: relative;                    
+        .a {
+            position: absolute;
+            box-sizing: border-box;
+            border: 1px solid variable.$gold;
+            width: 0;
+            height: 0;
+            transition: .3s;
+            width: 100px;
+            height: 100px;
+        }        
+        .a1 {
+            top: 0;
+            left: 0;
+            border-right: none;
+            border-bottom: none;
+        }    
+        .a2 {
+            top: 0;
+            right: 0;
+            border-left: none;
+            border-bottom: none;
+        }    
+        .a3 {
+            bottom: 0;
+            right: 0;
+            border-top: none;
+            border-left: none;
+        }    
+        .a4 {
+            bottom: 0;
+            left: 0;
+            border-top: none;
+            border-right: none;
+        }    
+        .parent {
+            position: relative;
+            float: left;
+        }
+
+        img {
+        width: 400px;
+        height: 400px;
+        border: 1px solid variable.$gold; 
+        margin: 15px;   
+        } 
+    }
+    .vl {
+        border-left: 1px solid variable.$gold;
+        height: auto;
+    }
+                  
+    .description {    
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 36px;
+            color: variable.$grey;
+            margin-bottom: 30px;
+        }  
+        hr.solid {
+            border-top: 1px solid variable.$gold;
+            width: 100px;
+        }
+        h4 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            color: variable.$grey;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        div {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: #333333;
+            width: 430px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+        hr.dashed {
+            border-top: 1px dashed variable.$gold;
+            width: 50px;
+            margin-bottom: 30px;
+        }
+        a {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            color: variable.$grey;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid variable.$gold;
+            padding: 5px 10px;
+            
+        }
+        a:hover {
+            color: variable.$gold;
+            border: 1px solid variable.$grey;
+            background-color: variable.$grey;
+        }
+    }    
+}
+
+.socials {
+    display: flex;
+    margin: 0 auto 50px;
+    width: 135px;
+    justify-content: space-between;
+    li {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid #CCCCCC;
+        position: relative;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    li:hover {
+        border-color: variable.$gold;
+    }
+    li:hover .social-icon {
+        fill: variable.$gold;
+    }
+    svg {
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
