@@ -18,7 +18,7 @@ body {
   font-weight: 900;
   font-size: 60px;
   color: #FFCC00;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   text-transform: uppercase;
 }
 .wrapper h2 {
@@ -28,6 +28,27 @@ body {
   text-transform: uppercase;
   color: #898F8F;
   margin-bottom: 15px;
+}
+
+.bonfire {
+  position: relative;
+  width: 450px;
+  margin: 0 auto;
+  height: 20px;
+  margin-bottom: 40px;
+}
+.bonfire hr {
+  border-top: 1px solid #FFCC00;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+.bonfire img {
+  position: absolute;
+  top: -50%;
+  background-color: #ffffff;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .section-about {
@@ -41,6 +62,8 @@ body {
           justify-content: space-between;
   padding-top: 65px;
   padding-bottom: 65px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .section-about .section-image {
   position: relative;
@@ -105,6 +128,9 @@ body {
 .section-about .description hr.solid {
   border-top: 1px solid #FFCC00;
   width: 100px;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
 }
 .section-about .description h4 {
   font-family: "Raleway", sans-serif;
@@ -124,6 +150,9 @@ body {
   margin-bottom: 20px;
 }
 .section-about .description hr.dashed {
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
   border-top: 1px dashed #FFCC00;
   width: 50px;
   margin-bottom: 30px;

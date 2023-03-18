@@ -21,7 +21,7 @@ body {
         font-weight: 900;
         font-size: 60px;
         color: variable.$gold;
-        margin-bottom: 100px;
+        margin-bottom: 40px;
         text-transform: uppercase;
     }
 
@@ -35,6 +35,28 @@ body {
     }
 }
 
+.bonfire {
+    position: relative;
+    width: 450px;
+    margin: 0 auto;
+    height: 20px;
+    margin-bottom: 40px;
+    hr {
+        border-top: 1px solid variable.$gold;
+        border-bottom: none;
+        border-right: none;
+        border-left: none;
+    }
+    
+    img {
+        position: absolute;
+        top: -50%;
+        background-color: #ffffff;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
 .section-about {
     display: flex;
     width: math.div(1030px, 1170px) * 100%;
@@ -42,6 +64,7 @@ body {
     justify-content: space-between;
     padding-top: 65px;
     padding-bottom: 65px;
+    box-sizing: border-box;
     
     .section-image {
         position: relative;                    
@@ -96,7 +119,8 @@ body {
         height: auto;
     }
                   
-    .description {    
+    .description {  
+          
         h3 {
             font-family: 'Roboto', sans-serif;
             font-weight: 900;
@@ -107,6 +131,9 @@ body {
         hr.solid {
             border-top: 1px solid variable.$gold;
             width: 100px;
+            border-bottom: none;
+            border-right: none;
+            border-left: none;
         }
         h4 {
             font-family: 'Raleway', sans-serif;
@@ -126,6 +153,9 @@ body {
             margin-bottom: 20px;
         }
         hr.dashed {
+            border-bottom: none;
+            border-right: none;
+            border-left: none;
             border-top: 1px dashed variable.$gold;
             width: 50px;
             margin-bottom: 30px;
