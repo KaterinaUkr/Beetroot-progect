@@ -555,6 +555,7 @@ body {
 }
 .header-block .logo-icon {
   width: 142px;
+  cursor: pointer;
 }
 .header-block .header-menu ul {
   display: -webkit-box;
@@ -568,6 +569,7 @@ body {
 }
 .header-block .header-menu ul li {
   margin-right: 42px;
+  cursor: pointer;
 }
 .header-block .header-block-right {
   width: 51%;
@@ -581,6 +583,7 @@ body {
 .header-block .header-search {
   width: 17px;
   height: 16px;
+  cursor: pointer;
 }
 
 .bg-block {
@@ -661,7 +664,8 @@ body {
 .main-content-block .main-content-block-article .data {
   margin-bottom: 50px;
 }
-.main-content-block .main-content-block-article.right {
+
+.main-content-block div:nth-of-type(2n) {
   -ms-grid-column-align: end;
       justify-self: end;
 }
