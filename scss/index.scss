@@ -1,1 +1,16 @@
-@use "(/_font.scss)"
+@use "./reset";
+@use "./font";
+@use "./mixins";
+
+
+body {
+    background-color: #E5E5E5;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+header {
+    @include block-width;
+}
