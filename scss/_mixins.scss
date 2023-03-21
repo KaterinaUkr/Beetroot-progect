@@ -1,4 +1,32 @@
 @mixin block-width {
     width: 81%;
     margin: 0 auto;
-};
+}
+
+@mixin fonts($family, $weight, $size, $letter) {
+    font-family: $family, sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    letter-spacing: $letter;
+}
+
+@mixin gap {
+    column-gap: 30px;
+    row-gap: 50px;
+}
+
+@mixin align {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin grid {
+    grid-column: 1 / span 3;
+    @include align;
+}
+
+@mixin align-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

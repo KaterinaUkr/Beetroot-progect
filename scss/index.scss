@@ -1,16 +1,296 @@
 @use "./reset";
+@use "./mixins" as *;
 @use "./font";
-@use "./mixins";
+@use "./variables" as *;
 
-
+* {
+   box-sizing: border-box; 
+}
 body {
     background-color: #E5E5E5;
+    color: black;    
 }
 
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
+    background-color: #FFFFFF;
 }
-header {
+.header-block {
+    @include block-width; 
+    @include align;    
+    padding-top: 40px;
+    padding-bottom: 40px;    
+
+    .logo-icon {
+        width: 142px;
+    }
+
+    .header-menu {
+        ul {
+            display: flex;
+            @include fonts('Lato', 400, 14px, .3em);
+            text-transform: uppercase;
+            
+            li {
+                margin-right: 42px;
+            }
+        }
+    }    
+    .header-block-right {        
+        width: 51%;
+        @include align;        
+    }
+    .header-search {
+        width: 17px;
+        height: 16px;
+    }
+}
+
+.bg-block {
+    width: $width;
+    position: relative;
+    .bg-image {
+        width: $width;        
+    }
+    .bg-text {
+        position: absolute;
+        @include fonts('Red Hat Display', 600, 48px, .1em);
+        line-height: $line-heigh;
+        top: 16%;
+        left: 10%;
+    }
+}
+
+.main-content {
+    padding-top: $padding-90;
+    padding-bottom: $padding-90;
     @include block-width;
+
+    h1 {
+        @include fonts('Red Hat Display', 400, 48px, .1em);
+        line-height: $line-heigh;
+        margin-bottom: $padding-50;
+    }
+}
+
+.main-content-block {
+    width: $width;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include gap;
+    align-items: center;
+    margin-bottom: $padding-90; 
+
+    .main-content-image {
+        width: $width;        
+    }    
+    .main-content-block-article {
+        width: 79%;
+               
+        .article {
+            @include fonts('Lato', 400, 16px, 0.1em);
+            line-height: 26px;
+            color: $grey;
+            cursor: pointer;
+        }
+        .article-title {
+            @include fonts('Red Hat Display', 500, 23px, 0.1em);
+            line-height: 38px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .tag {
+            margin-bottom: 30px;
+        }
+        .data {
+            margin-bottom: 50px;
+        }
+    }
+    .main-content-block-article.right {
+        justify-self: end;
+    }
+}
+
+.main-content-latest-post {
+    width: $width;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    @include gap;   
+    margin-bottom: $padding-90; 
+
+    .main-content-latest-article img {
+        width: $width;
+    }
+    .main-content-latest-title {       
+        @include grid;   
+        cursor: pointer;
+    }
+    .main-content-latest-article-tag,
+    .main-content-popuar-article-tag {
+        @include align;
+        margin-top: 25px;
+        margin-bottom: 25px;        
+    }
+    .post {
+        color: $grey;
+    }
+
+    .post.tag,
+    .post.data {
+        @include fonts('Lato', 400, 12px, 0.1em);
+    }
+    .post.text {
+        @include fonts('Lato', 400, 16px, 0.1em);
+        line-height: 26px;
+    }
+
+    .post-title {
+        @include fonts('Red Hat Display', 500, 22px, 0.1em);
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+}
+
+.main-content-popular-post {
+    width: $width;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    @include gap;
+    margin-bottom: $padding-90;
+
+    .main-content-popular-article img {
+        width: $width;
+    }
+
+    .main-content-popular-title {
+        @include grid;
+    }
+    .main-content-popular-button {
+        grid-column: 1 / span 3;
+        margin: 0 auto;
+    }
+}
+
+.main-content-popular-post {
+    .post.tag,
+    .post.data {
+        @include fonts('Lato', 400, 12px, 0.1em);
+        color: $grey
+    }
+    .main-content-popuar-article-tag {
+        @include align;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .post-title {
+        @include fonts('Red Hat Display', 500, 24px, 0.1em);
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .post.text {
+        @include fonts('Lato', 400, 16px, 0.05em);
+        line-height: 26px;
+        color: $grey
+    }
+    .main-content-popular-button {
+        padding: 10px 45px;
+        background-color: $grey-btn;
+        border: 1px solid $white;
+        text-align: center;
+        cursor: pointer;
+        a {
+            color: $white;
+            text-decoration: none
+        }
+    }
+    .main-content-popular-button:hover {
+        background-color: $white;
+        border: 1px solid $grey-btn;
+        a {
+            color: $grey-btn;
+        }
+    }
+}
+
+.main-content-title {
+    @include fonts('Red Hat Display', 600, 28px, 0.1em);
+    cursor: pointer;
+}
+.main-content-view {
+    @include fonts('Lato', 400, 16px, 0.1em);
+    cursor: pointer;
+
+    span {
+        padding-left: 20px;       
+    }
+}
+
+.main-content-info {
+    @include align;
+    div {
+        width: 40%;
+        max-width: 470px;
+    }
+    .post-title {
+        @include fonts('Lato', 400, 23px, 0.1em);
+        line-height: 38px;         
+        cursor: pointer;
+        span {
+                padding-top: 20px;
+                color: $grey;        
+                cursor: pointer;
+            }
+    }
+    .post.text {
+        @include fonts('Lato', 400, 19px, 0.05em);
+        line-height: 32px;
+        color: $grey;
+    }    
+}
+
+.footer-block {
+    padding: 70px 135px 30px;
+    background-color: #F4F4F4;
+    .footer-content {
+        @include align;
+
+        .footer-title {
+                @include fonts('Lato', 400, 48px, 0.05em);
+                margin-bottom: 30px;        
+            }        
+            p {
+                @include fonts('Lato', 400, 16px, 0.1em);
+                margin-bottom: 15px
+            }
+        .footer-content-socials {
+            @include align;
+            width: 270px;
+            li {
+                width: 50px;
+                height: 50px;
+                border: 1px solid $grey-btn;
+                position: relative;
+                cursor: pointer;
+                svg {                    
+                    @include align-center;
+                }
+            }
+            li:hover {
+                border: 1px solid $white;
+                background-color: $grey-btn;
+            }
+            li:hover .socials-icon {
+                fill: $white;                
+            }
+        }
+        
+    }
+    
+    .footer-copyright {
+        @include fonts('Lato', 400, 12px, 0.1em);
+        text-align: center;
+    }
 }
