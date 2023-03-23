@@ -34,7 +34,21 @@ body {
         cursor: pointer;
     }
 
-    .header-menu {
+    /*.nav-menu {
+        @media only screen and (max-width: 768px) {
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow:
+                0 10px 27px rgba(0, 0, 0, 0.05);
+        }*/
+
         ul {
             display: flex;
             @include fonts('Lato', 400, 14px, .3em);
@@ -43,28 +57,39 @@ body {
             li {
                 margin-right: 42px;
                 cursor: pointer;
+                
+                @include rwd(768px, 980px) {
+                    margin-right: 20px;
+                }
+            }
+            .nav-link {
+                text-decoration: none;
+                color: #000000;
+            }
+            .nav-link:active {
+                text-decoration: underline;
             }
         }
-        @include rwd(768px, 1440px) {
+        /*@include rwd(768px, 1440px) {
             display: none;
         }
         @include rwd(320px, 768px) {
             display: none;
-        }
-    }    
+        }*/
+    /*}  */  
     .header-block-right {        
-        width: 51%;
+        /*width: 51%;*/
         @include align;   
 
-        @include xxl {
+        /*@include xxl {
                 width: 90px;
-            }
+            }*/
 
         .header-menu-hamburger {
             display: none;
-            @include rwd(768px, 1440px) {
+           /* @include rwd(768px, 1440px) {
                 display: block;    
-            }
+            }*/
             @include rwd(320px, 768px) {
                 display: block;
             }
@@ -80,7 +105,12 @@ body {
         height: 20px;
         cursor: pointer;
     }
+
+    /*.header-menu {
+        position: relative;
+    }*/
 }
+
 
 .bg-block {
     width: $width;
@@ -254,9 +284,9 @@ body {
 
     @include rwd(768px, 1440px) {
             padding: 0;
-            display: block;            
+            display: block;           
         }
-    @include cwd(320px) {
+    @include rwd(320px, 768px) {
         display: block;
     }
     
@@ -267,7 +297,7 @@ body {
             margin-bottom: 30px;    
             justify-content: space-between;
         }
-        @include cwd(320px) {
+        @include rwd(320px, 768px) {
             display: block;
         }
     }
@@ -289,6 +319,7 @@ body {
     .main-content-latest-article img {
         @include rwd(320px, 768px) {
             margin-top: 50px;
+            width: 100%;
         }
     }
 
