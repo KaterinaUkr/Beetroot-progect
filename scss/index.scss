@@ -2,6 +2,7 @@
 @use "./mixins" as *;
 @use "./font";
 @use "./variables" as *;
+@use "./responsive" as *;
 
 * {
    box-sizing: border-box; 
@@ -54,15 +55,35 @@ body {
     width: $width;
     position: relative;
     .bg-image {
-        width: $width;        
+        width: $width;    
+        @include rwd(320px, 768px) {
+            display: none;
+        }
     }
+
+    .bg-image.tablet {
+        display: none;
+        @include rwd(320px, 768px) {
+            display: block;
+        }
+    }
+
     .bg-text {
         position: absolute;
         @include fonts('Red Hat Display', 600, 48px, .1em);
         line-height: $line-heigh;
         top: 16%;
-        left: 10%;
-    }
+        padding-left: 10%;
+
+        @include rwd(320px, 768px) {
+            font-size: 36px;
+            padding-left: 3.5%;
+            padding-right: 3.5%;
+            top: 70px;
+            line-height: 50px;
+            letter-spacing: 0.05em;
+        }
+    }    
 }
 
 .main-content {
@@ -74,6 +95,10 @@ body {
         @include fonts('Red Hat Display', 400, 48px, .1em);
         line-height: $line-heigh;
         margin-bottom: $padding-50;
+
+        @include rwd(320px, 768px) {
+            
+        }
     }
 }
 

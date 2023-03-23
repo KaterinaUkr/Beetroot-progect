@@ -48,7 +48,6 @@ $screen-xxl-min: 1400px;
     }
 }
 
-
 // Custom devices
 @mixin cwd($screen) {
     @media (min-width: $screen) {

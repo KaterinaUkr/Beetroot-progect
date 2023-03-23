@@ -593,6 +593,19 @@ body {
 .bg-block .bg-image {
   width: 100%;
 }
+@media (min-width: 320px) and (max-width: 768px) {
+  .bg-block .bg-image {
+    display: none;
+  }
+}
+.bg-block .bg-image.tablet {
+  display: none;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .bg-block .bg-image.tablet {
+    display: block;
+  }
+}
 .bg-block .bg-text {
   position: absolute;
   font-family: "Red Hat Display", sans-serif;
@@ -601,7 +614,17 @@ body {
   letter-spacing: 0.1em;
   line-height: 64px;
   top: 16%;
-  left: 10%;
+  padding-left: 10%;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .bg-block .bg-text {
+    font-size: 36px;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    top: 70px;
+    line-height: 50px;
+    letter-spacing: 0.05em;
+  }
 }
 
 .main-content {
@@ -618,7 +641,6 @@ body {
   line-height: 64px;
   margin-bottom: 50px;
 }
-
 .main-content-block {
   width: 100%;
   display: -ms-grid;
