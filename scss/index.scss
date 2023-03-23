@@ -81,15 +81,20 @@ body {
         /*width: 51%;*/
         @include align;   
 
-        /*@include xxl {
+        @include rwd(320px, 768px) {
                 width: 90px;
-            }*/
+            } 
+
+        .header-menu {
+            position: relative;
+            @include rwd(320px, 768px) {
+                display: none;
+            }
+        }
 
         .header-menu-hamburger {
             display: none;
-           /* @include rwd(768px, 1440px) {
-                display: block;    
-            }*/
+           
             @include rwd(320px, 768px) {
                 display: block;
             }
@@ -106,9 +111,7 @@ body {
         cursor: pointer;
     }
 
-    /*.header-menu {
-        position: relative;
-    }*/
+    
 }
 
 
