@@ -3,6 +3,7 @@
 @use "./font";
 @use "./variables" as *;
 @use "./responsive" as *;
+@use "./favicon" as *;
 /*@use "./hamburgers" as *;*/
 
 body {
@@ -141,7 +142,3 @@ body {
 
 }
 
-@media (prefers-color-scheme: dark) {
-  rect {
-    fill: red;
-  }

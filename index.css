@@ -687,6 +687,11 @@ textarea {
   font-weight: 600;
   font-style: italic;
 }
+@media (prefers-color-scheme: light) {
+  .favicon {
+    fill: #FFFF00;
+  }
+}
 /*@use "./hamburgers" as *;*/
 body {
   background-image: url("../assets/image/first-screen-image.png");
@@ -821,4 +826,14 @@ body {
 }
 .info__block_right {
   width: 52%;
+}
+
+.favicon {
+  fill: #689FF2;
+}
+
+@media (prefers-color-scheme: dark) {
+  .favicon {
+    fill: #FFFFFF;
+  }
 }
