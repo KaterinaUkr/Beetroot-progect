@@ -6,66 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="./index.css" rel="stylesheet" type="text/css">
-    
-    <title>Document</title>
+    <link rel="icon" href="./assets/icon/Union.svg" type="image/svg+xml">
+
+    <title>Solis</title>
 </head>
 <body>
-    
-<img src="./assets/image/first-screen-image.png" alt="">
 
-<div class="wrapper">
-    <header>
-        <div class="logo">
-            <img src="/assets/icon/Union.svg" alt="">
-            <img src="/assets/icon/Solis.svg" alt="">
+    <header class="header">
+        <div class="header__content">
+            <div class="header__logo">
+                <img src="/assets/icon/Union.svg" alt="">
+                <img src="/assets/icon/Solis.svg" alt="">
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav__item"><a href="#" class="nav__item__link">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__item__link">About</a></li>
+                    <li class="nav__item"><a href="#" class="nav__item__link">Products</a></li>
+                    <li class="nav__item"><a href="#" class="nav__item__link">Use Cases</a></li>
+                    <li class="nav__item"><a href="#" class="nav__item__link">Pricing</a></li>
+                    <li class="nav__item"><a href="#" class="nav__item__link">Resources</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="nav-menu">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Products</li>
-                <li>Use Cases</li>
-                <li>Pricing</li>
-                <li>Resources</li>
-            </ul>
-        </nav>
+        
     </header>
 
-    <section>
-        <p>A peer-to-peer stablecoin clearinghouse for the new economy</p>
-        <p>We are bringing real solutions to the payments world by leveraging public blockchains.</p>
-        <button>join now</button>
+<div class="wrapper">
+    <section class="first-screen">
+        <h2 class="first-screen__title">A peer-to-peer stablecoin <span class="blue-text">clearinghouse</span> for the new economy</h2>
+        <p class="first-screen__text text">We are bringing real solutions to the payments world by leveraging public blockchains.</p>
+        <button class="first-screen__button button">join now</button>
     </section>
 
-    <section>
-        <img src="/assets/image/statistic-image.jpg" alt="">
-        <div>
-            <div>
-               <p>$</p>
-               <p>1 tril</p>
-               <p>Market cap potential</p> 
+    <section class="info">
+        <img class="info__image" src="/assets/image/statistic-image.jpg" alt="">
+        <div class="info__block">
+            <div class="info__block_left">
+                <div>
+                    <p>$</p>
+                    <p>1 tril</p>
+                    <p>Market cap potential</p> 
+                </div>
+                <div>
+                    <p>$</p>
+                    <p>3.65 mil</p>
+                    <p>Deposited to platform</p>
+                </div>
+                <div>
+                    <p>12</p>
+                    <p>Stablecoins</p>
+                </div>
             </div>
-            <div>
-                <p>$</p>
-                <p>3.65 mil</p>
-                <p>Deposited to platform</p>
+            <div class="info__block_right">
+                <div class="info-text text">
+                    Solis group is a new venture created with investments from and collaboration with XBTO International, XBTO Ventures and
+                    Phil Potter, formerly of bitfinex. Stablehouse is intended to launch a first-of-its-kind clearing house for stablecoins
+                    that seeks to promote the next phase of the market’s development.
+                    The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and accessibility
+                    which are currently preventing the stablecoin market from reaching critical mass.
+                </div>
+                <button class="info-button button">Contact sales</button>
             </div>
-            <div>
-                <p>12</p>
-                <p>Stablecoins</p>
-            </div>
+            
         </div>
-        <div>
-            Solis group is a new venture created with investments from and collaboration with XBTO International, XBTO Ventures and
-            Phil Potter, formerly of bitfinex. Stablehouse is intended to launch a first-of-its-kind clearing house for stablecoins
-            that seeks to promote the next phase of the market’s development.
-            The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and accessibility
-            which are currently preventing the stablecoin market from reaching critical mass.
-        </div>
-        <button>Contact sales</button>
     </section>
 
-    <section>
+    <section class="benefits">
         <div>
             <p>Qualified traders and liquidty solutions</p>
             <p>Trade easily and efficiently between 12 stablecoins, including USDT, TrueUSD, Dai, Eurs and Gemini Dollar.</p>
@@ -85,7 +92,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="quote">
         <img src="./assets/image/quote-background.jpg" alt="">
         <div>
             <p>Solis Group serves as a liquidity nexus that gives stablecoin issuers, holders and exchanges certainty over access and
@@ -95,15 +102,20 @@
         </div>
     </section>
 
-    <section>
-        <video src="https://www.youtube.com/watch?v=vnbN9V_2Guk"></video>
+    <section class="video">
+        <!--<video src="https://www.youtube.com/watch?v=vnbN9V_2Guk"></video>-->
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/vnbN9V_2Guk" title="abstract building  1cokeklh  D"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         <div>
             <p>A powerful API , easy to use user interface</p>
             <p>Our API allows all members to interact with Stablehouse’s platform, from effecting transfers to deposits, withdrawals,
             creation and redemption and reporting.</p>
         </div>
     </section>
-    <section>
+
+    <section class="promises">
         <img src="./assets/image/features-background-image.jpg" alt="">
         <div>
             <div>
@@ -120,11 +132,11 @@
                 <h3>Time Settlement Swaps</h3>
                 <p>LBTC / Lightning and other sidechain swaps</p>
             </div>
-            <button>JOIN NOW</button>
+            <button class="promises__button button">JOIN NOW</button>
         </div>
     </section>
 
-    <section>
+    <section class="reviews">
         <h2>Client reviews</h2>
         <p>Happy clients, happy us. Read our client reviews about the work process and results.</p>
         <div>
@@ -149,7 +161,8 @@
             <p>Elvis Mooney</p>
         </div>
     </section>
-    <section>
+
+    <section class="contact">
         <div>
             <h2>Contact our sales team</h2>
             <p>Our team is happy to answer your sales questions.Fill out the form and we’ll be in touch as soon as possible.</p>
@@ -158,7 +171,7 @@
             Your name
             Email
             Tell more
-            <button>SEND REQuest</button> 
+            <button class="contact__button button">SEND REQuest</button> 
         </form>
     </section>
 

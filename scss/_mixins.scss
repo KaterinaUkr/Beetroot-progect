@@ -1,4 +1,27 @@
+@use "./variables" as *;
+
+@mixin wrapper {
+    max-width: 1170px;
+    width: 81.2%;
+    margin: 0 auto;
+}
+
 @mixin color-text {
     color: $color-white;
     opacity: 80%;
+}
+
+@mixin font($family, $size, $line) {    
+    font-weight: 400;
+    font-family: $family;
+    font-size: $size;
+    line-height: $line;
+}
+
+@mixin font-text {    
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.8;
 }

@@ -494,7 +494,7 @@ textarea {
   font-display: swap;
 }
 @font-face {
-  font-family: "Lato Hairline";
+  font-family: "Lato";
   src: url("../assets/font/Lato/Lato-Hairline.eot");
   src: url("../assets/font/Lato/Lato-Hairline.eot?#iefix") format("embedded-opentype"), url("../assets/font/Lato/Lato-Hairline.woff2") format("woff2"), url("../assets/font/Lato/Lato-Hairline.woff") format("woff"), url("../assets/font/Lato/Lato-Hairline.ttf") format("truetype");
   font-weight: 300;
@@ -502,7 +502,7 @@ textarea {
   font-display: swap;
 }
 @font-face {
-  font-family: "Lato Hairline";
+  font-family: "Lato";
   src: url("../assets/font/Lato/Lato-HairlineItalic.eot");
   src: url("../assets/font/Lato/Lato-HairlineItalic.eot?#iefix") format("embedded-opentype"), url("../assets/font/Lato/Lato-HairlineItalic.woff2") format("woff2"), url("../assets/font/Lato/Lato-HairlineItalic.woff") format("woff"), url("../assets/font/Lato/Lato-HairlineItalic.ttf") format("truetype");
   font-weight: 300;
@@ -553,7 +553,7 @@ textarea {
   font-family: "Lato";
   src: url("../assets/font/Lato/Lato-Regular.eot");
   src: url("../assets/font/Lato/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/font/Lato/Lato-Regular.woff2") format("woff2"), url("../assets/font/Lato/Lato-Regular.woff") format("woff"), url("../assets/font/Lato/Lato-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -689,7 +689,136 @@ textarea {
 }
 /*@use "./hamburgers" as *;*/
 body {
-  color: white;
+  background-image: url("../assets/image/first-screen-image.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
   background-color: #161926;
+  color: #FFFFFF;
+}
+
+.wrapper {
+  max-width: 1170px;
+  width: 81.2%;
+  margin: 0 auto;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  margin-top: 30px;
+  background: linear-gradient(90deg, rgba(22, 25, 38, 0) 0%, rgba(22, 25, 38, 0) 51%, rgba(22, 25, 38, 0.5) 100%);
+  backdrop-filter: blur(5px) opacity(0.8);
+}
+.header__content {
+  max-width: 1170px;
+  width: 81.2%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  width: 107px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.header .nav {
+  display: flex;
+}
+.header .nav__item {
+  cursor: pointer;
+}
+.header .nav__item:not(:first-of-type) {
+  margin-left: 30px;
+}
+.header .nav__item__link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 400;
   font-family: "Lato";
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+}
+
+.blue-text {
+  color: #689FF2;
+  font-style: italic;
+}
+
+.first-screen {
+  max-width: 523px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+.first-screen__title {
+  font-weight: 400;
+  font-family: "Playfair Display";
+  font-size: 44px;
+  line-height: 52px;
+  margin-bottom: 20px;
+}
+.first-screen__button {
+  margin-top: 50px;
+}
+
+.text {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  opacity: 0.8;
+}
+
+.button {
+  font-weight: 400;
+  font-family: "Lato";
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #53F3CD;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0;
+  background: none;
+  border: none;
+  position: relative;
+}
+
+.button::after {
+  content: "";
+  background-color: #53F3CD;
+  height: 13px;
+  width: 97%;
+  display: block;
+  opacity: 0.3;
+  position: absolute;
+  top: 11px;
+  left: 10px;
+}
+
+.info {
+  display: flex;
+  position: relative;
+  opacity: 0.9;
+  align-items: center;
+}
+.info__image {
+  max-width: 570px;
+  max-height: 670px;
+}
+.info__block {
+  position: absolute;
+  width: 770px;
+  right: 0px;
+  background-color: #161926;
+  opacity: 0.9;
+  display: flex;
+}
+.info__block_left {
+  width: 48%;
+}
+.info__block_right {
+  width: 52%;
 }
