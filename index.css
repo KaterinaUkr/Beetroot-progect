@@ -698,7 +698,7 @@ body {
 
 .wrapper {
   max-width: 1170px;
-  width: 81.2%;
+  /*width: 81.2%;*/
   margin: 0 auto;
 }
 
@@ -711,7 +711,7 @@ body {
 }
 .header__content {
   max-width: 1170px;
-  width: 81.2%;
+  /*width: 81.2%;*/
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -846,4 +846,26 @@ body {
 }
 .info__button {
   margin-top: 50px;
+}
+
+.benefits {
+  display: flex;
+  row-gap: 60px;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+}
+.benefits__post {
+  max-width: 500px;
+  min-height: 210px;
+  border-top: 1px solid #515773;
+  padding: 50px 35px 20px;
+  width: 43%;
+}
+.benefits__title {
+  font-weight: 400;
+  font-family: "Playfair Display";
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 30px;
 }

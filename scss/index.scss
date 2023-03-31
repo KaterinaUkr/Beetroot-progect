@@ -117,7 +117,7 @@ body {
   position: relative;  
   opacity: 0.9;
   align-items: center;
-  margin-bottom: $margin-120;
+  @include margin-block;
 
   &__image {
     max-width: 570px;
@@ -163,6 +163,27 @@ body {
 
   &__button {
     margin-top: 50px;
+  }
+}
+
+.benefits {
+  display: flex;  
+  row-gap: 60px;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  @include margin-block;
+
+  &__post {
+    max-width: 500px;
+    min-height: 210px;
+    border-top: 1px solid #515773;
+    padding: 50px 35px 20px;
+    width: 43%;    
+  }
+
+  &__title {
+    @include font('Playfair Display', 40px, 48px);
+    margin-bottom: 30px;
   }
 }
 

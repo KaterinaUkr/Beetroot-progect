@@ -2,7 +2,7 @@
 
 @mixin wrapper {
     max-width: 1170px;
-    width: 81.2%;
+    /*width: 81.2%;*/
     margin: 0 auto;
 }
 
@@ -24,4 +24,8 @@
     font-size: 18px;
     line-height: 26px;
     opacity: 0.8;
+}
+
+@mixin margin-block {
+    margin-bottom: $margin-120;
 }
