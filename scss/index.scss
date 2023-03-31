@@ -3,7 +3,7 @@
 @use "./font";
 @use "./variables" as *;
 @use "./responsive" as *;
-@use "./favicon" as *;
+
 /*@use "./hamburgers" as *;*/
 
 body {
@@ -117,6 +117,7 @@ body {
   position: relative;  
   opacity: 0.9;
   align-items: center;
+  margin-bottom: $margin-120;
 
   &__image {
     max-width: 570px;
@@ -130,15 +131,38 @@ body {
     background-color: $color-bg;
     opacity: 0.9;
     display: flex;
+    padding-top: $margin-45;
+    padding-bottom: $margin-45;
 
-    &_left {
-      width: 48%;
-    }
+      &_left {
+        width: 48%;
+        text-align: center;
+      }
 
-    &_right {
-      width: 52%;
-    }
+      &_right {
+        width: 52%;
+      }
   }
 
+  &__title {
+    @include font('Playfair Display', 68px, 72px);
+    margin-bottom: 12px;
+  }
+  &__title::before:not(:last-of-type) {
+    content: "$";
+    font-size: 40px;
+    margin-right: 10px;
+  }
+
+  &__line {
+    border: 1px solid $color-blue;
+    width: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    margin-top: 50px;
+  }
 }
 

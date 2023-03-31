@@ -687,11 +687,6 @@ textarea {
   font-weight: 600;
   font-style: italic;
 }
-@media (prefers-color-scheme: light) {
-  .favicon {
-    fill: #FFFF00;
-  }
-}
 /*@use "./hamburgers" as *;*/
 body {
   background-image: url("../assets/image/first-screen-image.png");
@@ -808,6 +803,7 @@ body {
   position: relative;
   opacity: 0.9;
   align-items: center;
+  margin-bottom: 120px;
 }
 .info__image {
   max-width: 570px;
@@ -820,20 +816,34 @@ body {
   background-color: #161926;
   opacity: 0.9;
   display: flex;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 .info__block_left {
   width: 48%;
+  text-align: center;
 }
 .info__block_right {
   width: 52%;
 }
-
-.favicon {
-  fill: #689FF2;
+.info__title {
+  font-weight: 400;
+  font-family: "Playfair Display";
+  font-size: 68px;
+  line-height: 72px;
+  margin-bottom: 12px;
 }
-
-@media (prefers-color-scheme: dark) {
-  .favicon {
-    fill: #FFFFFF;
-  }
+.info__title::before:not(:last-of-type) {
+  content: "$";
+  font-size: 40px;
+  margin-right: 10px;
+}
+.info__line {
+  border: 1px solid #689FF2;
+  width: 100px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.info__button {
+  margin-top: 50px;
 }
