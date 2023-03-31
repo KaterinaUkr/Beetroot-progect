@@ -25,7 +25,38 @@
     line-height: 26px;
     opacity: 0.8;
 }
+@mixin font-title {
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;    
+}
 
 @mixin margin-block {
     margin-bottom: $margin-120;
 }
+
+@mixin block {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    @include margin-block;
+}
+
+@mixin block-right {
+    position: absolute;
+    max-width: 770px;
+    width: 70%;
+    right: 0px;
+    background-color: $color-bg;
+    opacity: 0.9;
+    padding-top: $margin-45;
+    padding-bottom: $margin-45;
+}
+
+@mixin flex-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
