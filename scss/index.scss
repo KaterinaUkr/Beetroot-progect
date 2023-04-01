@@ -117,6 +117,12 @@ body {
   left: 10px;
 }
 
+.subscription {
+  @include font('Playfair Display', 20px, 20px);
+  font-style: italic;
+  letter-spacing: 0.08em;
+}
+
 .info {
   /*display: flex;
   position: relative;    
@@ -218,11 +224,6 @@ body {
     margin-bottom: 40px;
   }
 
-  &__subscription {
-    @include font('Playfair Display', 20px, 20px);
-    font-style: italic;
-    letter-spacing: 0.08em;
-  }
 
   &__img {
     position: absolute;
@@ -311,7 +312,7 @@ body {
   &__btn {
     width: 300px;
     height: 90px;
-    border: 1px solid $color-grey;
+    @include border;
     position: relative;
   }
   &__button {
@@ -319,7 +320,92 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }    
+}
+
+.reviews {
+  margin-bottom: $margin-100;
+  &__title {
+    margin-bottom: 20px;
   }
-  
-  
+
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;    
+    column-gap: 10px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+        
+  }
+
+  &__post{
+    width: 370px;
+    height: 340px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    &__text {
+      @include font('Lato', 16px, 26px);
+      opacity: $opacity-80;
+    }
+  }
+  &__post:first-of-type {
+    background-image: url('./assets/image/bg.jpg');
+  }
+  &__post:nth-child(2) {
+    background-image: url('./assets/image/bg_2.jpg');
+  }
+  &__post:nth-child(3) {
+    background-image: url('./assets/image/bg_3.jpg');
+  }
+}
+
+.contact {
+  margin-bottom: $margin-100;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    max-width: 470px;
+  }
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include border-top;
+  @include font('Lato', 14px, 24px);
+
+  &__block {
+    &_right {
+      display: inline-flex;
+      width: 250px;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    &_center {
+      display: inline-flex;
+      width: 161px;
+      justify-content: space-between;
+    }
+  }
+}
+
+.opacity {
+  opacity: $opacity-60;
 }

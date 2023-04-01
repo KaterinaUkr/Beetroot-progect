@@ -809,6 +809,15 @@ body {
   left: 10px;
 }
 
+.subscription {
+  font-weight: 400;
+  font-family: "Playfair Display";
+  font-size: 20px;
+  line-height: 20px;
+  font-style: italic;
+  letter-spacing: 0.08em;
+}
+
 .info {
   /*display: flex;
   position: relative;    
@@ -916,14 +925,6 @@ body {
   letter-spacing: 0.04em;
   margin-bottom: 40px;
 }
-.quote__subscription {
-  font-weight: 400;
-  font-family: "Playfair Display";
-  font-size: 20px;
-  line-height: 20px;
-  font-style: italic;
-  letter-spacing: 0.08em;
-}
 .quote__img {
   position: absolute;
   top: -30px;
@@ -1023,4 +1024,84 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.reviews {
+  margin-bottom: 100px;
+}
+.reviews__title {
+  margin-bottom: 20px;
+}
+.reviews__text {
+  margin-bottom: 50px;
+}
+.reviews__block {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  row-gap: 30px;
+  flex-wrap: wrap;
+}
+.reviews__post {
+  width: 370px;
+  height: 340px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.reviews__post__text {
+  font-weight: 400;
+  font-family: "Lato";
+  font-size: 16px;
+  line-height: 26px;
+  opacity: 0.8;
+}
+.reviews__post:first-of-type {
+  background-image: url("./assets/image/bg.jpg");
+}
+.reviews__post:nth-child(2) {
+  background-image: url("./assets/image/bg_2.jpg");
+}
+.reviews__post:nth-child(3) {
+  background-image: url("./assets/image/bg_3.jpg");
+}
+
+.contact {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.contact__title {
+  margin-bottom: 30px;
+}
+.contact__text {
+  max-width: 470px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid #515773;
+  font-weight: 400;
+  font-family: "Lato";
+  font-size: 14px;
+  line-height: 24px;
+}
+.footer__block_right {
+  display: inline-flex;
+  width: 250px;
+  justify-content: space-between;
+}
+.footer__text_center {
+  display: inline-flex;
+  width: 161px;
+  justify-content: space-between;
+}
+
+.opacity {
+  opacity: 0.6;
 }
