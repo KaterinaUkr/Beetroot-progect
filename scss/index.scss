@@ -532,11 +532,12 @@ body {
   width: 300px;
   padding: 33px 89px;
     @include xl {
-        margin: 0 0 15px auto;
+        margin: 0 10px 15px auto;
       }
     @include cwd(668px) {
       width: 261px;
       padding: 33px 71px;
+      
     }                    
 }
 
