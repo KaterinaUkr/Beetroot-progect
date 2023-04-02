@@ -1,3 +1,68 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/font/Lato/Lato Light.eot');
+    src: url('../assets/font/Lato/Lato Light.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Lato/Lato Light.woff2') format('woff2'),
+        url('../assets/font/Lato/Lato Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;    
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/font/Lato/Lato LightItalic.eot');
+    src: url('../assets/font/Lato/Lato LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Lato/Lato LightItalic.woff2') format('woff2'),
+        url('../assets/font/Lato/Lato LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;    
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/font/Lato/Lato Italic.eot');
+    src: url('../assets/font/Lato/Lato Italic.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Lato/Lato Italic.woff2') format('woff2'),
+        url('../assets/font/Lato/Lato Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/font/Lato/Lato Regular.eot');
+    src: url('../assets/font/Lato/Lato Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Lato/Lato Regular.woff2') format('woff2'),
+        url('../assets/font/Lato/Lato Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/font/Lato/Lato Bold.eot');
+    src: url('../assets/font/Lato/Lato Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Lato/Lato Bold.woff2') format('woff2'),
+        url('../assets/font/Lato/Lato Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/font/Lato/Lato Bold Italic.eot');
+    src: url('../assets/font/Lato/Lato Bold Italic.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Lato/Lato Bold Italic.woff2') format('woff2'),
+        url('../assets/font/Lato/Lato Bold Italic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+}
 
 
 @font-face {
@@ -24,65 +89,8 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-Black.eot');
-    src: url('../assets/font/Lato/Lato-Black.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-Black.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-Black.woff') format('woff'),
-        url('../assets/font/Lato/Lato-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-Heavy.eot');
-    src: url('../assets/font/Lato/Lato-Heavy.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-Heavy.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-Heavy.woff') format('woff'),
-        url('../assets/font/Lato/Lato-Heavy.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-HeavyItalic.eot');
-    src: url('../assets/font/Lato/Lato-HeavyItalic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-HeavyItalic.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-HeavyItalic.woff') format('woff'),
-        url('../assets/font/Lato/Lato-HeavyItalic.ttf') format('truetype');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-Hairline.eot');
-    src: url('../assets/font/Lato/Lato-Hairline.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-Hairline.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-Hairline.woff') format('woff'),
-        url('../assets/font/Lato/Lato-Hairline.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-HairlineItalic.eot');
-    src: url('../assets/font/Lato/Lato-HairlineItalic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-HairlineItalic.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-HairlineItalic.woff') format('woff'),
-        url('../assets/font/Lato/Lato-HairlineItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
 
 @font-face {
     font-family: 'Lato';
@@ -96,53 +104,7 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-Medium.eot');
-    src: url('../assets/font/Lato/Lato-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-Medium.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-Medium.woff') format('woff'),
-        url('../assets/font/Lato/Lato-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-MediumItalic.eot');
-    src: url('../assets/font/Lato/Lato-MediumItalic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-MediumItalic.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-MediumItalic.woff') format('woff'),
-        url('../assets/font/Lato/Lato-MediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-LightItalic.eot');
-    src: url('../assets/font/Lato/Lato-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-LightItalic.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-LightItalic.woff') format('woff'),
-        url('../assets/font/Lato/Lato-LightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-Light.eot');
-    src: url('../assets/font/Lato/Lato-Light.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-Light.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-Light.woff') format('woff'),
-        url('../assets/font/Lato/Lato-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
 
 @font-face {
     font-family: 'Lato';
@@ -156,73 +118,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-Thin.eot');
-    src: url('../assets/font/Lato/Lato-Thin.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-Thin.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-Thin.woff') format('woff'),
-        url('../assets/font/Lato/Lato-Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-SemiboldItalic.eot');
-    src: url('../assets/font/Lato/Lato-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-SemiboldItalic.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-SemiboldItalic.woff') format('woff'),
-        url('../assets/font/Lato/Lato-SemiboldItalic.ttf') format('truetype');
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-Semibold.eot');
-    src: url('../assets/font/Lato/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-Semibold.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-Semibold.woff') format('woff'),
-        url('../assets/font/Lato/Lato-Semibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../assets/font/Lato/Lato-ThinItalic.eot');
-    src: url('../assets/font/Lato/Lato-ThinItalic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Lato/Lato-ThinItalic.woff2') format('woff2'),
-        url('../assets/font/Lato/Lato-ThinItalic.woff') format('woff'),
-        url('../assets/font/Lato/Lato-ThinItalic.ttf') format('truetype');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display Bold.eot');
-    src: url('../assets/font/Playfair/Playfair Display Bold.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display Bold.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display Bold Italic.eot');
-    src: url('../assets/font/Playfair/Playfair Display Bold Italic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display Bold Italic.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display Bold Italic.woff') format('woff');
-    font-weight: 700;
-    font-style: italic;
-}
 
 @font-face {
     font-family: 'Playfair Display';
@@ -234,15 +129,6 @@
     font-style: italic;
 }
 
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display Italic.eot');
-    src: url('../assets/font/Playfair/Playfair Display Italic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display Italic.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display Italic.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-}
 
 @font-face {
     font-family: 'Playfair Display';
@@ -254,92 +140,5 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display Regular.eot');
-    src: url('../assets/font/Playfair/Playfair Display Regular.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display Regular.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display Black.eot');
-    src: url('../assets/font/Playfair/Playfair Display Black.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display Black.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display Black Italic.eot');
-    src: url('../assets/font/Playfair/Playfair Display Black Italic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display Black Italic.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display Black Italic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display ExtraBold.eot');
-    src: url('../assets/font/Playfair/Playfair Display ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display ExtraBold.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display ExtraBold.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display ExtraBold Italic.eot');
-    src: url('../assets/font/Playfair/Playfair Display ExtraBold Italic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display ExtraBold Italic.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display ExtraBold Italic.woff') format('woff');
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display Medium.eot');
-    src: url('../assets/font/Playfair/Playfair Display Medium.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display Medium.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display Medium Italic.eot');
-    src: url('../assets/font/Playfair/Playfair Display Medium Italic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display Medium Italic.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display Medium Italic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display SemiBold.eot');
-    src: url('../assets/font/Playfair/Playfair Display SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display SemiBold.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/font/Playfair/Playfair Display SemiBold Italic.eot');
-    src: url('../assets/font/Playfair/Playfair Display SemiBold Italic.eot?#iefix') format('embedded-opentype'),
-        url('../assets/font/Playfair/Playfair Display SemiBold Italic.woff2') format('woff2'),
-        url('../assets/font/Playfair/Playfair Display SemiBold Italic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-}
