@@ -654,6 +654,9 @@ body {
       letter-spacing: 0.08em;
     }
   }
+  &__input:focus {
+    border-color: #02E0AB;
+  }
 }
 
 .footer {
