@@ -10,10 +10,13 @@
   box-sizing: border-box;
   }
 body {
-  background-image: url('../assets/image/first-screen-image.png');
+  /*background-image: url('../assets/image/first-screen-image.png');*/
+  background: linear-gradient(rgba(224, 225, 231, 0) 0%,
+            rgba(22, 25, 38, 1) 100%),
+              url('../assets/image/first-screen-image.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  
+  max-height: 1175px;
   background-color: $color-bg;  
   color: $color-white;
 }
@@ -46,6 +49,7 @@ body {
     width: 107px;
     display: inline-flex;
     justify-content: space-between;
+    cursor: pointer;
   }
 
   .nav {
@@ -63,8 +67,25 @@ body {
         text-decoration: none;    
         @include font('Lato', 14px, 24px);    
         letter-spacing: 0.08em;
-      }
+      }     
     }
+    &__item::after {
+      content: "";
+      display: block;
+      height: 3px;
+    }
+    &__item:hover:after {
+      content: "";
+      display: block;      
+      height: 3px;
+      width: 110%;
+      background: linear-gradient(90deg,
+            rgba(83, 243, 205, 1) 0%,
+            rgba(83, 243, 205, 0) 100%);
+      opacity: 0.3;
+     
+    }
+    
   }
 }
 
@@ -91,6 +112,7 @@ body {
 
   &__button {
     margin-top: 50px;
+    @include btn;
   }
 }
 
@@ -98,16 +120,15 @@ body {
   @include font('Lato', 20px, 20px);
   font-weight: 700;
   color: $color-green-neon;
-  text-transform: uppercase;
+  text-transform: uppercase;  
   letter-spacing: 0.08em;
-  padding: 0;
-  background: none;
-  border: none;
+  padding: 0;  
   position: relative;  
+  text-decoration: none;
 }
 .button::after {
   content: "";
-  background-color: #53F3CD;
+  background-color: $color-green-neon;
   height: 13px;
   width: 97%;
   display: block;
@@ -115,6 +136,12 @@ body {
   position: absolute;
   top: 11px;
   left: 10px;
+}
+.button:hover{
+  color: $color-green-neon-dark;
+}
+.button:hover::after {
+  background-color: $color-green-neon-dark;
 }
 
 .subscription {
@@ -177,6 +204,7 @@ body {
 
   &__button {
     margin-top: 50px;
+    @include btn;
   }
 }
 
@@ -185,16 +213,17 @@ body {
   @include margin-block;
   row-gap: 60px;
   column-gap: 30px;
+  justify-content: space-between;
   /*display: flex;
   flex-wrap: wrap;
    */
 
   &__post {
-    max-width: 500px;
+    max-width: 570px;
     min-height: 210px;
     border-top: 1px solid #515773;
     padding: 50px 35px 20px;
-    width: 43%;    
+    width: 49%;    
   }
 
   &__title {   
@@ -266,6 +295,7 @@ body {
     left: 42%;
     width: 120px;
     height: 120px;
+    cursor: pointer;
   }
   
   &__title {
@@ -315,12 +345,56 @@ body {
     @include border;
     position: relative;
   }
+    &__btn:hover {
+      border-color: $color-green-neon-dark;
+    }
   &__button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }    
+    @include btn;    
+  }   
+  &__link {
+    @include font('Lato', 20px, 20px);
+      font-weight: 700;
+      color: $color-green-neon;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0;
+      position: relative;
+      text-decoration: none;
+      display: block;
+      height: 100%;    
+  }
+
+  &__link::after {
+    content: "";
+    background-color: $color-green-neon;
+    height: 13px;
+    width: 113px;
+    display: block;
+    opacity: 0.3;
+    position: inherit;
+    top: -9px;
+    left: 10px;
+  }
+  &__link:hover {
+    color: $color-green-neon-dark;
+  }
+  &__link:hover::after {
+    background-color: $color-green-neon-dark;
+  }
+    &__link:hover.bord {
+      border-color: $color-green-neon-dark;
+    }
+
+}
+
+.bord {
+  @include border;
+  width: 300px;
+  padding: 33px 89px;
 }
 
 .reviews {
@@ -330,6 +404,7 @@ body {
   }
 
   &__text {
+    max-width: 400px;
     margin-bottom: 50px;
   }
 
@@ -371,6 +446,9 @@ body {
   display: flex;
   justify-content: space-between;
 
+  &__label{
+    display: none;
+  }
   &__title {
     margin-bottom: 30px;
   }
@@ -408,4 +486,48 @@ body {
 
 .opacity {
   opacity: $opacity-60;
+}
+
+.contact { 
+  @include border-top;
+  align-items: center;
+
+  &__form {
+    width: 41%;
+    max-width: 470px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+
+    &__button {
+      display: flex;
+      width: max-content;
+      @include btn;
+    }
+  }
+}
+
+.contact {
+
+  &__input {
+    @include font-text;
+    color: $color-white;
+    letter-spacing: 0.08em;
+    font-style: italic;
+    background: none;
+    padding-bottom: 12px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+
+    &::placeholder {
+      @include font('Playfair Display', 18px, 20px);
+      color: $color-white;
+      opacity: 0.5;
+      font-style: italic;
+      letter-spacing: 0.08em;
+    }
+  }
 }

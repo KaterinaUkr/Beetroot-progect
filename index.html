@@ -36,7 +36,7 @@
     <section class="first-screen">
         <h2 class="first-screen__title">A peer-to-peer stablecoin <span class="blue-text">clearinghouse</span> for the new economy</h2>
         <p class="first-screen__text text">We are bringing real solutions to the payments world by leveraging public blockchains.</p>
-        <button class="first-screen__button button">join now</button>
+        <button class="first-screen__button"><a class="first-screen__link button" href="#">join now</a></button>
     </section>
 
     <section class="info">
@@ -68,7 +68,7 @@
                     The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and accessibility
                     which are currently preventing the stablecoin market from reaching critical mass.
                 </p>                 
-                <button class="info__button button">Contact sales</button>
+                <button class="info__button"><a class="info__link button" href="#">Contact sales</a></button>
             </div>            
         </div>
     </section>
@@ -139,9 +139,9 @@
                 <h5 class="promises__title">Time Settlement Swaps</h5>
                 <p class="promises__text text">LBTC / Lightning and other sidechain swaps</p>
             </div>
-            <div class="promises__btn">
-                <button class="promises__button button">JOIN NOW</button>
-            </div>
+            <a class="promises__link bord" href="#">JOIN NOW</a>
+              
+            
             
         </div>
     </section>
@@ -177,12 +177,16 @@
             <p class="contact__text text">Our team is happy to answer your sales questions. <br> 
                 Fill out the form and we’ll be in touch as soon as possible.</p>
         </div>
-        <form action="#">
-            Your name
-            Email
-            Tell more
-            <button class="contact__button button">SEND REQuest</button> 
+        <form class="contact__form" action="#" target="_blank" name="contact">
+            <label class="contact__label" for="name">Your name</label>
+            <input class="contact__input" id="name" type="text" placeholder="Your name" maxlength="50" required>
+            <label class="contact__label" for="email">Email</label>
+            <input class="contact__input" id="email" type="email" placeholder="Email" required>
+            <label class="contact__label" for="more">Tell more</label>
+            <input class="contact__input" id="more" type="text" placeholder="Tell more">
+            <button type="submit" class="contact__form__button button">SEND REQuest</button> 
         </form>
+        
     </section>
 
     <footer class="footer">
