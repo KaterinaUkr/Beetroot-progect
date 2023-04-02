@@ -541,7 +541,6 @@ textarea {
 }
 
 body {
-  /*background-image: url('../assets/image/first-screen-image.png');*/
   background: linear-gradient(rgba(224, 225, 231, 0) 0%, rgb(22, 25, 38) 100%), url("../assets/image/first-screen-image.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1032,16 +1031,15 @@ body {
   align-items: center;
   margin-bottom: 120px;
 }
-@media (max-width: 668px) {
-  .promises {
-    /*display: block;
-    top: 0px;
-    position: inherit;*/
-  }
-}
 .promises__img {
   max-width: 600px;
   max-height: 540px;
+}
+@media (max-width: 668px) {
+  .promises__img {
+    width: 70%;
+    min-height: 540px;
+  }
 }
 .promises__block {
   position: absolute;

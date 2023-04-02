@@ -10,7 +10,6 @@
   box-sizing: border-box;
   }
 body {
-  /*background-image: url('../assets/image/first-screen-image.png');*/
   background: linear-gradient(rgba(224, 225, 231, 0) 0%,
             rgba(22, 25, 38, 1) 100%),
               url('../assets/image/first-screen-image.png');
@@ -38,14 +37,12 @@ body {
     rgba(22, 25, 38, 0.5) 100%);
   backdrop-filter: blur(5px) opacity(0.8);
   
-
   &__content {
     @include wrapper;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   &__logo {
@@ -67,12 +64,10 @@ body {
       width: 100%;
       align-items: center;
       padding-top: 5px;
-      background-color: #161926;
+      background-color: $color-bg;
       opacity: 0.9;
       display: none;
-    }
-  
-    
+    }    
   
     &__item {
       cursor: pointer;
@@ -98,8 +93,7 @@ body {
       background: linear-gradient(90deg,
             rgba(83, 243, 205, 1) 0%,
             rgba(83, 243, 205, 0) 100%);
-      opacity: 0.3;
-     
+      opacity: 0.3;     
     }
   }
   
@@ -111,8 +105,7 @@ body {
 .hamburger {
   display: none;
   @include cwd(868px) {    
-        display: block;
-      
+        display: block;      
     }
 }
 
@@ -179,8 +172,7 @@ body {
   font-style: italic;
   letter-spacing: 0.08em;
   @include cwd(500px) {
-      font-size: 18px;
-      
+      font-size: 18px;      
     }
 }
 
@@ -357,8 +349,7 @@ body {
         top: -6px;
         left: -21px;
         width: 30px;
-      }
-        
+      }        
   }
 }
 
@@ -429,15 +420,14 @@ body {
 
 .promises {
   @include block;
-  @include cwd(668px) {
-      /*display: block;
-      top: 0px;
-      position: inherit;*/
-    }
-
+  
   &__img {
     max-width: 600px;
     max-height: 540px;
+    @include cwd(668px) {
+        width: 70%;
+        min-height: 540px;
+      }    
   }
 
   &__block {
@@ -536,8 +526,7 @@ body {
       }
     @include cwd(668px) {
       width: 261px;
-      padding: 33px 71px;
-      
+      padding: 33px 71px;      
     }                    
 }
 
@@ -560,8 +549,7 @@ body {
     flex-wrap: wrap;
       @include cwd(1396px) {
           justify-content: space-evenly;
-        }
-        
+        }        
   }
 
   &__post{
@@ -580,8 +568,7 @@ body {
       opacity: $opacity-80;
       @include sm {
           line-height: 22px;
-        }
-      
+        }      
     }
   }
   &__post:first-of-type {
@@ -656,7 +643,7 @@ body {
     }
   }
   &__input:focus {
-    border-color: #02E0AB;
+    border-color: $color-green-neon-dark;
   }
 }
 
@@ -685,8 +672,7 @@ body {
     &_center {
       display: inline-flex;
       width: 161px;
-      justify-content: space-between;
-      
+      justify-content: space-between;      
     }
   }
 }
