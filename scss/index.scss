@@ -16,13 +16,16 @@ body {
               url('../assets/image/first-screen-image.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  max-height: 1175px;
+  max-height: 1450px;
   background-color: $color-bg;  
   color: $color-white;
 }
 
 .wrapper {
   @include wrapper;
+  @include md {
+    width: 90%;
+  }
 }
 
 .header {
@@ -54,14 +57,27 @@ body {
 
   .nav {
     display: flex;
+    z-index: 1;
 
+    @include cwd(868px) {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      padding-top: 5px;
+      background-color: #161926;
+      opacity: 0.9;
+      display: none;
+    }
+  
+    
+  
     &__item {
       cursor: pointer;
-
-      &:not(:first-of-type) {
-        margin-left: 30px;
-      }
-
+      margin-left: 30px;
+      
       &__link {
         color: $color-white;
         text-decoration: none;    
@@ -85,8 +101,19 @@ body {
       opacity: 0.3;
      
     }
-    
   }
+  
+  .nav.is-active {
+    display: flex;
+  } 
+}
+
+.hamburger {
+  display: none;
+  @include cwd(868px) {    
+        display: block;
+      
+    }
 }
 
 .blue-text {
@@ -104,6 +131,9 @@ body {
   max-width: 523px;
   margin-top: $margin-150;
   margin-bottom: $margin-150;
+    @include cwd(668px) {
+        margin-bottom: $margin-45;
+      }
  
   &__title {
     @include font('Playfair Display', 44px, 52px);
@@ -148,40 +178,62 @@ body {
   @include font('Playfair Display', 20px, 20px);
   font-style: italic;
   letter-spacing: 0.08em;
+  @include cwd(500px) {
+      font-size: 18px;
+      
+    }
 }
 
 .info {
-  /*display: flex;
-  position: relative;    
-  align-items: center;
-  @include margin-block;*/
   @include block;
   opacity: 0.9;
+  @include cwd(668px) {
+    display: block;
+    margin-bottom: $margin-45;
+  }
 
   &__image {
     max-width: 570px;
     max-height: 670px;
+    @include cwd(668px) {
+        width: 100%;
+      }
   }
 
   &__block {
     @include block-right;    
     display: flex;
+        @include cwd(668px) {
+          display: block;   
+          top: 0px;
+          position: inherit;
+        }
+        
+    @include xl {
+      max-width: 700px;
+    }
     
-    /*position: absolute; 
-    width: 770px;   
-    right: 0px;
-    background-color: $color-bg;
-    opacity: 0.9;    
-    padding-top: $margin-45;
-    padding-bottom: $margin-45;*/
-
       &_left {
         width: 48%;
         text-align: center;
+        @include xl {
+          width: 40%;
+        }
+        @include cwd(668px) {
+          width: 100%;
+          margin-bottom: 15px;
+        }
       }
 
       &_right {
         width: 52%;
+        @include xl {
+          width: 60%;
+          padding-left: 15px;
+        }
+        @include cwd(668px) {
+          width: 100%;
+        }
       }
   }
 
@@ -200,6 +252,10 @@ body {
     width: 100px;
     margin-top: 40px;
     margin-bottom: 40px;
+      @include cwd(668px) {          
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
   }
 
   &__button {
@@ -214,16 +270,23 @@ body {
   row-gap: 60px;
   column-gap: 30px;
   justify-content: space-between;
-  /*display: flex;
-  flex-wrap: wrap;
-   */
-
+    @include lg {
+      display: block;
+    }
+    @include cwd(668px) {      
+      margin-bottom: $margin-45;
+    }
+  
   &__post {
     max-width: 570px;
     min-height: 210px;
     border-top: 1px solid #515773;
     padding: 50px 35px 20px;
-    width: 49%;    
+    width: 48%;    
+      @include lg {
+          width: 100%;
+          max-width: none;
+        }
   }
 
   &__title {   
@@ -238,26 +301,64 @@ body {
   height: 400px;
   background-repeat: no-repeat;
   @include margin-block;
+    @include xl {      
+      background-size: auto;
+    }
+    @include cwd(668px) {
+        margin-bottom: $margin-45;
+      }
 
   &__block {
     width: 61%;
     max-width: 710px;
     position: relative;
     top: 70px;
-    left: 100px;
+    left: 170px;
+      @include cwd(668px) {
+          font-size: 28px;
+          width: 80%;
+          top: 24px;
+          left: 60px;
+        }
+      @include cwd(500px) {
+        font-size: 28px;
+        width: 80%;
+        top: 15px;
+        left: 25px;
+      }
   }
 
   &__text {
     @include font('Lato', 32px, 46px);
     letter-spacing: 0.04em;
     margin-bottom: 40px;
+      @include cwd(800px) {        
+        margin-bottom: 20px;
+        }
+      @include cwd(668px) {
+        font-size: 28px;        
+      }
+      @include cwd(500px) {
+        font-size: 22px;   
+        line-height: 30px;        
+      }
   }
-
 
   &__img {
     position: absolute;
     top: -30px;
     left: -60px;
+      @include cwd(668px) {
+        top: -12px;
+        left: -36px;
+        width: 52px;
+      }
+      @include cwd(500px) {        
+        top: -6px;
+        left: -21px;
+        width: 30px;
+      }
+        
   }
 }
 
@@ -266,6 +367,9 @@ body {
   max-width: 970px;
   margin: 0 auto;
   @include margin-block;
+  @include sm {
+      width: 90%;
+    }
   
   &__block {     
     position: relative;
@@ -275,7 +379,8 @@ body {
   
   &__tablet {
     max-width: 970px;
-    max-height: 601px;    
+    max-height: 601px; 
+    width: 100%;
   }
 
   &__screen {
@@ -287,6 +392,10 @@ body {
     border-radius: 8px;
     opacity: 20%;
     mix-blend-mode: luminosity;
+      @include md {
+          top: 15px;
+          left: 18px;
+        }    
   }
 
   &__play-icon {
@@ -296,6 +405,17 @@ body {
     width: 120px;
     height: 120px;
     cursor: pointer;
+      @include xl {
+        top: 41%;      
+        width: 100px;
+        height: 100px;
+      }
+      @include md {
+        top: 38%;
+        left: 41%;
+        width: 80px;
+        height: 80px;
+      }
   }
   
   &__title {
@@ -309,11 +429,11 @@ body {
 
 .promises {
   @include block;
-  /*width: 100%;
-  display: flex;
-  align-items: center;
-  @include margin-block;
-  position: relative;*/
+  @include cwd(668px) {
+      /*display: block;
+      top: 0px;
+      position: inherit;*/
+    }
 
   &__img {
     max-width: 600px;
@@ -327,11 +447,28 @@ body {
     padding-left: 70px;
     justify-content: space-between;
     width: 70%;
+      @include xl {
+          display: block;          
+        }
+      @include cwd(668px) {
+        width: 98%;
+        padding-left: 0;
+      }
   }
 
   &__post {
     width: 300px;
     height: auto;
+      @include xl {
+          margin: 0 0 25px auto;
+        }  
+      @include cwd(668px) {
+        width: 280px;
+        padding-top: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-top: 1px solid $color-grey;
+      }
   }
 
   &__title {
@@ -388,13 +525,19 @@ body {
     &__link:hover.bord {
       border-color: $color-green-neon-dark;
     }
-
 }
 
 .bord {
   @include border;
   width: 300px;
   padding: 33px 89px;
+    @include xl {
+        margin: 0 0 15px auto;
+      }
+    @include cwd(668px) {
+      width: 261px;
+      padding: 33px 71px;
+    }                    
 }
 
 .reviews {
@@ -414,6 +557,9 @@ body {
     column-gap: 10px;
     row-gap: 30px;
     flex-wrap: wrap;
+      @include cwd(1396px) {
+          justify-content: space-evenly;
+        }
         
   }
 
@@ -424,10 +570,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include sm {
+        padding: 15px 30px;
+      }
     
     &__text {
       @include font('Lato', 16px, 26px);
       opacity: $opacity-80;
+      @include sm {
+          line-height: 22px;
+        }
+      
     }
   }
   &__post:first-of-type {
@@ -445,59 +598,34 @@ body {
   margin-bottom: $margin-100;
   display: flex;
   justify-content: space-between;
+  @include border-top;
+  align-items: center;
+    @include xl {      
+      margin-bottom: $margin-45;
+      flex-direction: column;
+    }
 
   &__label{
     display: none;
   }
   &__title {
     margin-bottom: 30px;
+    @include xl {
+        padding-top: 30px;        
+      }
   }
-
   &__text {
     max-width: 470px;
   }
-}
-
-.footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  @include border-top;
-  @include font('Lato', 14px, 24px);
-
-  &__block {
-    &_right {
-      display: inline-flex;
-      width: 250px;
-      justify-content: space-between;
-    }
-  }
-
-  &__text {
-    &_center {
-      display: inline-flex;
-      width: 161px;
-      justify-content: space-between;
-    }
-  }
-}
-
-.opacity {
-  opacity: $opacity-60;
-}
-
-.contact { 
-  @include border-top;
-  align-items: center;
-
   &__form {
     width: 41%;
     max-width: 470px;
     display: flex;
     flex-direction: column;
     padding-top: 60px;
+      @include xl {
+        width: 90%;
+      }
 
     &__button {
       display: flex;
@@ -505,10 +633,6 @@ body {
       @include btn;
     }
   }
-}
-
-.contact {
-
   &__input {
     @include font-text;
     color: $color-white;
@@ -531,3 +655,39 @@ body {
     }
   }
 }
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include border-top;
+  @include font('Lato', 14px, 24px);
+    @include lg {
+        flex-direction: column;
+        align-items: center;
+      }
+
+  &__block {
+    &_right {
+      display: inline-flex;
+      width: 250px;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    &_center {
+      display: inline-flex;
+      width: 161px;
+      justify-content: space-between;
+      
+    }
+  }
+}
+
+.opacity {
+  opacity: $opacity-60;
+}
+

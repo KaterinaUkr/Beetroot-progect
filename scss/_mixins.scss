@@ -47,7 +47,7 @@
 @mixin block-right {
     position: absolute;
     max-width: 770px;
-    width: 70%;
+    /*width: 70%;*/
     right: 0px;
     background-color: $color-bg;
     opacity: 0.9;
