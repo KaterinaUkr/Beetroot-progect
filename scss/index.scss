@@ -4,3 +4,69 @@
 @use "./variables" as *;
 @use "./responsive" as *;
 /*@use "./hamburgers" as *;*/
+
+body {
+    /*background-color: cadetblue;*/
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+        grid-template-columns: repeat(9, 65px);
+        row-gap: 10px;
+        column-gap: 10px;
+    justify-content: center;
+}
+.table {
+    display: grid;
+    grid-template-columns: repeat(9, 65px);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.scene {
+    width: 65px;
+    height: 96px;   
+    margin: 10px 0;
+    perspective: 600px;
+    
+    
+}
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgb(56, 56, 56);
+}
+.card:hover {
+        transform: rotateY(180deg);
+    }
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    text-align: center;    
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card__face--front {
+    //background-image: url('../assets/image/fon_karty.jpg');
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(58, 45, 253, 1) 100%);
+}
+
+.card__face--back {    
+    transform: rotateY(180deg);
+    font-size: 100px;
+       
+}
+.red {
+    color: $red; 
+}
+.black {
+    color: $black;
+}
