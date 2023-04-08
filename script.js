@@ -28,7 +28,7 @@ let name_;
 CamelCase — кожне слово в змінній пишеться з великої букви. Наприклад: MySuperVar.
 сamelCase — кожне слово в змінній пишеться з великої букви, окрім першого. Наприклад: mySuperVar.*/
 
-
+//Norma
 let userName = prompt('What is your name?');
 alert(`Hello, ${userName}!`);
 
@@ -44,7 +44,7 @@ const lengthSquare = prompt('Скільки сантиметрів довжин�
 const result = 4 * Number(lengthSquare);
 alert(`Периметр квадрату дорівнює ${result}см`);
 
-
+//Maximum
 const radius = prompt('Введіть радіус кола в см');
 const pi = 3.14;
 const squareCircle = pi * (Number(radius) * Number(radius));
@@ -54,12 +54,10 @@ alert(`Площа окружності дорівнює ${squareCircle}см2`);
 const distance = prompt('Скільки кілометрів необхідно подолати?');
 const time = prompt('За скільки годин треба подолати відстань?');
 const speed = Number(distance) / Number(time);
-
 alert (`Швидкість з якою треба рухатись - ${speed}км/год`);
 
 
 const dollar = prompt('Введіть суму долларів?');
 const kurs = 0.91;
 const euro = Number(dollar) * kurs;
-
 alert (`${dollar} USD дорівнює ${euro} EUR`);
