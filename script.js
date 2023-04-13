@@ -108,13 +108,14 @@
 // alert(result);
 
 
-let arrayNumber = [ ];
+let number;
   //задаєм длину масиву
-for (arrayNumber.length = 0; arrayNumber.length <= 9; arrayNumber.length++) {
-    arrayNumber.push = arrayNumber += prompt('Enter any number?');  
-    console.log(arrayNumber);
+for (let i = 0; i <= 9; i++) {
+    number = prompt('Enter any number?');  
+    
+    console.log(number);
 }
-  alert(arrayNumber);
+ 
 
     
 
