@@ -164,3 +164,25 @@
 // /*якщо умова від'ємне/невідємне
 //     - взяти число, прогнати в циклі, результ, затем итерацию1
 
+
+
+// let sheep = prompt('Введіть кількість овець');
+// let lamb = '';
+// for (let i = 1; i <= sheep; i++) {
+//     lamb += `${i} вівця...`;
+// }
+// console.log(lamb);
+
+
+// const number = prompt('Введіть число');
+// for (let i = number; i > 0; i--) {
+//     console.log(i);
+// }
+
+
+// const number = prompt('Введіть число');
+// let star = ' ';
+// for (let i = 1; i <= number; i++) {
+//     star += '*'
+//     console.log(star);       
+// }
