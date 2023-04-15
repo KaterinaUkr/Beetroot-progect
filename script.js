@@ -1,4 +1,10 @@
 // Скасування функції setTimeout відбувається за допомогою clearTimeout(назва функції)
+// function sayHi(phrase, who) {
+//   alert( phrase + ', ' + who );
+// }
+
+// setTimeout(sayHi, 1000, "Привіт", "Джон");
+
 
     /* 1. Варіанти створення функцій -
     - оголошення функції
@@ -37,22 +43,22 @@
 
     //4. Factorial
 
-// function factorial(n) {
-//     let result = 1;
-//     for (let i = 1; i <= n; i++) {
-//         result *= i;
-//     }
-//     return result;
-// }
-// let n = +prompt('Enter number', '');
+function factorial(n) {
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+let n = +prompt('Enter number', '');
 
-// if (n > 0 && Number.isInteger(n)) {
-//     alert(factorial(n));
-//     alert("Enter a number > 0");
+if (n > 0 && Number.isInteger(n)) {
+    alert(factorial(n));
+    alert("Enter a number > 0");
 
-// } else {
-//     alert("It's wrong number");
-// }
+} else {
+    alert("It's wrong number");
+}
 
 
     // 5.
@@ -62,11 +68,11 @@
 // console.log(number(5, 8, 9));
 
 
-    // 6.
-    function calcSquare(x, y) {
+    // // 6.
+    // function calcSquare(x, y) {
         
-    }
-    let x = +prompt('Enter  number', '');
+    // }
+    // let x = +prompt('Enter  number', '');
 
     // Norma 
     // 1.
