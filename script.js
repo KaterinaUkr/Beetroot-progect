@@ -43,22 +43,22 @@
 
     //4. Factorial
 
-function factorial(n) {
-    let result = 1;
-    for (let i = 1; i <= n; i++) {
-        result *= i;
-    }
-    return result;
-}
-let n = +prompt('Enter number', '');
+// function factorial(n) {
+//     let result = 1;
+//     for (let i = 1; i <= n; i++) {
+//         result *= i;
+//     }
+//     return result;
+// }
+// let n = +prompt('Enter number', '');
 
-if (n > 0 && Number.isInteger(n)) {
-    alert(factorial(n));
-    alert("Enter a number > 0");
+// if (n > 0 && Number.isInteger(n)) {
+//     alert(factorial(n));
+//     alert("Enter a number > 0");
 
-} else {
-    alert("It's wrong number");
-}
+// } else {
+//     alert("It's wrong number");
+// }
 
 
     // 5.
@@ -68,15 +68,68 @@ if (n > 0 && Number.isInteger(n)) {
 // console.log(number(5, 8, 9));
 
 
-    // // 6.
-    // function calcSquare(x, y) {
-        
-    // }
-    // let x = +prompt('Enter  number', '');
+    // // 6. Площа прямокутника / кадрата
+// function calcSquare(x, y) {
+//     if (y === undefined) {
+//         return x * x;
+//     } else {
+//         return x * y;
+//     }
+// }
+// console.log(calcSquare(4, 5));
+
+    
 
     // Norma 
     // 1.
+// let n = +prompt('Enter number');
+// let sum = 0; 
+// function perfect (n) {
+    
+//     for (let i = 1; i < n; i++) {
+//         if (n % i ) {
+//             sum + 0; 
+//         } else {
+//             sum += i;
+//         }            
+//     }    
+//     return sum;
+// }
+// console.log(perfect(n));
+// if (n === sum) {
+//     console.log('Your number is perfect');
+// } else {
+//     console.log('Your number is not perfect');
+// };    
+        
     // 2.
+
+let perfect = function (n) {
+    
+    for (let i = 1; i < n; i++) {
+        if (n % i ) {
+            sum + 0; 
+        } else {
+            sum += i;
+        }            
+    }    
+    return sum;
+}
+    
+function lookPerfect(min, max) {
+    for (let n = min; n <= max; n++) {
+        perfect()
+        if (n === sum) {
+            console.log(n);
+        } else {
+            console.log('not');
+        }       
+        
+    }    
+}
+console.log(lookPerfect(1, 6))
+
+
     
     
 
