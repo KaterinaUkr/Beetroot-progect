@@ -93,6 +93,102 @@ console.log(incToOne(4)); */
 // console.log(printName.bind(jackson));
 
 
-function name(params) {
-    
+// const person = {
+//     first: 'David',
+//     last: 'Habridze',
+//     age: 45,
+// }
+
+    // New object
+/* cons obj = {
 }
+    
+const obj = new Object {
+    name: 'ss',
+}
+
+const obj = Object.create({}, {
+    name: {
+        value: 'ss'
+        writable: true,
+    }
+}); */
+
+    // Copy
+/* const person = Object.assign({}, person);
+
+const person3 = { ...person }
+person.age = 555
+console.log(person3)
+
+const { age, first } = person;
+console.log(age, first);*/
+
+
+// const address = {
+//     city: 'Rivne',
+//     country: 'UA',
+// };
+// const fullPersonInfo = { ...person, ...address };
+// const { age, first ...anyName } = fullPersonInfo;
+/*console.log(fullPersonInfo);
+console.log(anyName);
+ */
+
+    //Перевірити чи є значення
+// console.log(!!person.first);   //більш частий варіант
+
+// console.log(person.hasOwnProperty('first'));   //old variant
+
+// console.log('first' in person);
+
+
+    //як пройти по об'єкту
+// for (const key in fullPersonInfo) {
+//     console.log(key, fullPersonInfo[key]);
+// }
+
+
+    //Перетворення на масив
+// console.log(Object.keys(fullPersonInfo));
+// console.log(Object.values(fullPersonInfo));
+// console.log(Object.entries(fullPersonInfo));
+
+ 
+    //Перевірити, чи об'єкт не пустий
+// const obj = {};  // пустий - false
+// console.log(!!Object.keys(obj).length)
+// console.log(!!obj)
+
+
+
+const model = {
+    marka: 'Renault',
+    model: 'Espace',
+    color: 'black',
+}
+const characteristic = {
+    speed: 224,
+    fuel: 8,
+    tank: 62,
+}
+const methods = { 
+    fullInfo: function() {
+        console.log(full);
+    },
+    modelInfo: function () {
+        console.log(`This car is ${this.marka} ${this.model},  color ${this.color}`)
+    },
+    characteristicInfo: function () {
+        return characteristic;
+    }
+};
+ 
+const full = { ...model, ...characteristic, ...methods };
+
+const { color, ...another} = full;
+// alert(full.modelInfo());   //спрацює з return
+console.log(full);
+full.fullInfo();
+full.modelInfo();
+console.log(another);
