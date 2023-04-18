@@ -1,4 +1,4 @@
-//     рекурсія
+
 // const count = 7;
 // let res = '';
 
@@ -6,9 +6,8 @@
 //     res = `${res} ${index} вівця...`;
 // }
 
-
+    //     рекурсія
 // const getSheepString = (count, res = '', index = 1) => {
-
 //     if (count) {
 //         res = `${res} ${index} вівця...`;
 //         return getSheepString(count - 1, res, index + 1);
@@ -22,21 +21,26 @@
 // const getSheepString = (count, res = '', index = 1) => return count ? getSheepString(count - 1, `${res} ${index} вівця...`, index + 1) : res;
 
 
-// const greetings = (text) => {
-//     return (name) => `${text} ${name}`;
-// }
-// const sayHi = greetings('Hi,');
-// const sayGreeting = greetings('Hello my dear friend,');
-//
-//
+    //замкнення
 
-// const increment = (step) => {
-//     return (number) => number + step;
-// }
-// const incToFive = increment(5)(2);
-// const incToOne = increment(1);
-// console.log(incToFive);
-// console.log(incToOne(4));
+/* const greetings = (text) => {
+    return (name) => `${text} ${name}`;
+}
+const sayHi = greetings('Hi,')('Ivan');
+const sayGreeting = greetings('Hello my dear friend,');
+
+console.log(sayGreeting('Ivan'))
+console.log(sayHi('Dmytro')) */
+
+
+/* const increment = (step) => {
+    return (number) => number + step;
+}
+const incToFive = increment(5)(2);
+const incToOne = increment(1);
+console.log(incToOne(4)); */
+
+
 
 
 
