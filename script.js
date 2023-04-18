@@ -104,30 +104,23 @@
         
     // 2.
 
-let perfect = function (n) {
-    
+const perfect = (n) => {
     for (let i = 1; i < n; i++) {
-        if (n % i ) {
-            sum + 0; 
+        if (n % i) {
+            sum + 0;
         } else {
             sum += i;
-        }            
-    }    
+        }
+    }
     return sum;
-}
+};
     
-function lookPerfect(min, max) {
+const range = (min = 1, max = 6) => {
     for (let n = min; n <= max; n++) {
-        perfect()
-        if (n === sum) {
-            console.log(n);
-        } else {
-            console.log('not');
-        }       
-        
+        return n;                      
     }    
 }
-console.log(lookPerfect(1, 6))
+console.log(perfect(range()));
 
 
     
