@@ -1,4 +1,4 @@
-//Norma 
+//Minimum 
 
 let carInfo = {
     manufacturer: "Renault",
@@ -11,7 +11,7 @@ let carInfo = {
 
 let methods = {
     infoAbout: function () {
-        return (`${this.manufacturer} ${this.model}, ${this["production year"]} production year, average speed - ${this["average speed"]}km, fuel tank - ${this["fuel tank"]}l, average fuel consuption - ${this["fuel consumption"]}l/100km`);
+        return (`${this.manufacturer} ${this.model}, ${this["production year"]} production year, average speed - ${this["average speed"]}km, fuel tank - ${this["fuel tank"]} l, average fuel consuption - ${this["fuel consumption"]} l/100km`);
     },
     addDriver: function (name = '') {
         carInfo.driver = name;
@@ -24,10 +24,20 @@ let methods = {
             return "No, you haven't driver";
         };                       
     },
+    amountFuel: function (distance) {
+        return `You need ${(distance / carInfo["fuel consumption"]).toFixed(2)} litres for your trip`;
+    },
+    amountHour: function (distance) {
 
+        let hour = +Math.floor(distance / carInfo["average speed"]).toFixed(2);
+        stopBreak = Math.floor(hour / 4);
+        console.log(stopBreak)
+        return `You need ${hour + stopBreak} hours for road`;
 
+    },
 }   
-    
+
+let distance = 900;
 let fullInfoCar = { ...carInfo, ...methods };
 
 // alert(fullInfoCar.infoAbout());
@@ -37,6 +47,10 @@ console.log(fullInfoCar.infoAbout());  //інформація про автом�
 // console.log(fullInfoCar.carInfo); //видає undefined
 // console.log(carInfo);
 // console.log(fullInfoCar.checkDriver());
+
+console.log(fullInfoCar.amountFuel(distance));
+console.log(fullInfoCar.amountHour(distance));   //розрахунок часу на подолання дистанції
+
 
 
 
