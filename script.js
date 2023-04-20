@@ -66,15 +66,15 @@ let time = {
     
 let methods = {
     showTime: function () {
-        // if (this.hour < 10) {        
-        //     this.hour = `0` + this.hour;
-        // };
-        // if (this.minutes < 10) {
-        //     this.minutes = "0" + this.minutes
-        // };        
-        // if (this.seconds < 10) {
-        //     this.seconds = "0" + this.seconds
-        // };
+        if (this.hour < 10) {        
+            this.hour = `0` + this.hour;
+        };
+        if (this.minutes < 10) {
+            this.minutes = "0" + this.minutes
+        };        
+        if (this.seconds < 10) {
+            this.seconds = "0" + this.seconds
+        };
         return (`${this.hour}:${this.minutes}:${this.seconds}`);
     },
 
@@ -128,7 +128,7 @@ let methods = {
 
 let fullProperties = { ...time, ...methods }
 
-console.log(fullProperties.showTime());
+// console.log(fullProperties.showTime());
 // console.log(fullProperties.changeSeconds(3));
 // console.log(fullProperties.changeMinutes(1));
 // console.log(fullProperties.changeHours(3));
