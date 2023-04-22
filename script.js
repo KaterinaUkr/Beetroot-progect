@@ -162,33 +162,68 @@ console.log(anyName);
 
 
 
-const model = {
-    marka: 'Renault',
-    model: 'Espace',
-    color: 'black',
-}
-const characteristic = {
-    speed: 224,
-    fuel: 8,
-    tank: 62,
-}
-const methods = { 
-    fullInfo: function() {
-        console.log(full);
-    },
-    modelInfo: function () {
-        console.log(`This car is ${this.marka} ${this.model},  color ${this.color}`)
-    },
-    characteristicInfo: function () {
-        return characteristic;
-    }
-};
+// const model = {
+//     marka: 'Renault',
+//     model: 'Espace',
+//     color: 'black',
+// }
+// const characteristic = {
+//     speed: 224,
+//     fuel: 8,
+//     tank: 62,
+// }
+// const methods = {
+//     fullInfo: function() {
+//         console.log(full);
+//     },
+//     modelInfo: function () {
+//         console.log(`This car is ${this.marka} ${this.model},  color ${this.color}`)
+//     },
+//     characteristicInfo: function () {
+//         return characteristic;
+//     }
+// };
  
-const full = { ...model, ...characteristic, ...methods };
+// const full = { ...model, ...characteristic, ...methods };
 
-const { color, ...another} = full;
-// alert(full.modelInfo());   //спрацює з return
-console.log(full);
-full.fullInfo();
-full.modelInfo();
-console.log(another);
+// const { color, ...another} = full;
+// // alert(full.modelInfo());   //спрацює з return
+// console.log(full);
+// full.fullInfo();
+// full.modelInfo();
+// console.log(another);
+
+
+
+
+    // 20.04.2023
+// const date = new Date(2020, 3, 19);
+// const date = new Date("2020-3-19");
+
+// const date = new Date();
+// const utc = date.toUTCString();
+// const simple = date.toDateString();
+// const iso = date.toISOString();
+// console.log(date);
+// console.log(utc);
+// console.log(simple);
+// console.log(iso);
+
+// console.log(date.getFullYear());
+// console.log(date.getMonth());
+// console.log(date.getDate());
+// console.log(date.getDay());
+
+// 01 квітня 2023 15:00 (день)
+
+
+let date = (
+
+)
+    
+console.log(date.toUTCString())
+
+// function getUserTime() {
+//     console.log(date.toUTCString())
+// }
+// getUserTime();
