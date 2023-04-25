@@ -77,11 +77,11 @@ console.log(shoppingList);
     //1. Видалення продукту зі списку (видалення повинно проводитися шляхом створення нового масиву, в якому продукт, що ми шукаємо, буде відсутнім)
 
 // const deleteProduct = shoppingList.map(())
-function deleteProduct(shoppingList) {
-    shoppingList.splice(4, 1)
+// function deleteProduct(shoppingList) {
+//     shoppingList.splice(4, 1)
     
-}
-console.log(shoppingList);
+// }
+// console.log(shoppingList);
 
 
 
