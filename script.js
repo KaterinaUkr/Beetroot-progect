@@ -1,3 +1,5 @@
+
+
 let playList = [
 {
  author: "LED ZEPPELIN",
@@ -33,25 +35,24 @@ let playList = [
 }
 ];
 
-
+const list = document.querySelector('#list');
 
 const createSongList = ({ author, song }) => {
     const li = document.createElement("li");
-    const text = document.createElement("p");     
+    const text = document.createElement("p");
     text.innerText = `author: ${author}; \r\n song: ${song};`;
-    text.style.color = '#00004d';    
+    text.style.color = '#00004d';
     li.appendChild(text);
-    li.style.listStyleType = "disk";
-    return li;
-}
+    li.style.listStyleType = 'decimal';
+    li.style.paddingTop = '10px';
+    text.style.fontStyle = 'italic';
+    return li;   
+};
 
 playList.forEach((item) => {
     const element = createSongList(item);
-    list.appendChild(element);
-    
-}
-)
-
+    list.append(element);
+});
 
 console.log(createSongList(playList));
 
