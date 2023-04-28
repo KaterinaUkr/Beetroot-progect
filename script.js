@@ -78,4 +78,24 @@ window.onclick = function (event) {
 
 
 // 3. Створити HTML-сторінку зі світлофором і кнопкою, яка перемикає світлофор на наступний колір.
+const btn = document.querySelector('#btn__lights');
+let red = document.querySelector('.red');
+let yellow = document.querySelector('.yellow');
+let green = document.querySelector('.green');
 
+
+btn.onclick = function () {
+    console.log(red.classList)
+       
+    if (red.classList.contains('active')) {
+        red.classList.remove('active');
+        yellow.classList.add('active');
+        
+    } else if (yellow.classList.contains('active')) {
+        yellow.classList.remove('active');
+        green.classList.add('active');
+    } else {
+        green.classList.remove('active');
+        red.classList.add('active');
+    }
+}
