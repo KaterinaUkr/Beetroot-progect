@@ -169,13 +169,7 @@ const move = (event) => {
 
 grandparent.addEventListener("mousedown", (event) => {
     event.stopPropagation();   
-    
-        
-
-
-
-
-    
+           
     document.addEventListener('mousemove', move);
     
     grandparent.addEventListener('mouseup', () => {
