@@ -74,3 +74,36 @@ grid.onclick = function(e) {
 
 // Створити HTML-сторінку з блоком тексту в рамці. Реалізувати можливість змінювати розмір блоку, якщо затиснути мишку в правому нижньому кутку і тягнути її далі.
 
+let blok = document.querySelector('#blok');
+// let width = blok.offsetWidth; //поточна ширина блоку
+// let height = blok.offsetHeight;  //поточна висота блоку
+let delta_w = 0; 
+let delta_h = 0;
+const rect = blok.getBoundingClientRect();
+let width = rect.width;
+let height = rect.height;
+
+
+const move = (event) => {
+    // let pos_x = event.pageX;
+    // let pos_y = event.pageY;
+
+    // delta_w = width - event.pageX; //різниця між шириною блоку та поточними координатами
+    // delta_h = height - event.pageY;
+    delta_w = rect.right - event.pageX;
+    delta_h = rect.bottom - event.pageY;
+    blok.style.width = delta_w + blok.offsetWidth + 'px';
+    blok.style.height = delta_h + blok.offsetHeight + 'px';
+};
+
+blok.addEventListener("mousedown", (event) => {
+    
+
+    document.addEventListener('mousemove', move);
+    
+    blok.addEventListener('mouseup', () => {
+        document.removeEventListener('mousemove', move);
+    })
+});
+
+console.log(rect);
