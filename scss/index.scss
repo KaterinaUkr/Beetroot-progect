@@ -4,3 +4,11 @@
 @use "./variables" as *;
 @use "./responsive" as *;
 /*@use "./hamburgers" as *;*/
+
+.owl {
+	
+	&-custom-item {
+		background-color: purple;
+		height: 200px;
+	}
+}
