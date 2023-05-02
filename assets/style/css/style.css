@@ -12,6 +12,9 @@
 	margin-bottom: 50px;
 }
 
+table {
+	margin-bottom: 50px;
+}
 caption {
 	font-size: 20px;
 	color: gray;
@@ -45,6 +48,13 @@ th {
 }
 th:hover {
 	background-color: rgb(99, 99, 24);
+}
+
+
+#blok {
+	border: 1px solid grey;
+	padding: 10px;
+	margin-bottom: 50px;
 }
 
 
