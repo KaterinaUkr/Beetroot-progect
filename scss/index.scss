@@ -4,3 +4,13 @@
 @use "./variables" as *;
 @use "./responsive" as *;
 /*@use "./hamburgers" as *;*/
+
+
+.slick-item {
+	height: 200px;
+	width: 200px;	
+}
+img {
+	height: 100%;
+	width: auto;
+}
