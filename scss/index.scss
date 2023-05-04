@@ -16,21 +16,6 @@ body {
 	margin: 0 auto;
 }
 
-.bg__slider{
-	width: 100%;
-	height: 700px;
-	margin: 0 auto;
-	position: relative;
-
-	&__dots {		
-		width: 100%;
-		height: 20px;
-		position: absolute;
-		bottom: 50px;
-		text-align: center;
-	}
-};
-
 .header {
 	width: 86%;
 	max-width: 1200px;
@@ -73,8 +58,50 @@ body {
 		outline: none;
 		border: none;
 		font-size: 0;
-	}
+	};
 	li[class="slick-active"] button {
 		background-color: $tomato-light;		
-	}
+	};
+};
+
+.bg__slider {
+	width: 100%;
+	height: 700px;
+	margin: 0 auto;
+	position: relative;
+
+	&__dots {
+		width: 100%;
+		height: 20px;
+		position: absolute;
+		bottom: 50px;
+		text-align: center;
+	};
+
+	// &__content {
+	// 	position: absolute;		
+	// 	top: 120px;
+	// 	right: 100px;		
+		
+	// 	// &__text {
+	// 	// 	@include textH(50px, 700);
+	// 	// }
+	// };
+	
+}
+
+
+// .slider__content__text {
+// 	@include textH(50px, 700);
+// }
+
+// .bg__content {
+// 	position: absolute;
+// 	top: 120px;
+// 	right: 100px;		
+// }
+.slick-slide ~ div  {
+	position: absolute;
+	top: 120px;
+	right: 100px;	
 }

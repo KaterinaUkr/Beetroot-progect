@@ -16,6 +16,12 @@
 	font: 500 20px 'Montserrat';
 }
 
+@mixin textH($size, $weight) {
+	font-family: 'Montserrat';
+	font-size: $size;
+	font-weight: $weight;
+}
+
 @mixin padding-main {
 	padding: 0 100px;
 }
