@@ -77,31 +77,8 @@ body {
 		bottom: 50px;
 		text-align: center;
 	};
+};
 
-	// &__content {
-	// 	position: absolute;		
-	// 	top: 120px;
-	// 	right: 100px;		
-		
-	// 	// &__text {
-	// 	// 	@include textH(50px, 700);
-	// 	// }
-	// };
+.products {
 	
-}
-
-
-// .slider__content__text {
-// 	@include textH(50px, 700);
-// }
-
-// .bg__content {
-// 	position: absolute;
-// 	top: 120px;
-// 	right: 100px;		
-// }
-.slick-slide ~ div  {
-	position: absolute;
-	top: 120px;
-	right: 100px;	
 }
