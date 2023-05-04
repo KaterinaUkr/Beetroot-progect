@@ -4,3 +4,77 @@
 @use "./variables" as *;
 @use "./responsive" as *;
 /*@use "./hamburgers" as *;*/
+
+body {
+	background-color: #E5E5E5;
+	font-family: 'Montserrat';
+	box-sizing: border-box;
+}
+
+.wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.bg__slider{
+	width: 100%;
+	height: 700px;
+	margin: 0 auto;
+	position: relative;
+
+	&__dots {		
+		width: 100%;
+		height: 20px;
+		position: absolute;
+		bottom: 50px;
+		text-align: center;
+	}
+};
+
+.header {
+	width: 86%;
+	max-width: 1200px;
+	height: 80px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	@include padding-main;
+
+	&__logo {
+		width: 182px;
+		height: 34px;
+		fill: #F16A50;
+	};
+	&__menu {
+		@include horizontal-list($padding-menu);		
+		@include menu-text;		
+
+		&__item {
+			padding: 0 15px;
+		};
+	}
+	&__icon img {
+		width: 36px;
+		height: 36px;
+	};
+	&__icon > img {
+		margin-right: $padding-menu;
+	}
+}
+
+.slickdots {
+	@include horizontal-list(30px);
+	
+	button {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;	
+		background-color: $dot-inactive;		
+		outline: none;
+		border: none;
+		font-size: 0;
+	}
+	li[class="slick-active"] button {
+		background-color: $tomato-light;		
+	}
+}

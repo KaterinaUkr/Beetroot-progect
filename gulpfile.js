@@ -9,7 +9,8 @@ gulp.task('sass', () => {
     .on('error', (err) => {
       notify().write(err);
       this.emit('end');
-  })
+    })
+    //  .pipe(gulp.dest('./assets/style/'))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream())
 });

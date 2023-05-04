@@ -5,13 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="./assets/style/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <link href="./index.css" rel="stylesheet" type="text/css">
     
     <title>Document</title>
 </head>
 <body>
+<div class="wrapper">
+    <header class="header">
+        <svg class="header__logo">
+            <use xlink:href="./assets/icon/sprite.svg#logo"></use>
+        </svg>
+        <nav class="header__menu">
+            <ul>
+                <li class="header__menu__item">Home</li>
+                <li class="header__menu__item">Catalog</li>
+                <li class="header__menu__item">News</li>
+                <li class="header__menu__item">Contacts</li>
+            </ul>
+        </nav>
+        <div class="header__icon">
+            <img src="./assets/icon/search-icon.svg" alt="search-icon">
+            <img src="./assets/icon/profile-icon.svg" alt="profile-icon">
+        </div>
+    </header>
+</div>
+<div class="wrapper">
+    <div class="bg__slider">
+        <div class="bg__slider__image">
+            <div><img src="./assets/image/bg1.jpg" alt="image"></div>
+            <div><img src="./assets/image/bg2.jpg" alt="image"></div>
+            <div><img src="./assets/image/bg3.jpg" alt="image"></div>
+        </div>
+        <div class="bg__slider__dots"></div>
+        <div>
+            <h1>Find your own style</h1>
+            <a href="#">View more</a>
+        </div>
+    </div>
+</div>
+<div class="wrapper">    
+    <div class="products">
+        <h2>new arrivals</h2>
+        <div>
+            <div class="product__item">
+                <img src="./assets/image/product1.jpg" alt="guitar">
+                <p class="product__item__name">Hagstrom Alvar Limited Edition</p>                
+                <p class="product__item__price">€2.990,00</p>
+            </div>
+            <div>
+                <img src="./assets/image/product2.jpg" alt="guitar">
+                <p class="product__item__name">Hagstrom Tremar Viking Deluxe Cloudy Seas</p>
+                <p class="product__item__price">€1.300,00</p>
+            </div>
+            <div>
+                <img src="./assets/image/product3.jpg" alt="guitar">
+                <p class="product__item__name">Gibson Les Paul Standard 60s</p>
+                <p class="product__item__price">€3.749,00</p>
+            </div>
+            <div>
+                <img src="./assets/image/product4.jpg" alt="guitar">
+                <p class="product__item__name">Suhr Standard Plus Trans Blue Denim</p>
+                <p class="product__item__price">€3.449,00</p>
+            </div>
+            <div>
+                <img src="./assets/image/product5.jpg" alt="guitar">
+                <p class="product__item__name">Fender Telecaster Black Paisley Limited Edition</p>
+                <p class="product__item__price">€1.499,00</p>
+            </div>
+        </div>
+        <a href="#">View more</a>
+    </div>
+
+    <div class="partners">
+        <h2>our partners</h2>
+    </div>
+
     
 
+    
+    
+    <footer>
+        <div>
+            <img src="./assets/icon/logo.svg" alt="logo">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Catalog</li>
+                    <li>News</li>
+                    <li>Contacts</li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <p>Contact Us</p>
+            <ul>
+                <li><img src="./assets/icon/instagram.svg" alt="instagram"></li>
+                <li><img src="./assets/icon/facebook.svg" alt="facebook"></li>
+                <li><img src="./assets/icon/pinterest.svg" alt="pinterest"></li>
+                <li><img src="./assets/icon/twitter.svg" alt="twitter"></li>
+                <li><img src="./assets/icon/youtube.svg" alt="youtube"></li>
+            </ul>
+            <p>0800 300 4040</p>
+        </div>
+        <p>© Copyright 2022. All rights reserved.</p>
+    </footer>
+</div>
+
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script src="slick.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

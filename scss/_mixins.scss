@@ -1,0 +1,21 @@
+@mixin reset-list {
+	list-style-type: none;
+}
+
+@mixin horizontal-list($margin) {
+	@include reset-list;
+	li {
+		display: inline-block;			
+	}
+	li:not(:first-child) {
+		margin-left: $margin;	
+	}
+}
+
+@mixin menu-text {
+	font: 500 20px 'Montserrat';
+}
+
+@mixin padding-main {
+	padding: 0 100px;
+}
