@@ -548,6 +548,7 @@ body {
 }
 .header__icon img:hover {
   fill: #F16A50;
+  stroke: #F16A50;
 }
 .header__icon > img {
   margin-right: 30px;
@@ -681,6 +682,7 @@ body {
 }
 .slick-prev:before:hover {
   fill: #F16A50;
+  stroke: #F16A50;
 }
 
 .slick-next:before {
@@ -689,6 +691,7 @@ body {
 }
 .slick-next:before:hover {
   fill: #F16A50;
+  stroke: #F16A50;
 }
 
 .partners__head {
@@ -730,6 +733,7 @@ footer {
 }
 .footer__left__logo:hover {
   fill: #F16A50;
+  stroke: #F16A50;
 }
 .footer__left__menu {
   font: 500 20px "Montserrat";
@@ -757,9 +761,11 @@ footer {
 .footer__item {
   width: 40px;
   height: 40px;
+  fill: #F8F1EA;
   stroke: #F8F1EA;
   cursor: pointer;
 }
 .footer__item:hover {
   fill: #F16A50;
+  stroke: #F16A50;
 }
