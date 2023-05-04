@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <link href="./index.css" rel="stylesheet" type="text/css">
     
@@ -38,23 +39,23 @@
         <div class="slider__image">
             <div>
                 <img src="./assets/image/bg1.jpg" alt="image">
-                <div class="bg__content" style="position: absolute;	top: 120px;	right: 100px; width: 400px; height: 110px; text-align: center; text-transform: uppercase; ">
-                    <h1 class="bg__slider__content__text" style="font: 700 50px Monserrat; color: #F8F1EA; margin-bottom: 50px">discover new options</h1>
-                    <a class="bg__slider__content__btn" href="#" style="font: 500 18px Monserrat; color: #F8F1EA; padding: 15px 57px; border: 1px solid #F8F1EA; text-decoration: none;" onmouseover="this.style.backgroundColor = '#F16A50'; this.style.borderColor = '#F16A50';" onmouseout="this.style.backgroundColor = 'transparent'; this.style.borderColor = '#F8F1EA'">View more</a>
+                <div class="bg__slider__content">
+                    <h1 class="bg__slider__content__text">discover new options</h1>
+                    <a class="bg__slider__content__btn" href="#">View more</a>
                 </div>
             </div>
             <div>
                 <img src="./assets/image/bg2.jpg" alt="image">
-                <div class="bg__content" style="position: absolute;	top: 120px;	right: 100px; width: 400px; height: 110px; text-align: center; text-transform: uppercase; ">
-                    <h1 class="bg__slider__content__text" style="font: 700 50px Monserrat; color: #F8F1EA; margin-bottom: 50px">expand your horizons</h1>
-                    <a class="bg__slider__content__btn" href="#" style="font: 500 18px Monserrat; color: #F8F1EA; padding: 15px 57px; border: 1px solid #F8F1EA; text-decoration: none;" onmouseover="this.style.backgroundColor = '#F16A50'; this.style.borderColor = '#F16A50';" onmouseout="this.style.backgroundColor = 'transparent'; this.style.borderColor = '#F8F1EA'">View more</a>
+                <div class="bg__slider__content">
+                    <h1 class="bg__slider__content__text">expand your horizons</h1>
+                    <a class="bg__slider__content__btn">View more</a>
                 </div>
             </div>
             <div>
                 <img src="./assets/image/bg3.jpg" alt="image">
-                <div class="bg__content" style="position: absolute;	top: 120px;	right: 100px; width: 400px; height: 110px; text-align: center; text-transform: uppercase; ">
-                    <h1 class="bg__slider__content__text" style="font: 700 50px Monserrat; color: #F8F1EA; margin-bottom: 50px">Find your own style</h1>
-                    <a class="bg__slider__content__btn" href="#" style="font: 500 18px Monserrat; color: #F8F1EA; padding: 15px 57px; border: 1px solid #F8F1EA; text-decoration: none;" onmouseover="this.style.backgroundColor = '#F16A50'; this.style.borderColor = '#F16A50';" onmouseout="this.style.backgroundColor = 'transparent'; this.style.borderColor = '#F8F1EA'">View more</a>
+                <div class="bg__slider__content">
+                    <h1 class="bg__slider__content__text">Find your own style</h1>
+                    <a class="bg__slider__content__btn" href="#">View more</a>
                 </div>                
             </div>
         </div>
@@ -63,76 +64,87 @@
 </div>
 <div class="wrapper">    
     <div class="products">
-        <h2>new arrivals</h2>
-        <div>
-            <div class="product__item">
+        <h2 class="products_head">new arrivals</h2>
+        <div class="product__slick">
+            <div class="products__item">
                 <img src="./assets/image/product1.jpg" alt="guitar">
-                <p class="product__item__name">Hagstrom Alvar Limited Edition</p>                
-                <p class="product__item__price">€2.990,00</p>
+                <p class="products__item__name">Hagstrom Alvar Limited Edition</p>                
+                <p class="products__item__price">€2.990,00</p>
             </div>
-            <div>
+            <div class="products__item">
                 <img src="./assets/image/product2.jpg" alt="guitar">
-                <p class="product__item__name">Hagstrom Tremar Viking Deluxe Cloudy Seas</p>
-                <p class="product__item__price">€1.300,00</p>
+                <p class="products__item__name">Hagstrom Tremar Viking Deluxe Cloudy Seas</p>
+                <p class="products__item__price">€1.300,00</p>
             </div>
-            <div>
+            <div class="products__item">
                 <img src="./assets/image/product3.jpg" alt="guitar">
-                <p class="product__item__name">Gibson Les Paul Standard 60s</p>
-                <p class="product__item__price">€3.749,00</p>
+                <p class="products__item__name">Gibson Les Paul Standard 60s</p>
+                <p class="products__item__price">€3.749,00</p>
             </div>
-            <div>
+            <div class="products__item">
                 <img src="./assets/image/product4.jpg" alt="guitar">
-                <p class="product__item__name">Suhr Standard Plus Trans Blue Denim</p>
-                <p class="product__item__price">€3.449,00</p>
+                <p class="products__item__name">Suhr Standard Plus Trans Blue Denim</p>
+                <p class="products__item__price">€3.449,00</p>
             </div>
-            <div>
+            <div class="products__item">
                 <img src="./assets/image/product5.jpg" alt="guitar">
-                <p class="product__item__name">Fender Telecaster Black Paisley Limited Edition</p>
-                <p class="product__item__price">€1.499,00</p>
+                <p class="products__item__name">Fender Telecaster Black Paisley Limited Edition</p>
+                <p class="products__item__price">€1.499,00</p>
             </div>
         </div>
-        <a href="#">View more</a>
+        <a class="products__btn" href="#">View more</a>
     </div>
 
     <div class="partners">
-        <h2>our partners</h2>
+        <h2 class="partners__head">our partners</h2>
     </div>
 
+</div>      
     
-
-    
-    
-    <footer>
-        <div>
-            <img src="./assets/icon/logo.svg" alt="logo">
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Catalog</li>
-                    <li>News</li>
-                    <li>Contacts</li>
-                </ul>
-            </nav>
+    <footer >
+        <div class="footer wrapper">
+            <div class="footer__info">
+                <div class="footer__left">
+                    <svg class="footer__left__logo">
+                        <use xlink:href="./assets/icon/sprite.svg#logo"></use>
+                    </svg>
+                    <nav class="footer__left__menu">
+                        <ul>
+                            <li>Home</li>
+                            <li>Catalog</li>
+                            <li>News</li>
+                            <li>Contacts</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__right">
+                    <h3 class="footer__right__text">Contact Us</h3>
+                    <nav class="footer__right__menu">
+                        <ul>
+                            <li><svg class="footer__item">
+                                <use xlink:href="./assets/icon/sprite.svg#instagram"></use>
+                            </svg></li>
+                            <li><img src="./assets/icon/facebook.svg" alt="facebook"></li>
+                            <li><img src="./assets/icon/pinterest.svg" alt="pinterest"></li>
+                            <li><img src="./assets/icon/twitter.svg" alt="twitter"></li>
+                            <li><img src="./assets/icon/youtube.svg" alt="youtube"></li>
+                        </ul>
+                    </nav>
+                    
+                    <p class="footer__right__text">0800 300 4040</p>
+                </div>
+            </div>
+            
+            <p>© Copyright 2022. All rights reserved.</p>
         </div>
-        <div>
-            <p>Contact Us</p>
-            <ul>
-                <li><img src="./assets/icon/instagram.svg" alt="instagram"></li>
-                <li><img src="./assets/icon/facebook.svg" alt="facebook"></li>
-                <li><img src="./assets/icon/pinterest.svg" alt="pinterest"></li>
-                <li><img src="./assets/icon/twitter.svg" alt="twitter"></li>
-                <li><img src="./assets/icon/youtube.svg" alt="youtube"></li>
-            </ul>
-            <p>0800 300 4040</p>
-        </div>
-        <p>© Copyright 2022. All rights reserved.</p>
     </footer>
-</div>
+
 
 
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    
     <script type="text/javascript" src="slick/slick.min.js"></script>
 
     <script src="slick.js"></script>

@@ -23,12 +23,13 @@ body {
 	display: inline-flex;
 	align-items: center;
 	justify-content: space-between;
-	@include padding-main;
+	@include paddingAside;
 
 	&__logo {
 		width: 182px;
 		height: 34px;
-		fill: #F16A50;
+		fill: $tomato-light;
+		cursor: pointer;
 	};
 	&__menu {
 		@include horizontal-list($padding-menu);		
@@ -41,6 +42,8 @@ body {
 	&__icon img {
 		width: 36px;
 		height: 36px;
+		fill: $black;
+		@include hoverSVG;
 	};
 	&__icon > img {
 		margin-right: $padding-menu;
@@ -70,6 +73,26 @@ body {
 	margin: 0 auto;
 	position: relative;
 
+	&__content {
+		position: absolute;
+		top: 120px;
+		right: 100px;
+		width: 400px;
+		height: 110px;
+		text-align: center;		
+
+		&__text {
+			font: 700 50px Monserrat;
+			color: $brown-light;
+			margin-bottom: 50px;
+			text-transform: uppercase;
+		}
+		&__btn {
+			@include btnLight;			
+		}
+		
+	}
+
 	&__dots {
 		width: 100%;
 		height: 20px;
@@ -80,5 +103,100 @@ body {
 };
 
 .products {
-	
+	// width: 100%;
+	height: auto;
+	background-color: white;
+	@include paddingAside;
+	@include paddingSection;
+	text-align: center;
+
+		&_head {
+			@include textH2;
+			margin-bottom: 50px;
+		}
+			&__item {
+			width: 204px;
+			text-align: center;		
+			margin-bottom: 50px;
+
+			&__name {
+				@include textH(16px, 600);
+				margin-bottom: 10px;
+				margin-top: 18px;
+			}
+
+			&__price {
+				@include textH(24px, 700);
+			}
+	 }
+	&__btn {
+		@include btnDark;
+	}
+}
+
+.slick-prev,
+.slick-next {
+	width: 40px;
+	height: 74px;
+}
+.slick-prev:before {
+	content: url("../assets/icon/prev.svg");
+	@include hoverSVG;
+};
+.slick-next:before {
+	content: url("../assets/icon/next.svg");	
+	@include hoverSVG;
+};
+
+.partners {
+	&__head {
+		@include textH2;
+	}
+};
+
+
+footer {
+	background-color: $browndark;
+}
+.footer {
+	padding-top: $padding-section;
+	@include paddingAside;
+
+	&__info {
+		width: 100%;
+		padding-left: $padding-menu;
+		padding-right: $padding-menu;
+		display: inline-flex;
+		justify-content: space-between;
+	}
+	&__left{
+		&__logo {
+			width: 150px;
+			height: 30px;			
+			fill: $brown-light;
+			margin-bottom: 35px;
+			@include hoverSVG;
+		}
+		&__menu {
+			@include menu-text;
+			color: $brown-light;
+		}
+	}
+
+	&__right{
+		&__text{
+			@include textH(26px, 500);
+			color: $brown-light;
+		}
+		&__menu {
+			@include horizontal-list(30px);			
+		}
+	} 
+	&__item {
+		width: 40px;
+			height: 40px;
+			stroke: $brown-light;
+			@include hoverSVG;
+			
+	}
 }

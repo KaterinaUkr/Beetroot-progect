@@ -505,20 +505,6 @@ body {
   margin: 0 auto;
 }
 
-.bg__slider {
-  width: 100%;
-  height: 700px;
-  margin: 0 auto;
-  position: relative;
-}
-.bg__slider__dots {
-  width: 100%;
-  height: 20px;
-  position: absolute;
-  bottom: 50px;
-  text-align: center;
-}
-
 .header {
   width: 86%;
   max-width: 1200px;
@@ -526,16 +512,21 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 100px;
+  width: 86%;
+  max-width: 1200px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 .header__logo {
   width: 182px;
   height: 34px;
   fill: #F16A50;
+  cursor: pointer;
 }
 .header__menu {
   list-style-type: none;
   font: 500 20px "Montserrat";
+  cursor: pointer;
 }
 .header__menu li {
   display: inline-block;
@@ -543,12 +534,20 @@ body {
 .header__menu li:not(:first-child) {
   margin-left: 30px;
 }
+.header__menu li:hover {
+  color: #F16A50;
+}
 .header__menu__item {
   padding: 0 15px;
 }
 .header__icon img {
   width: 36px;
   height: 36px;
+  fill: #000000;
+  cursor: pointer;
+}
+.header__icon img:hover {
+  fill: #F16A50;
 }
 .header__icon > img {
   margin-right: 30px;
@@ -574,4 +573,193 @@ body {
 }
 .slickdots li[class=slick-active] button {
   background-color: #F16A50;
+}
+
+.bg__slider {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg__slider__content {
+  position: absolute;
+  top: 120px;
+  right: 100px;
+  width: 400px;
+  height: 110px;
+  text-align: center;
+}
+.bg__slider__content__text {
+  font: 700 50px Monserrat;
+  color: #F8F1EA;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+.bg__slider__content__btn {
+  font: 500 18px Monserrat;
+  color: #F8F1EA;
+  padding: 15px 57px;
+  border: 1px solid #F8F1EA;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.bg__slider__content__btn:hover {
+  background-color: #F16A50;
+  border-color: #F16A50;
+}
+.bg__slider__dots {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+}
+
+.products {
+  height: auto;
+  background-color: white;
+  width: 86%;
+  max-width: 1200px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+.products_head {
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.products_head:hover {
+  color: #F16A50;
+}
+.products__item {
+  width: 204px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.products__item__name {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 18px;
+}
+.products__item__price {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 700;
+}
+.products__btn {
+  font: 500 18px Monserrat;
+  color: #000000;
+  padding: 15px 57px;
+  border: 1px solid #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.products__btn:hover {
+  background-color: #F16A50;
+  border-color: #F16A50;
+  color: #F8F1EA;
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 74px;
+}
+
+.slick-prev:before {
+  content: url("../assets/icon/prev.svg");
+  cursor: pointer;
+}
+.slick-prev:before:hover {
+  fill: #F16A50;
+}
+
+.slick-next:before {
+  content: url("../assets/icon/next.svg");
+  cursor: pointer;
+}
+.slick-next:before:hover {
+  fill: #F16A50;
+}
+
+.partners__head {
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.partners__head:hover {
+  color: #F16A50;
+}
+
+footer {
+  background-color: #35312D;
+}
+
+.footer {
+  padding-top: 70px;
+  width: 86%;
+  max-width: 1200px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.footer__info {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.footer__left__logo {
+  width: 150px;
+  height: 30px;
+  fill: #F8F1EA;
+  margin-bottom: 35px;
+  cursor: pointer;
+}
+.footer__left__logo:hover {
+  fill: #F16A50;
+}
+.footer__left__menu {
+  font: 500 20px "Montserrat";
+  cursor: pointer;
+  color: #F8F1EA;
+}
+.footer__left__menu li:hover {
+  color: #F16A50;
+}
+.footer__right__text {
+  font-family: "Montserrat";
+  font-size: 26px;
+  font-weight: 500;
+  color: #F8F1EA;
+}
+.footer__right__menu {
+  list-style-type: none;
+}
+.footer__right__menu li {
+  display: inline-block;
+}
+.footer__right__menu li:not(:first-child) {
+  margin-left: 30px;
+}
+.footer__item {
+  width: 40px;
+  height: 40px;
+  stroke: #F8F1EA;
+  cursor: pointer;
+}
+.footer__item:hover {
+  fill: #F16A50;
 }

@@ -9,3 +9,14 @@ $(document).ready(function(){
 		appendDots: $('.bg__slider__dots'),
   });
 });
+
+
+$(document).ready(function(){
+	$('.product__slick').slick({
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 2,
+		arrows: true,
+		centerMode: true,		
+  });
+});

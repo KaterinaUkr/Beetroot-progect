@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @mixin reset-list {
 	list-style-type: none;
 }
@@ -14,6 +16,10 @@
 
 @mixin menu-text {
 	font: 500 20px 'Montserrat';
+	cursor: pointer;
+	li:hover {
+			color: $tomato-light;			
+		}
 }
 
 @mixin textH($size, $weight) {
@@ -21,7 +27,58 @@
 	font-size: $size;
 	font-weight: $weight;
 }
+@mixin textH2{
+	@include textH(32px, 700);
+	text-align: center;	
+	text-transform: uppercase;
+	cursor: pointer;
+	&:hover {
+			color: $tomato-light;
+		}
+}
 
-@mixin padding-main {
-	padding: 0 100px;
+@mixin paddingAside {
+	width: 86%;
+	max-width: 1200px;
+	padding-left: $padding-aside;
+	padding-right: $padding-aside;
+}
+
+@mixin btn($color) {
+	font: 500 18px Monserrat;
+	color: $color;
+	padding: 15px 57px;
+	border: 1px solid $color;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+@mixin btnLight {
+	@include btn($brown-light);
+	&:hover {
+		background-color: $tomato-light;
+		border-color: $tomato-light;
+	}
+}
+
+@mixin btnDark {
+	@include btn($black);
+	&:hover {
+			background-color: $tomato-light;
+			border-color: $tomato-light;
+			color: #F8F1EA;
+		}
+}
+
+@mixin paddingSection {
+			padding-top: $padding-section;
+			padding-bottom: $padding-section;
+		}
+
+@mixin hoverSVG {	
+	cursor: pointer;
+
+	&:hover {
+		fill: $tomato-light;
+	}
 }
