@@ -24,6 +24,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	@include paddingAside;
+	@include background;
 
 	&__logo {
 		width: 182px;
@@ -32,22 +33,40 @@ body {
 		cursor: pointer;
 	};
 	&__menu {
-		@include horizontal-list($padding-menu);		
-		@include menu-text;		
+		@include horizontal-list($padding-menu);						
 
 		&__item {
-			padding: 0 15px;
+			cursor: pointer;
+			@include menu-text;		
+			& a {
+				text-decoration: none;
+				color: $black;								
+				padding: 28px 15px;
+			}
+			& a:hover {				
+				color: $brown-light;
+				background-color: $tomato-light;
+			}			
 		};
 	}
-	&__icon img {
+	.search {
 		width: 36px;
 		height: 36px;
 		fill: $black;
-		@include hoverSVG;
-	};
-	&__icon > img {
 		margin-right: $padding-menu;
+		@include hoverSVG;
+		
+	};
+	.profile {
+		width: 36px;
+		height: 36px;
+		stroke: $black;
+		cursor: pointer;
+		&:hover {				
+				stroke: $tomato-light;		
+			}
 	}
+
 }
 
 .slickdots {
@@ -67,11 +86,22 @@ body {
 	};
 };
 
+.bg__img::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%);
+}
+
 .bg__slider {
 	width: 100%;
 	height: 700px;
 	margin: 0 auto;
-	position: relative;
+	position: relative;		
 
 	&__content {
 		position: absolute;
@@ -80,6 +110,7 @@ body {
 		width: 400px;
 		height: 110px;
 		text-align: center;		
+		z-index: 10;
 
 		&__text {
 			font: 700 50px Monserrat;
@@ -89,8 +120,7 @@ body {
 		}
 		&__btn {
 			@include btnLight;			
-		}
-		
+		}		
 	}
 
 	&__dots {
@@ -102,36 +132,74 @@ body {
 	};
 };
 
+.bg__img {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 700px;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%);
+}
+
 .products {
 	// width: 100%;
 	height: auto;
 	background-color: white;
 	@include paddingAside;
 	@include paddingSection;
-	text-align: center;
+	text-align: center;	
+
+	&.slick-slide {
+		width: 204px;
+	}
 
 		&_head {
 			@include textH2;
 			margin-bottom: 50px;
 		}
-			&__item {
-			width: 204px;
-			text-align: center;		
-			margin-bottom: 50px;
-
+		&__item {
+		width: 204px;
+		text-align: center;		
+		margin-bottom: 50px;
+		position: relative;
+		
+			& img {
+				cursor: pointer;
+			}
 			&__name {
 				@include textH(16px, 600);
 				margin-bottom: 10px;
-				margin-top: 18px;
+				margin-top: 18px;		
+				width: 204px;
+				cursor: pointer;
 			}
 
 			&__price {
 				@include textH(24px, 700);
+				width: 204px;
+				cursor: pointer;
 			}
-	 }
+
+			&__stock {
+				width: 49px;
+				height: 12px;
+				top: 0;
+				position: absolute;
+				left: 0;
+				@include textH(10px, 500);
+				color: $brown-light;
+				background-color: $tomato-light;
+			}
+	 	}
 	&__btn {
 		@include btnDark;
 	}
+}
+.sold {
+	color: $black;
+		background-color: $brown-light;
 }
 
 .slick-prev,
@@ -139,21 +207,50 @@ body {
 	width: 40px;
 	height: 74px;
 }
+.slick-prev {
+	left: -60px;
+}
+.slick-next {
+	right: -60px;
+}
 .slick-prev:before {
 	content: url("../assets/icon/prev.svg");
-	@include hoverSVG;
+	@include hoverSVG;	
 };
 .slick-next:before {
 	content: url("../assets/icon/next.svg");	
-	@include hoverSVG;
+	@include hoverSVG;	
 };
 
 .partners {
+	@include paddingSection;
+	@include background;
+	@include paddingAside;
+	margin: 0 auto;
+
+	& img {
+			cursor: pointer;
+		}
+
 	&__head {
 		@include textH2;
+		margin-bottom: 40px;
+	}
+	& .slick-list .draggable {	
+		width: 86%;
+		max-width: 1200px;
+	}	
+	& .slick-slide:not(:first-child) {
+		margin-left: 27px;
 	}
 };
-
+.slick-list.draggable {
+	padding: 0;
+}
+.slick-track {
+	display: inline-flex;
+		align-items: center;
+}
 
 footer {
 	background-color: $browndark;
@@ -168,6 +265,7 @@ footer {
 		padding-right: $padding-menu;
 		display: inline-flex;
 		justify-content: space-between;
+		margin-bottom: 50px;
 	}
 	&__left{
 		&__logo {
@@ -180,6 +278,15 @@ footer {
 		&__menu {
 			@include menu-text;
 			color: $brown-light;
+			& a {
+					text-decoration: none;
+					color: $brown-light;
+					padding: 28px 15px;
+				}
+			
+				& a:hover {
+					color: $tomato-light;					
+				}
 		}
 	}
 
@@ -190,22 +297,36 @@ footer {
 		}
 		&__menu {
 			@include horizontal-list(30px);			
+			margin-top: 50px;
+			margin-bottom: 30px;
+
+			li:not(:first-child) {
+					margin-left: 30px;
+				}
 		}
 	} 
 	&__item {
-		width: 40px;
-		height: 40px;
+		// width: 40px;
+		height: 30px;
 		fill: $brown-light;
 		stroke: $brown-light;
 		@include hoverSVG;			
+
 	}
-		&__item__youtube {
-			width: 40px;
-			height: 40px;
+		&__item__empty {
+			// width: 30px;
+			height: 30px;
 			stroke: $brown-light;			
 		}
-		&__item__youtube:hover {
+		&__item__empty:hover {
 			cursor: pointer;
 			stroke: $tomato-light;
 		}
+	
+	&__copyright {
+		@include textH(14px, 500);
+		color: $brown-light;
+		text-align: center;
+		padding-bottom: 20px;
+	}
 }

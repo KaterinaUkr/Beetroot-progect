@@ -7,18 +7,23 @@
 @mixin horizontal-list($margin) {
 	@include reset-list;
 	li {
-		display: inline-block;			
+		display: inline-block;		
+
 	}
-	li:not(:first-child) {
-		margin-left: $margin;	
-	}
+	 
+	// li:not(:first-child) {
+	// 	margin-left: $margin;	
+	// }
+}
+@mixin background {
+	background-color: $brown-light;
 }
 
 @mixin menu-text {
 	font: 500 20px 'Montserrat';
 	cursor: pointer;
-	li:hover {
-			color: $tomato-light;			
+	a:hover li {
+			color: $brown-light;			
 		}
 }
 
@@ -80,6 +85,6 @@
 
 	&:hover {
 		fill: $tomato-light;
-		stroke: $tomato-light;;
+		stroke: $tomato-light;
 	}
 }
