@@ -45,15 +45,16 @@ header {
 			}
 		}
 		
-
 		& ul {
-			position: absolute;
-			right: 60px;
-			top: 70px;
-			background-color: #F8F1EA;
-			width: auto;
-			z-index: 1;
-			text-align: center;
+			@include devices(mobile) {
+					position: absolute;
+					right: 60px;
+					top: 70px;
+					background-color: #F8F1EA;
+					width: auto;
+					z-index: 1;
+					text-align: center;
+				}			
 		}
 
 		&__item {
@@ -87,6 +88,13 @@ header {
 		&:hover {				
 				stroke: $tomato-light;		
 			}
+	}
+}
+.hamburger {
+	display: none;
+
+	@include devices(mobile) {
+		display: block;
 	}
 }
 
@@ -292,6 +300,9 @@ footer {
 			padding-right: 10px;
 		}
 	&__block {
+		@include devices(monitor) {
+				display: contents;
+			};
 		@include devices(mobile) {
 			display: flex;
 			justify-content: space-between;

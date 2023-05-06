@@ -550,14 +550,16 @@ header {
     display: block;
   }
 }
-.header__menu ul {
-  position: absolute;
-  right: 60px;
-  top: 70px;
-  background-color: #F8F1EA;
-  width: auto;
-  z-index: 1;
-  text-align: center;
+@media only screen and (max-width: 768px) {
+  .header__menu ul {
+    position: absolute;
+    right: 60px;
+    top: 70px;
+    background-color: #F8F1EA;
+    width: auto;
+    z-index: 1;
+    text-align: center;
+  }
 }
 .header__menu__item {
   cursor: pointer;
@@ -595,6 +597,15 @@ header {
 }
 .header .profile:hover {
   stroke: #F16A50;
+}
+
+.hamburger {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
 }
 
 .slickdots {
@@ -880,6 +891,11 @@ footer {
   .footer {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .footer__block {
+    display: contents;
   }
 }
 @media only screen and (max-width: 768px) {
