@@ -51,7 +51,7 @@
 // 	.then((data) => console.log(data))
 
 
-const API = 'https://swapi.dev/api/planets/';
+// const API = 'https://swapi.dev/api/planets/';
 
 
 // fetch(API)
@@ -64,3 +64,71 @@ const API = 'https://swapi.dev/api/planets/';
 // 		);
 // 	}
 		
+// function generator() {
+// 	yield 1;
+// 	yield 2;
+// 	return 3;
+// };
+
+// const res = generator();
+
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+
+
+
+
+// const API = 'https://swapi.dev/api/planets/';
+
+// const getData = (url) => {
+// 	return fetch(url)
+// 		.then((res) => res.json()) // отримуєм дані
+// 		.then((data) => data); // отримуєм дані
+// }
+
+// const renderPlanets = (planets) => {
+// 	// document.body.innerHTML = '';    //підчищаєм, щоб виводилось замість предидущего
+// 	planets.forEach(element => {
+// 		const div = document.createElement('div');
+// 		div.innerText = element.name;
+// 		document.body.appendChild(div);
+// 	});
+// }
+
+// async function* displayPlanets () {
+// 	let url = API;
+// 	while (url) {
+// 		const data = await getData(url); // отримуєм дані з fetch
+// 		url = data.next;
+// 		console.log(data)
+// 		renderPlanets(data.results);
+// 		if (url) {
+// 			const button = document.createElement('button');
+// 			button.innerText = 'Next';
+// 			button.onclick = () => getPage.next();
+// 			document.body.appendChild(button);
+// 		}
+// 		yield
+// 	}
+
+// // const displayPlanets = async () => {
+// // 	let planets = [];
+// // 	let url = API;
+// // 	while (url) {
+// // 		const data = await getData(url);
+// // 		url = data.next;
+// // 		planets = [...planets, ...data.results];
+// // 	}
+
+// 	// console.log(planets)
+
+// };
+
+// // displayPlanets();
+// // displayPlanets().next();
+
+// const getPage = displayPlanets();
+// getPage.next();
+
+
