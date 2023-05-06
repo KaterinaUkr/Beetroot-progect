@@ -4,7 +4,7 @@
 	list-style-type: none;
 }
 
-@mixin horizontal-list($margin) {
+@mixin horizontal-list {
 	@include reset-list;
 	li {
 		display: inline-block;		
@@ -43,10 +43,19 @@
 }
 
 @mixin paddingAside {
-	width: 86%;
+	// width: 86%;
 	max-width: 1200px;
 	padding-left: $padding-aside;
 	padding-right: $padding-aside;
+
+	@include devices(netbook) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	@include devices(netbook) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 @mixin btn($color) {
@@ -86,5 +95,34 @@
 	&:hover {
 		fill: $tomato-light;
 		stroke: $tomato-light;
+	}
+};
+
+
+@mixin devices ($breakpoint) {
+	//the name of the mixin is devices
+
+	@if $breakpoint ==monitor {
+			@media only screen and (max-width: 1400px) {
+				@content;
+			}
+		}
+
+	@if $breakpoint ==netbook {
+			@media only screen and (max-width: 1280px) {
+				@content;
+			}
+		}
+
+	@if $breakpoint ==tablet {
+		@media only screen and (max-width: 1024px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint ==mobile {
+		@media only screen and (max-width: 768px) {
+			@content;
+		}
 	}
 }

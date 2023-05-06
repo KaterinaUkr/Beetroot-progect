@@ -15,16 +15,19 @@ body {
 	max-width: 1400px;
 	margin: 0 auto;
 }
-
+header {
+	@include paddingAside;
+	@include background;
+}
 .header {
-	width: 86%;
+	width: 100%;
 	max-width: 1200px;
 	height: 80px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: space-between;
-	@include paddingAside;
-	@include background;
+	// @include paddingAside;
+	// @include background;
 
 	&__logo {
 		width: 182px;
@@ -33,7 +36,25 @@ body {
 		cursor: pointer;
 	};
 	&__menu {
-		@include horizontal-list($padding-menu);						
+		@include horizontal-list;		
+
+		& li {
+			@include devices(mobile) {
+				text-align: end;
+				display: block;
+			}
+		}
+		
+
+		& ul {
+			position: absolute;
+			right: 60px;
+			top: 70px;
+			background-color: #F8F1EA;
+			width: auto;
+			z-index: 1;
+			text-align: center;
+		}
 
 		&__item {
 			cursor: pointer;
@@ -47,6 +68,7 @@ body {
 				color: $brown-light;
 				background-color: $tomato-light;
 			}			
+			
 		};
 	}
 	.search {
@@ -66,12 +88,15 @@ body {
 				stroke: $tomato-light;		
 			}
 	}
-
 }
 
 .slickdots {
-	@include horizontal-list(30px);
-	
+	@include horizontal-list;	
+
+	li:not(:first-child) {
+				margin-left: 50px;	
+			}
+
 	button {
 		width: 20px;
 		height: 20px;
@@ -79,7 +104,7 @@ body {
 		background-color: $dot-inactive;		
 		outline: none;
 		border: none;
-		font-size: 0;
+		font-size: 0;		
 	};
 	li[class="slick-active"] button {
 		background-color: $tomato-light;		
@@ -202,26 +227,23 @@ body {
 		background-color: $brown-light;
 }
 
-.slick-prev,
-.slick-next {
-	width: 40px;
-	height: 74px;
-}
 .slick-prev {
-	left: -60px;
+	left: -60px;	
 }
 .slick-next {
 	right: -60px;
 }
 .slick-prev:before {
-	content: url("../assets/icon/prev.svg");
-	@include hoverSVG;	
-};
-.slick-next:before {
-	content: url("../assets/icon/next.svg");	
-	@include hoverSVG;	
+	content: url("../assets/icon/prev.svg");			
 };
 
+.slick-next:before {
+	content: url("../assets/icon/next.svg");	
+	// @include hoverSVG;	
+};
+.path {
+	fill: $tomato-light;
+}
 .partners {
 	@include paddingSection;
 	@include background;
@@ -258,7 +280,24 @@ footer {
 .footer {
 	padding-top: $padding-section;
 	@include paddingAside;
+	
 
+	@include devices(netbook) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	
+		@include devices(netbook) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	&__block {
+		@include devices(mobile) {
+			display: flex;
+			justify-content: space-between;
+		}
+		
+	}
 	&__info {
 		width: 100%;
 		padding-left: $padding-menu;
@@ -266,6 +305,7 @@ footer {
 		display: inline-flex;
 		justify-content: space-between;
 		margin-bottom: 50px;
+		
 	}
 	&__left{
 		&__logo {
@@ -274,10 +314,22 @@ footer {
 			fill: $brown-light;
 			margin-bottom: 35px;
 			@include hoverSVG;
+
+			@include devices(mobile) {
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+				}
 		}
 		&__menu {
 			@include menu-text;
 			color: $brown-light;
+			
+			& li {
+				@include devices(mobile) {
+						margin-bottom: 10px;
+				}
+			}
 			& a {
 					text-decoration: none;
 					color: $brown-light;
@@ -291,17 +343,30 @@ footer {
 	}
 
 	&__right{
+		display: grid;
+		@include devices(mobile) {
+				text-align: end;
+			}
+
 		&__text{
 			@include textH(26px, 500);
 			color: $brown-light;
 		}
 		&__menu {
-			@include horizontal-list(30px);			
+			@include horizontal-list;			
 			margin-top: 50px;
 			margin-bottom: 30px;
+				@include devices(mobile) {
+					margin-top: 25px;
+					margin-bottom: 25px;
+				}				
 
 			li:not(:first-child) {
 					margin-left: 30px;
+
+					@include devices(netbook) {
+							margin-left: 20px;
+						}
 				}
 		}
 	} 
@@ -310,7 +375,8 @@ footer {
 		height: 30px;
 		fill: $brown-light;
 		stroke: $brown-light;
-		@include hoverSVG;			
+		@include hoverSVG;	
+		
 
 	}
 		&__item__empty {
