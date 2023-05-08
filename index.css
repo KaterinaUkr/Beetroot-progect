@@ -445,8 +445,4 @@ textarea {
   padding: 0.2em 0;
 }
 
-/*@use "./hamburgers" as *;*/
-.owl-custom-item {
-  background-color: purple;
-  height: 200px;
-}
+/*@use "./hamburger" as *;*/
