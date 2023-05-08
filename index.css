@@ -1491,6 +1491,16 @@ textarea {
   padding: 0 100px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    padding: 0 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
 
 header {
   background-color: #F8F1EA;
@@ -1513,6 +1523,21 @@ header {
   display: inline-flex;
   width: auto;
 }
+@media only screen and (max-width: 768px) {
+  .header__menu {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+    padding-top: 5px;
+    background-color: #F8F1EA;
+    opacity: 0.9;
+    z-index: 2;
+    display: none;
+  }
+}
 .header__menu__link {
   text-decoration: none;
   font: 500 20px "Montserrat";
@@ -1523,6 +1548,11 @@ header {
 .header__menu__link:hover {
   color: #F8F1EA;
   background-color: #F16A50;
+}
+@media only screen and (max-width: 768px) {
+  .header__menu__link {
+    padding: 0;
+  }
 }
 .header__icon {
   display: inline-flex;
@@ -1541,6 +1571,10 @@ header {
 .header__icon__item:hover {
   fill: #F16A50;
   stroke: #F16A50;
+}
+
+.header__menu.is-active {
+  display: flex;
 }
 
 .bg__img::after {
@@ -1625,6 +1659,12 @@ header {
   padding-right: 80px;
   text-align: center;
 }
+@media only screen and (max-width: 768px) {
+  .products {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
 .products__title {
   font-family: "Montserrat";
   font-size: 32px;
@@ -1666,6 +1706,12 @@ header {
   color: #F8F1EA;
   background-color: #F16A50;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 768px) {
+  .products__item__stock {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 .products__item .sold {
   color: #000000;
@@ -1710,6 +1756,12 @@ header {
   padding-left: 80px;
   padding-right: 80px;
   margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  .partners {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 .partners .slick-slider {
   padding: 0px 34px;
@@ -1764,9 +1816,16 @@ footer {
   grid-template-columns: auto 331px;
   color: #F8F1EA;
   fill: #F8F1EA;
-  padding-top: 70px;
+  padding-top: 50px;
   padding-left: 130px;
   padding-right: 130px;
+}
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: auto auto;
+  }
 }
 .footer__logo {
   width: 150px;
@@ -1778,8 +1837,19 @@ footer {
   fill: #F16A50;
   stroke: #F16A50;
 }
+@media only screen and (max-width: 768px) {
+  .footer__logo {
+    grid-area: 1/1/span 1/span 2;
+    margin: 0 auto 40px;
+  }
+}
 .footer__menu {
   grid-area: 2/1/span 2/span 1;
+}
+@media only screen and (max-width: 768px) {
+  .footer__menu {
+    grid-area: 2/1/span 3/span 1;
+  }
 }
 .footer__menu__link {
   text-decoration: none;
@@ -1795,12 +1865,22 @@ footer {
   font-size: 26px;
   font-weight: 500;
 }
+@media only screen and (max-width: 768px) {
+  .footer__text {
+    text-align: right;
+  }
+}
 .footer__social {
   display: inline-flex;
   align-items: center;
 }
 .footer__social li:not(:first-child) {
   margin-left: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .footer__social {
+    justify-content: flex-end;
+  }
 }
 .footer__social__item {
   height: 30px;
@@ -1819,9 +1899,20 @@ footer {
   font-weight: 500;
   align-self: center;
 }
+@media only screen and (max-width: 768px) {
+  .footer__phone {
+    grid-area: 4/2/span 1/span 1;
+    text-align: right;
+  }
+}
 .footer__copyright {
   grid-area: 4/1/span 1/span 2;
   text-align: center;
   margin-top: 50px;
   padding-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .footer__copyright {
+    grid-area: 5/1/span 1/span 2;
+  }
 }

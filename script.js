@@ -1,5 +1,5 @@
 const hamburgerElm = document.querySelector('.hamburger');
-    const navElm = document.querySelector('.nav');
+    const navElm = document.querySelector('.header__menu');
 
 
 hamburgerElm.addEventListener('click', () => {

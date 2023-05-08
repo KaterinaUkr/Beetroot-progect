@@ -8,6 +8,12 @@
 .wrapper {	
 	padding: 0 100px;
 	margin: 0 auto;
+	@include devices (netbook) {
+			padding: 0 60px;
+		}
+	@include devices (mobile) {
+		padding: 0 10px;
+	}
 }
 header {
 	@include background-light;	
@@ -28,7 +34,22 @@ header {
 
 	&__menu {
 		display: inline-flex;	
-		width: auto;		
+		width: auto;
+
+		@include devices (mobile) {
+				position: absolute;				
+				right: 0;
+				top: 80px;
+				flex-direction: column;
+				width: 200px;
+				align-items: center;
+				padding-top: 5px;
+				background-color: $brown-light;
+				opacity: 0.9;
+				z-index: 2;
+				display: none;			
+			}
+		
 		&__link {
 			text-decoration: none;
 			@include menu-text;
@@ -37,6 +58,10 @@ header {
 			&:hover {
 				color: $brown-light;
 				background-color: $tomato-light;
+			}
+
+			@include devices (mobile) {
+				padding: 0;
 			}
 		}
 	};
@@ -55,9 +80,12 @@ header {
 			&:hover {
 				fill: $tomato-light;
 				stroke: $tomato-light;
-			}
+			}			
 		}
 	}
+}
+.header__menu.is-active {
+	display: flex;
 }
 
 //HEADER SLIDER
@@ -233,17 +261,29 @@ footer {
 	grid-template-columns: auto 331px;
 	color: $brown-light;
 	fill: $brown-light;
-	padding-top: $padding-section;
+	padding-top: $padding50;
 	@include paddingAside(130px);
+
+	@include devices (mobile) {
+		@include paddingAside(10px);
+			grid-template-columns: auto auto;
+		}
 
 	&__logo {
 		width: 150px;
 		height: 30px;		
 		margin-bottom: 35px;
 		@include hoverSVG;
+		@include devices (mobile) {
+				grid-area: 1 / 1 / span 1 / span 2;		
+				margin: 0 auto 40px;
+			}
 	}
 	&__menu {
 		grid-area: 2 / 1 / span 2 / span 1;
+		@include devices (mobile) {
+				grid-area: 2 / 1 / span 3 / span 1;				
+			}
 		&__link {
 			text-decoration: none;
 			@include menu-text;		
@@ -251,10 +291,13 @@ footer {
 			&:hover {
 				color: $tomato-light;
 			}
-		}					
+		}				
 	}
 	&__text {
 		@include textH(26px, 500);		
+		@include devices (mobile) {
+				@include rightAlign;
+			}
 	}
 	&__social {
 		display: inline-flex;
@@ -262,6 +305,9 @@ footer {
 		li:not(:first-child) {
 				margin-left: 30px;
 			}
+		@include devices (mobile) {
+			justify-content: flex-end;
+		}
 
 		&__item {
 			height: 30px;
@@ -278,11 +324,18 @@ footer {
 	&__phone {
 		@include textH(26px, 500);
 		align-self: center;
+		@include devices (mobile) {
+				grid-area: 4 / 2 / span 1 / span 1;
+				@include rightAlign;
+			}		
 	}
 	&__copyright {
 		grid-area: 4 / 1 / span 1 / span 2;
 		text-align: center;
 		margin-top: 50px;
 		padding-bottom: 20px;
+		@include devices (mobile) {
+				grid-area: 5 / 1 / span 1 / span 2;
+			}
 	}
 }

@@ -45,6 +45,10 @@
 @mixin paddingSection($padding) {
 	padding-top: $padding;
 	padding-bottom: $padding;
+	@include devices(mobile) {
+		padding-top: $padding50;
+		padding-bottom: $padding50;
+	}
 }
 
 @mixin btn($color) {
@@ -83,6 +87,9 @@
 		stroke: $tomato-light;
 	}
 };
+@mixin rightAlign {
+	text-align: right;
+}
 
 
 @mixin devices ($breakpoint) {
