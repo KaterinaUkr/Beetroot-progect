@@ -16,8 +16,8 @@ $(document).ready(function(){
 		slidesToShow: 5,
 		slidesToScroll: 2,
 		arrows: true,
-		centerMode: true,		
-		centerPadding: 0,
+		// centerMode: true,		
+		// centerPadding: 0,
 		responsive: [
             {
                 breakpoint: 1300,
@@ -60,7 +60,8 @@ $(document).ready(function(){
 	$('.partners__slick').slick({
 		infinite: true,
 		slidesToShow: 9,
-		slidesToScroll: 3,
+        slidesToScroll: 3,
+        draggable: true,
 		arrows: true,
 		centerMode: true,		
 		adaptiveHeight: true,

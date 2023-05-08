@@ -3,15 +3,17 @@
 @use "./font";
 @use "./variables" as *;
 @use "./responsive" as *;
-/*@use "./hamburgers" as *;*/
+@use "./hamburger" as *;
 
-.wrapper {
-	width: 100%;
+.wrapper {	
 	padding: 0 100px;
 	margin: 0 auto;
 }
-.header {	
-	@include background-light;
+header {
+	@include background-light;	
+}
+.header {			
+	width: -webkit-fill-available;
 	height: 80px;
 	display: inline-flex;
 	align-items: center;
@@ -23,6 +25,7 @@
 		fill: $tomato-light;
 		cursor: pointer;
 	};
+
 	&__menu {
 		display: inline-flex;	
 		width: auto;		
@@ -37,402 +40,249 @@
 			}
 		}
 	};
+	&__icon {
+		display: inline-flex;
+		width: 36px;
+		height: 36px;
+		&:first-child {
+			margin-right: 30px;
+		}		
+		&__item {
+			width: 100%;
+			height: 100%;
+			fill: $black;
+			stroke: $black;
+			&:hover {
+				fill: $tomato-light;
+				stroke: $tomato-light;
+			}
+		}
+	}
 }
 
-// body {
-// 	background-color: #E5E5E5;
-// 	font-family: 'Montserrat';
-// 	box-sizing: border-box;
-// }
+//HEADER SLIDER
+.bg__img::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%);
+}
 
-// .wrapper {
-// 	max-width: 1400px;
-// 	margin: 0 auto;
-// }
-// header {
-// 	@include paddingAside;
-// 	@include background;
-// }
-// .header {
-// 	width: 100%;
-// 	max-width: 1200px;
-// 	height: 80px;
-// 	display: inline-flex;
-// 	align-items: center;
-// 	justify-content: space-between;
-// 	// @include paddingAside;
-// 	// @include background;
+.bg__slider {
+	width: 100%;
+	position: relative;
 
-// 	
-// 	&__menu {
-// 		@include horizontal-list;		
+	.slick-slide img {
+			width: 100%;
+		}
+	.slickdots {
+		display: inline-flex;
+		li:not(:first-child) {
+				margin-left: 50px;
+			}
+	}
 
-// 		& li {
-// 			@include devices(mobile) {
-// 				text-align: end;
-// 				display: block;
-// 			}
-// 		}
-		
-// 		& ul {
-// 			@include devices(mobile) {
-// 					position: absolute;
-// 					right: 60px;
-// 					top: 70px;
-// 					background-color: #F8F1EA;
-// 					width: auto;
-// 					z-index: 1;
-// 					text-align: center;
-// 				}			
-// 		}
+	&__content {
+		position: absolute;
+		top: 120px;
+		right: 100px;
+		width: 400px;
+		height: 110px;
+		text-align: center;
+		z-index: 10;
 
-// 		&__item {
-// 			cursor: pointer;
-// 			@include menu-text;		
-// 			& a {
-// 				text-decoration: none;
-// 				color: $black;								
-// 				padding: 28px 15px;
-// 			}
-// 			& a:hover {				
-// 				color: $brown-light;
-// 				background-color: $tomato-light;
-// 			}			
-			
-// 		};
-// 	}
-// 	.search {
-// 		width: 36px;
-// 		height: 36px;
-// 		fill: $black;
-// 		margin-right: $padding-menu;
-// 		@include hoverSVG;
-		
-// 	};
-// 	.profile {
-// 		width: 36px;
-// 		height: 36px;
-// 		stroke: $black;
-// 		cursor: pointer;
-// 		&:hover {				
-// 				stroke: $tomato-light;		
-// 			}
-// 	}
-// }
-// .hamburger {
-// 	display: none;
-
-// 	@include devices(mobile) {
-// 		display: block;
-// 	}
-// }
-
-// .slickdots {
-// 	@include horizontal-list;	
-
-// 	li:not(:first-child) {
-// 				margin-left: 50px;	
-// 			}
-
-// 	button {
-// 		width: 20px;
-// 		height: 20px;
-// 		border-radius: 50%;	
-// 		background-color: $dot-inactive;		
-// 		outline: none;
-// 		border: none;
-// 		font-size: 0;		
-// 	};
-// 	li[class="slick-active"] button {
-// 		background-color: $tomato-light;		
-// 	};
-// };
-
-// .bg__img::after {
-// 	content: "";
-// 	display: block;
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	height: 100%;
-// 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%);
-// }
-
-// .bg__slider {
-// 	width: 100%;
-// 	height: 700px;
-// 	margin: 0 auto;
-// 	position: relative;		
-
-// 	&__content {
-// 		position: absolute;
-// 		top: 120px;
-// 		right: 100px;
-// 		width: 400px;
-// 		height: 110px;
-// 		text-align: center;		
-// 		z-index: 10;
-
-// 		&__text {
-// 			font: 700 50px Monserrat;
-// 			color: $brown-light;
-// 			margin-bottom: 50px;
-// 			text-transform: uppercase;
-// 		}
-// 		&__btn {
-// 			@include btnLight;			
-// 		}		
-// 	}
-
-// 	&__dots {
-// 		width: 100%;
-// 		height: 20px;
-// 		position: absolute;
-// 		bottom: 50px;
-// 		text-align: center;
-// 	};
-// };
-
-// .bg__img {
-// 	content: "";
-// 	display: block;
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	height: 700px;
-// 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%);
-// }
-
-// .products {
-// 	// width: 100%;
-// 	height: auto;
-// 	background-color: white;
-// 	@include paddingAside;
-// 	@include paddingSection;
-// 	text-align: center;	
-
-// 	&.slick-slide {
-// 		width: 204px;
-// 	}
-
-// 		&_head {
-// 			@include textH2;
-// 			margin-bottom: 50px;
-// 		}
-// 		&__item {
-// 		width: 204px;
-// 		text-align: center;		
-// 		margin-bottom: 50px;
-// 		position: relative;
-		
-// 			& img {
-// 				cursor: pointer;
-// 			}
-// 			&__name {
-// 				@include textH(16px, 600);
-// 				margin-bottom: 10px;
-// 				margin-top: 18px;		
-// 				width: 204px;
-// 				cursor: pointer;
-// 			}
-
-// 			&__price {
-// 				@include textH(24px, 700);
-// 				width: 204px;
-// 				cursor: pointer;
-// 			}
-
-// 			&__stock {
-// 				width: 49px;
-// 				height: 12px;
-// 				top: 0;
-// 				position: absolute;
-// 				left: 0;
-// 				@include textH(10px, 500);
-// 				color: $brown-light;
-// 				background-color: $tomato-light;
-// 			}
-// 	 	}
-// 	&__btn {
-// 		@include btnDark;
-// 	}
-// }
-// .sold {
-// 	color: $black;
-// 		background-color: $brown-light;
-// }
-
-// .slick-prev {
-// 	left: -60px;	
-// }
-// .slick-next {
-// 	right: -60px;
-// }
-// .slick-prev:before {
-// 	content: url("../assets/icon/prev.svg");			
-// };
-
-// .slick-next:before {
-// 	content: url("../assets/icon/next.svg");	
-// 	// @include hoverSVG;	
-// };
-// .path {
-// 	fill: $tomato-light;
-// }
-// .partners {
-// 	@include paddingSection;
-// 	@include background;
-// 	@include paddingAside;
-// 	margin: 0 auto;
-
-// 	& img {
-// 			cursor: pointer;
-// 		}
-
-// 	&__head {
-// 		@include textH2;
-// 		margin-bottom: 40px;
-// 	}
-// 	& .slick-list .draggable {	
-// 		width: 86%;
-// 		max-width: 1200px;
-// 	}	
-// 	& .slick-slide:not(:first-child) {
-// 		margin-left: 27px;
-// 	}
-// };
-// .slick-list.draggable {
-// 	padding: 0;
-// }
-// .slick-track {
-// 	display: inline-flex;
-// 		align-items: center;
-// }
-
-// footer {
-// 	background-color: $browndark;
-// }
-// .footer {
-// 	padding-top: $padding-section;
-// 	@include paddingAside;
+		&__text {			
+			@include textH (50px, 700);
+			color: $brown-light;
+			margin-bottom: 50px;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+		&__btn {
+			@include btnLight;
+		}
+	}
 	
-
-// 	@include devices(netbook) {
-// 			padding-left: 15px;
-// 			padding-right: 15px;
-// 		}
-	
-// 		@include devices(netbook) {
-// 			padding-left: 10px;
-// 			padding-right: 10px;
-// 		}
-// 	&__block {
-// 		@include devices(monitor) {
-// 				display: contents;
-// 			};
-// 		@include devices(mobile) {
-// 			display: flex;
-// 			justify-content: space-between;
-// 		}
+	&__dots {
+		width: 100%;
+		height: 20px;
+		position: absolute;
+		bottom: 50px;
+		text-align: center;		
 		
-// 	}
-// 	&__info {
-// 		width: 100%;
-// 		padding-left: $padding-menu;
-// 		padding-right: $padding-menu;
-// 		display: inline-flex;
-// 		justify-content: space-between;
-// 		margin-bottom: 50px;
-		
-// 	}
-// 	&__left{
-// 		&__logo {
-// 			width: 150px;
-// 			height: 30px;			
-// 			fill: $brown-light;
-// 			margin-bottom: 35px;
-// 			@include hoverSVG;
+		&	button {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: $dot-inactive;
+				outline: none;
+				border: none;
+				font-size: 0;
+		};
+		li[class="slick-active"] button {
+			background-color: $tomato-light;
+		};
+	};
+};
 
-// 			@include devices(mobile) {
-// 					display: block;
-// 					margin-left: auto;
-// 					margin-right: auto;
-// 				}
-// 		}
-// 		&__menu {
-// 			@include menu-text;
-// 			color: $brown-light;
-			
-// 			& li {
-// 				@include devices(mobile) {
-// 						margin-bottom: 10px;
-// 				}
-// 			}
-// 			& a {
-// 					text-decoration: none;
-// 					color: $brown-light;
-// 					padding: 28px 15px;
-// 				}
-			
-// 				& a:hover {
-// 					color: $tomato-light;					
-// 				}
-// 		}
-// 	}
 
-// 	&__right{
-// 		display: grid;
-// 		@include devices(mobile) {
-// 				text-align: end;
-// 			}
+.products {
+	@include paddingSection(70px);
+	@include paddingAside(80px);
+	text-align: center;
+	&__title {
+		@include textH2;
+		margin-bottom: 50px;		
+	}
+	.slick-slider {
+		margin-bottom: 65px;
+		padding: 0px 34px; 
+	}
+	&__item {
+		border: 1px solid $brown-light;
+		text-align: center;
+		cursor: pointer;
+		padding-bottom: 20px;
+		&:not(:first-child) {
+			margin-left: 20px;
+		}
+		&:hover {
+			border: 1px solid $tomato-light;
+		}
+		&__img {
+			margin: 0 auto;
+		}
+		&__stock {
+			width: 60px;			
+			@include paddingSection(5px);
+			@include textH(10px, 500);
+			color: $brown-light;
+			background-color: $tomato-light;
+			text-transform: uppercase;
+		}
+		.sold {
+				color: $black;
+					background-color: $brown-light;
+			}
+		&__name {
+			@include textH(16px, 600);
+			margin-bottom: 10px;
+			margin-top: 18px;					
+			cursor: pointer;
+		}
+		&__price {
+			@include textH(24px, 700);			
+			cursor: pointer;
+		}
+	}
+	&__btn {
+		@include btnDark;
+	}
+}
 
-// 		&__text{
-// 			@include textH(26px, 500);
-// 			color: $brown-light;
-// 		}
-// 		&__menu {
-// 			@include horizontal-list;			
-// 			margin-top: 50px;
-// 			margin-bottom: 30px;
-// 				@include devices(mobile) {
-// 					margin-top: 25px;
-// 					margin-bottom: 25px;
-// 				}				
+.section-partners {
+	background-color: $brown-light;
+}
+.partners {
+	@include paddingSection(70px);	
+	@include paddingAside(80px);
+	margin: 0 auto;
+.slick-slider {
+		padding: 0px 34px; // поля между стрелкой и краем слайдера
+	}
+	&__title {
+		@include textH2;
+		margin-bottom: 40px;		
+	}
+	.slick-track {
+		display: inline-flex;
+		align-items: center;
+	}
+	.slick-slide {
+		margin-left: 20px;
+	}
+}
 
-// 			li:not(:first-child) {
-// 					margin-left: 30px;
+.slick-prev, 
+.slick-next {
+	height: 74px;	
+}
+.slick-prev:before {
+	content: url("../assets/icon/prev.svg");	
+}
+.slick-prev:hover:before {
+	content: url("../assets/icon/prev_hover.svg");
+}
+.slick-next:before {
+	content: url("../assets/icon/next.svg");	
+}
+.slick-next:hover:before {
+	content: url("../assets/icon/next_hover.svg");
+}
 
-// 					@include devices(netbook) {
-// 							margin-left: 20px;
-// 						}
-// 				}
-// 		}
-// 	} 
-// 	&__item {
-// 		// width: 40px;
-// 		height: 30px;
-// 		fill: $brown-light;
-// 		stroke: $brown-light;
-// 		@include hoverSVG;	
-		
 
-// 	}
-// 		&__item__empty {
-// 			// width: 30px;
-// 			height: 30px;
-// 			stroke: $brown-light;			
-// 		}
-// 		&__item__empty:hover {
-// 			cursor: pointer;
-// 			stroke: $tomato-light;
-// 		}
-	
-// 	&__copyright {
-// 		@include textH(14px, 500);
-// 		color: $brown-light;
-// 		text-align: center;
-// 		padding-bottom: 20px;
-// 	}
-// }
+footer {
+	background-color: $browndark;
+}
+.footer {
+	display: grid;
+	grid-template-columns: auto 331px;
+	color: $brown-light;
+	fill: $brown-light;
+	padding-top: $padding-section;
+	@include paddingAside(130px);
+
+	&__logo {
+		width: 150px;
+		height: 30px;		
+		margin-bottom: 35px;
+		@include hoverSVG;
+	}
+	&__menu {
+		grid-area: 2 / 1 / span 2 / span 1;
+		&__link {
+			text-decoration: none;
+			@include menu-text;		
+			color: $brown-light;
+			&:hover {
+				color: $tomato-light;
+			}
+		}					
+	}
+	&__text {
+		@include textH(26px, 500);		
+	}
+	&__social {
+		display: inline-flex;
+		align-items: center;
+		li:not(:first-child) {
+				margin-left: 30px;
+			}
+
+		&__item {
+			height: 30px;
+			width: 30px;
+			fill: $brown-light;
+			stroke: $brown-light;
+			cursor: pointer;
+			&:hover {
+				fill: $tomato-light;
+				stroke: $tomato-light;
+			}
+		}
+	}
+	&__phone {
+		@include textH(26px, 500);
+		align-self: center;
+	}
+	&__copyright {
+		grid-area: 4 / 1 / span 1 / span 2;
+		text-align: center;
+		margin-top: 50px;
+		padding-bottom: 20px;
+	}
+}
