@@ -445,4 +445,36 @@ textarea {
   padding: 0.2em 0;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/font/Open Sans Italic.eot");
+  src: url("../assets/font/Open Sans Italic.eot?#iefix") format("embedded-opentype"), url("../assets/font/Open Sans Italic.woff2") format("woff2"), url("../assets/font/Open Sans Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/font/Open Sans Regular.eot");
+  src: url("../assets/font/Open Sans Regular.eot?#iefix") format("embedded-opentype"), url("../assets/font/Open Sans Regular.woff2") format("woff2"), url("../assets/font/Open Sans Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/font/Source Sans Pro Italic.eot");
+  src: url("../assets/font/Source Sans Pro Italic.eot?#iefix") format("embedded-opentype"), url("../assets/font/Source Sans Pro Italic.woff2") format("woff2"), url("../assets/font/Source Sans Pro Italic.woff") format("woff"), url("../assets/font/Source Sans Pro Italic.svg#Source Sans Pro Italic") format("svg");
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../assets/font/Source Sans Pro.eot");
+  src: url("../assets/font/Source Sans Pro.eot?#iefix") format("embedded-opentype"), url("../assets/font/Source Sans Pro.woff2") format("woff2"), url("../assets/font/Source Sans Pro.woff") format("woff"), url("../assets/font/Source Sans Pro.svg#Source Sans Pro") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
 /*@use "./hamburger" as *;*/
