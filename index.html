@@ -14,12 +14,12 @@
 </head>
 <body>
     
-<form action="/" class="row g-3 w-50">
+<form name="searchParam" action="/" class="row g-3 w-50">
     <label for="inputName" class="form-label">What film do you want to search?</label>
-    <input type="text" id="inputName" name="filmname" class="form-control" placeholder="Search...">   
+    <input type="text" id="inputName" name="filmname" class="form-control" placeholder="Search..." value='' onchange="getParams()">   
     
     <label for="filmtype">Type</label>
-    <select id="filmtype" name="filmtype" class="form-control">
+    <select id="filmtype" name="filmtype" class="form-control" onchange="getParams()">
         <option value="movie">movie</option>
         <option value="series">series</option>
         <option value="episode">episode</option>
@@ -30,23 +30,8 @@
     </div>
 </form>
 
-
-
 <div id="search-result" class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-
-
-
-
-    <!-- <div class="card">
-        <img class="p-3" src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-outline-success" role="button">Details</a>
-            <a href="#" class="btn btn-outline-success" role="button">See film</a>
-        </div>
-    </div>                  -->
+  
 
 </div>
 

@@ -1,22 +1,24 @@
-const API = 'http://www.omdbapi.com/?i=tt3896198&apikey=f97d33df';
+const API = 'https://www.omdbapi.com/?i=tt3896198';
+const API_KEY = '&apikey=f97d33df&';
 
-const searchResult = document.querySelector('search-result');
+// const API = 'https://api.themoviedb.org/3/';
 
-const getData = (url) => 
+const searchResult = document.querySelector('#search-result');
+
+const getData = (url) =>
 	fetch(url)
 		.then((res) => res.json())
-		.then((data) => console.log(data));
-
-
+		.then((data) => data);
 
 const createSearchElement = (film) => {
 	const cardFilm = document.createElement('div');
 	cardFilm.classList.add('card');
 	
+	let imageURL = film.Poster
 	const img = document.createElement('img');
 	img.classList.add('p-3');
 	img.classList.add('card-img-top');
-	img.src = 'film.Poster';
+	img.src = imageURL;
 	img.alt = 'film photo';
 
 	const infoList = document.createElement('div');
@@ -53,20 +55,27 @@ const createSearchElement = (film) => {
 	return cardFilm;
 };
 
-// const getFilms = async () => {
-// 	const data = await getData(API); 
-// 	// console.log(data)
-// 	data.forEach(element => {
-// 		searchResult.appendChild(createSearchElement(element))
-// 	});		
-// }
-
 const getFilms = async () => {
-	const data = await getData(API); 
-	// console.log(data)
-	// data.forEach(element => {
-		searchResult.appendChild(createSearchElement(element))
-	// });		
-}
+	const data = await getData(API+API_KEY);
+	// data.for(element => {
+		searchResult.appendChild(createSearchElement(data));		
+	// });
+	
+	
+};
+getFilms()
 
-getFilms();
+let btnSearch = document.querySelector('#search-result');
+
+btnSearch.onclick = getParams;
+
+function getParams() {
+	let nameSearch = document.querySelector('#inputName').value;
+	console.log(nameSearch);
+	let typeSearch = document.querySelector('#filmtype').value;
+	console.log(typeSearch);
+}
+	
+	
+
+
