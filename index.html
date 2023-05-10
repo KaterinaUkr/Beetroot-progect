@@ -7,18 +7,65 @@
 
     <link href="./index.css" rel="stylesheet" type="text/css">
     
-    <title>Document</title>
+    <title>Monticello</title>
 </head>
 <body>
 
-<header></header>
+<header>
+    <div>        
+        <div class="header__bg">            
+            <img class="header__bg__img gradient" src="./assets/image/header_bg.png" alt="foto">  
+            <h1 class="header__bg__title">Simple & MODERN</h1>         
+            <h5 class="header__bg__subscribe">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h5>
+            <a href="#">
+                <svg class="header__bg__item">
+                    <use xlink:href="./assets/icon/sprite.svg#arrow"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="header wrapper">
+            <img src="./assets/icon/Logo.svg" alt="">         
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu__item"><a class="header__menu__link" href="#">about us</a></li>
+                    <li class="header__menu__item"><a class="header__menu__link" href="#">projects</a></li>
+                    <li class="header__menu__item"><a class="header__menu__link" href="#">news</a></li>
+                    <li class="header__menu__item"><a class="header__menu__link" href="#">contact</a></li>
+                </ul>
+            </nav>   
+            <div class="header__social">
+                <a href="#">
+                    <svg class="header__social__item">
+                        <use xlink:href="./assets/icon/sprite.svg#facebook"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="header__social__item">
+                        <use xlink:href="./assets/icon/sprite.svg#twitter"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="header__social__item">
+                        <use xlink:href="./assets/icon/sprite.svg#instagram"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</header>
 <section class="projects"></section>
 <section class="news"></section>
 <section class="gallery"></section>
+<section class="map">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoCmyKICq07lTsF-fajorkeZCBgNUu5iA"></script> 
+</section>
 <section class="contact"></section>
 <footer></footer>
     
-
+    
+    <script src="map.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

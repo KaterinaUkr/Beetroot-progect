@@ -478,3 +478,106 @@ textarea {
   font-stretch: normal;
 }
 /*@use "./hamburger" as *;*/
+body {
+  background-color: gray;
+}
+
+.wrapper {
+  width: 75%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.header__bg {
+  width: 100%;
+}
+.header__bg__img {
+  width: 100%;
+}
+.header__bg__item {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  fill: #ffffff;
+  stroke: #ffffff;
+  position: absolute;
+  top: 710px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.header__bg__item:hover {
+  fill: #7E5AFF;
+  stroke: #7E5AFF;
+}
+.header__bg__title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 80px;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 330px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.header__bg__subscribe {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  position: absolute;
+  top: 448px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.header__bg .gradient {
+  background: linear-gradient(60deg, rgb(85, 183, 255) 0%, rgb(90, 104, 255) 100%);
+}
+
+.header {
+  top: 7%;
+  position: absolute;
+  display: inline-flex;
+  justify-content: space-between;
+  left: 50%;
+  transform: translate(-50%);
+  align-items: center;
+}
+.header__menu {
+  display: inline-flex;
+}
+.header__menu__item {
+  list-style-type: circle;
+  color: #ffffff;
+  cursor: pointer;
+}
+.header__menu li:not(:first-child) {
+  margin-left: 70px;
+}
+.header__menu__link {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header__social {
+  display: inline-flex;
+}
+.header__social a:not(:first-child) {
+  margin-left: 20px;
+}
+.header__social__item {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+.header__social__item:hover {
+  fill: #7E5AFF;
+  stroke: #7E5AFF;
+}

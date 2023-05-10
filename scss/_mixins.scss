@@ -1,0 +1,31 @@
+@use "./variables" as *;
+
+@mixin flex {
+	display: inline-flex;
+}
+
+@mixin font-menu {
+	font-family: $font-SSP;
+	font-weight: $weight-400;
+	font-size: 14px;
+	color: $white;
+}
+
+@mixin svg {
+	cursor: pointer;
+		fill: $white;
+		stroke: $white;
+	
+		&:hover {
+			fill: $violet; // змінити колір hovera
+			stroke: $violet;
+		}
+}
+
+@mixin title-header ($weight, $size) {
+	font-family: $font-M;
+	font-weight: $weight;
+	font-size: $size;
+	color: $white;
+	text-transform: uppercase;
+}
