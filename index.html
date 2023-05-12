@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="/lightbox/css/lightbox.min.css" rel="stylesheet">
     <!-- <link href="./assets/fontawesome-free-6.4.0-web/css/fontawesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/font-awesome.min.css"> -->
      
@@ -142,8 +143,41 @@
 
 
 <section class="gallery wrapper">
-    <h2 class="title__title">gallery</h2>
+    <div class="block-title">
+        <h2 class="gallery__title center line">gallery</h2>
+    </div>
+    
+    <div class="gallery__photo">  
+
+        <figure class="gallery__photo__item">
+            <a href="./assets/image/gallery/original/gallery_orig_1.jpg" data-lightbox="roadtrip"><img src="./assets/image/gallery/gallery_1.jpg" alt="build photo" /></a>
+            <figcaption></figcaption>
+        </figure>
+        <figure class="gallery__photo__item">
+            <a href="./assets/image/gallery/original/gallery_orig_2.jpg" data-lightbox="roadtrip"><img src="./assets/image/gallery/gallery_2.jpg" alt="build photo" /></a>
+            <figcaption></figcaption>
+        </figure>
+        <figure class="gallery__photo__item">
+            <a href="./assets/image/gallery/original/gallery_orig_3.jpg" data-lightbox="roadtrip"><img src="./assets/image/gallery/gallery_3.jpg" alt="build photo" /></a>
+            <figcaption></figcaption>
+        </figure>
+        <figure class="gallery__photo__item">
+            <a href="./assets/image/gallery/original/gallery_orig_4.jpg" data-lightbox="roadtrip"><img src="./assets/image/gallery/gallery_4.jpg" alt="build photo" /></a>
+            <figcaption></figcaption>
+        </figure>
+        <figure class="gallery__photo__item">
+            <a href="./assets/image/gallery/original/gallery_orig_5.jpg" data-lightbox="roadtrip"><img src="./assets/image/gallery/gallery_5.jpg" alt="build photo" /></a>
+            <figcaption></figcaption>
+        </figure>
+        
+        
+
+    </div>
+    <a class="gallery__button" href="#">see more</a>
 </section>
+
+
+
 <section class="map">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoCmyKICq07lTsF-fajorkeZCBgNUu5iA"></script> 
 </section>
@@ -152,7 +186,8 @@
 </section>
 <footer></footer>
     
-    
+
+    <script src="/lightbox/js/lightbox-plus-jquery.min.js"></script>
     <script src="map.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

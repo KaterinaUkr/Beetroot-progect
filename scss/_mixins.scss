@@ -56,6 +56,10 @@
 		display: block;
 		text-align: center;
 	}
+	@mixin btn {
+		width: 190px;
+		padding: 16px;		
+	}
 
 @mixin padding-article {
 	padding-left: 20px;
