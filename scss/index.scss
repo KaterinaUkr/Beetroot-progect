@@ -9,6 +9,9 @@
 // 	background-color: gray;
 // }
 
+i {
+	margin-right: 10px;
+}
 .wrapper {
 	width: 75%;
 	max-width: 1170px;
@@ -108,10 +111,27 @@
 .center {
 	text-align: center;
 }
+.block-title {
+	position: relative;
+}
+.line {
+	&::before {
+		position: absolute;
+		top: -30px;
+		left: 50%;
+		transform: translate(-50%);
+		width: 100px;
+		border-top: 1px solid;
+		content: "";
+	}
+}
 
 .projects {
+	padding-top: 130px;
+	padding-bottom: 150px;
 	&__title {
-		@include title-section;
+		@include title-section;			
+		margin-bottom: 142px;	
 	}
 	&__block {
 		display: flex;
@@ -123,10 +143,36 @@
 			&:nth-of-type(2) {
 				flex-direction: row-reverse;
 			}
+		}		
+	}
+	&__image {
+		width: 54%;
+		max-width: 630px;
+		height: fit-content;
+		position: relative;
+		&__item {
+			width: 100%;
 		}
-		&__img {
-			width: 54%;
-			max-width: 630px;				
+
+		.image-left::before {
+			content: "";
+			position: absolute;
+			width: 93%;
+			height: 100%;
+			background-color: $blue;
+			top: -57px;
+			left: -215px;
+			z-index: -1;
+		}
+		.image-right::before {
+			content: "";
+			position: absolute;
+			width: 93%;
+			height: 100%;
+			background-color: $violet;
+			top: -57px;
+			left: 215px;
+			z-index: -1;
 		}
 	}
 
@@ -140,7 +186,7 @@
 			color: $dark-blue;
 		}		
 		&__text {
-			@include text;
+			@include text ($font-OS);
 			margin-top: 19px;
 			margin-bottom: 40px;
 		}
@@ -156,13 +202,63 @@
 	}
 }
 
-.image-left::after {
-	content: '';
-	display: block;
-	position: absolute;
-	width: 585px;
-	height: 470px;
-	background-color: $blue;
-	top: -57px;
-	left: -215px;
+.news {
+	padding-top: 150px;
+	padding-bottom: 170px;	
+	background: url('../assets/image/news/bg.png'), linear-gradient(45deg, rgba(60, 127, 212, 1) 0%, rgba(36, 204, 250, 1) 100% );
+	background-repeat: no-repeat;
+	background-position-y: bottom;	
+	background-size: 100%;
+
+	&__title {
+			@include title-section;
+			margin-bottom: 90px;
+		}
+	&__block {
+		background: $white;
+		padding-bottom: 30px;
+		&__image {
+			width: 370px;
+			height: 240px;
+		}
+		&__title {
+			font: 700 22px 'Montserrat';
+			text-transform: uppercase;
+			color: $dark-blue;
+			margin-top: 30px;
+			margin-bottom: 15px;
+			@include padding-article;
+		}
+		&__text {
+			@include text ($font-OS);
+			line-height: 24px;
+			margin-bottom: 39px;
+			@include padding-article;
+		}
+		&__data {
+			@include padding-article;
+			display: grid;
+			grid-template-columns: auto 1fr;
+			column-gap: 20px;
+		}
+		&__photo {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;			
+			grid-area: 1/1/span 2/span 1;
+		}
+		&__author {
+			@include text ($font-M);
+			text-transform: uppercase;
+		}
+		&__date {
+			font: 400 18px 'Montserrat';
+			color: $blue;
+		}
+	}	
 }
+
+.white {
+	color: $white;
+}
+

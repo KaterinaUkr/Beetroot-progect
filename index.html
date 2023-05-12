@@ -10,6 +10,9 @@
      
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
         integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous"> 
+    
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
     <link href="./index.css" rel="stylesheet" type="text/css">
     
@@ -66,10 +69,14 @@
 </header>
 
 <section class="projects wrapper">
-    <h2 class="projects__title center">what we do</h2>
+    <div class="block-title"><h2 class="projects__title center line">what we do</h2></div>
     <div class="projects__block">
         <div class="projects__block__section">
-            <img class="projects__block__img image-left" src="./assets/image/project1.jpg" alt="photo project work">
+            <div class="projects__image">
+                <div class="image-left">
+                    <img  class="projects__image__item" src="./assets/image/project1.jpg" alt="photo project work"> 
+                </div>               
+            </div>            
             <div class="projects__article">
                 <h4 class="projects__article__subscribe">one world</h4>
                 <h3 class="projects__title">trade center</h3>
@@ -79,7 +86,11 @@
             </div>
         </div>
         <div class="projects__block__section">
-            <img class="projects__block__img image-right" src="./assets/image/project2.jpg" alt="photo project work">
+            <div class="projects__image">
+                <div class="image-right">
+                    <img class="projects__block__img" src="./assets/image/project2.jpg" alt="photo project work">
+                </div>
+            </div>            
             <div class="projects__article">
                 <h4 class="projects__article__subscribe">INTERNATIONAL</h4>
                 <h3 class="projects__title">COMMERCE CENTRE</h3>
@@ -87,15 +98,50 @@
                 <a class="projects__button" href="#">more details</a>
                 <div class="projects__location"><i class="fas fa-map-marker-alt"></i>Hong Kong - 1588 feet</div>
             </div>
-        </div>
-        
+        </div>        
     </div>    
 </section>
 
 <section class="news">
-    <h2 class="title__title white">latest news</h2>
+    <div class="block-title"><h2 class="news__title white center line">latest news</h2></div>
+    <div class="slick wrapper">        
+        <div class="news__block">
+            <img class="news__block__image" src="/assets/image/news/news_1.jpg" alt="build photo">
+            <h5 class="news__block__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h5>
+            <p class="news__block__text">Free directories: directories are perfect for customers that are searching for...</p>
+            <div class="news__block__data">
+                <img class="news__block__photo" src="/assets/image/news/photos-icon1.jpg" alt="icon profile">
+                <h6 class="news__block__author">ALJA BRUN</h6>
+                <p class="news__block__date">20 Jan 2020</p>
+            </div>
+        </div>
+        <div class="news__block">
+            <img class="news__block__image" src="/assets/image/news/news_2.jpg" alt="build photo">
+            <h5 class="news__block__title">EFFECTIVE ADVERTISING POINTERS.</h5>
+            <p class="news__block__text">Having a home based business is a wonderful asset to your life...</p>
+            <div class="news__block__data">
+                <img class="news__block__photo" src="/assets/image/news/photos-icon2.jpg" alt="icon profile">
+                <h6 class="news__block__author">DOMINIC FREEMAN</h6>
+                <p class="news__block__date">13 Dec 2019</p>
+            </div>
+        </div>
+        <div class="news__block">
+            <img class="news__block__image" src="/assets/image/news/news_3.jpg" alt="build photo">
+            <h5 class="news__block__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h5>
+            <p class="news__block__text">There are many things that are important to catalog design...</p>
+            <div class="news__block__data">
+                <img class="news__block__photo" src="/assets/image/news/photos-icon3.jpg" alt="icon profile">
+                <h6 class="news__block__author">ALICE WARD</h6>
+                <p class="news__block__date">30 Nov 2019</p>
+            </div>
+        </div>
+    </div>
+    
 </section>
-<section class="gallery">
+
+
+
+<section class="gallery wrapper">
     <h2 class="title__title">gallery</h2>
 </section>
 <section class="map">
@@ -108,6 +154,10 @@
     
     
     <script src="map.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="slick-slider.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

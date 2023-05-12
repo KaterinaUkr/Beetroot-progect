@@ -37,8 +37,8 @@
 	text-transform: uppercase;
 	color: $dark-blue;
 }
-@mixin text {
-	font-family: $font-OS;
+@mixin text ($font) {
+	font-family: $font;
 	font-weight: 400;
 	font-size: 18px;	
 	color: $dark-blue;
@@ -57,3 +57,7 @@
 		text-align: center;
 	}
 
+@mixin padding-article {
+	padding-left: 20px;
+	padding-right: 20px;
+}
