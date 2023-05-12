@@ -477,11 +477,39 @@ textarea {
   font-style: normal;
   font-stretch: normal;
 }
-/*@use "./hamburger" as *;*/
-body {
-  background-color: gray;
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/font/Montserrat Bold.eot");
+  src: url("../assets/font/Montserrat Bold.eot?#iefix") format("embedded-opentype"), url("../assets/font/Montserrat Bold.woff2") format("woff2"), url("../assets/font/Montserrat Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
 }
-
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/font/Montserrat Bold Italic.eot");
+  src: url("../assets/font/Montserrat Bold Italic.eot?#iefix") format("embedded-opentype"), url("../assets/font/Montserrat Bold Italic.woff2") format("woff2"), url("../assets/font/Montserrat Bold Italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/font/Montserrat Italic.eot");
+  src: url("../assets/font/Montserrat Italic.eot?#iefix") format("embedded-opentype"), url("../assets/font/Montserrat Italic.woff2") format("woff2"), url("../assets/font/Montserrat Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/font/Montserrat Regular.eot");
+  src: url("../assets/font/Montserrat Regular.eot?#iefix") format("embedded-opentype"), url("../assets/font/Montserrat Regular.woff2") format("woff2"), url("../assets/font/Montserrat Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+/*@use "./hamburger" as *;*/
 .wrapper {
   width: 75%;
   max-width: 1170px;
@@ -490,24 +518,34 @@ body {
 
 .header__bg {
   width: 100%;
+  position: relative;
 }
 .header__bg__img {
   width: 100%;
 }
-.header__bg__item {
+.header__bg__arrow {
   width: 40px;
   height: 40px;
   cursor: pointer;
   fill: #ffffff;
   stroke: #ffffff;
   position: absolute;
-  top: 710px;
+  bottom: 6%;
   left: 50%;
   transform: translate(-50%);
 }
-.header__bg__item:hover {
+.header__bg__arrow:hover {
   fill: #7E5AFF;
   stroke: #7E5AFF;
+}
+.header__bg__block {
+  position: absolute;
+  height: fit-content;
+  width: 75%;
+  top: 41%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
 }
 .header__bg__title {
   font-family: "Montserrat";
@@ -515,10 +553,7 @@ body {
   font-size: 80px;
   color: #ffffff;
   text-transform: uppercase;
-  position: absolute;
-  top: 330px;
-  left: 50%;
-  transform: translate(-50%);
+  letter-spacing: 0.1em;
 }
 .header__bg__subscribe {
   font-family: "Montserrat";
@@ -527,10 +562,7 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  position: absolute;
-  top: 448px;
-  left: 50%;
-  transform: translate(-50%);
+  margin-top: 20px;
 }
 .header__bg .gradient {
   background: linear-gradient(60deg, rgb(85, 183, 255) 0%, rgb(90, 104, 255) 100%);
@@ -580,4 +612,87 @@ body {
 .header__social__item:hover {
   fill: #7E5AFF;
   stroke: #7E5AFF;
+}
+
+.dark {
+  color: #2C4058;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.center {
+  text-align: center;
+}
+
+.projects__title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 44px;
+  text-transform: uppercase;
+  color: #2C4058;
+}
+.projects__block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 120px;
+}
+.projects__block__section {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.projects__block__section:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+.projects__block__img {
+  width: 54%;
+  max-width: 630px;
+}
+.projects__article {
+  width: 41%;
+  max-width: 470px;
+  margin-top: 94px;
+}
+.projects__article__subscribe {
+  font: 400 22px "Montserrat";
+  text-transform: uppercase;
+  color: #2C4058;
+}
+.projects__article__text {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 18px;
+  color: #2C4058;
+  line-height: 30px;
+  margin-top: 19px;
+  margin-bottom: 40px;
+}
+.projects__button {
+  width: 190px;
+  padding: 16px;
+  margin-bottom: 60px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  border: 1px solid #2C4058;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+.projects__location {
+  font: italic 400 15px "Open Sans";
+}
+
+.image-left::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 585px;
+  height: 470px;
+  background-color: #55B7FF;
+  top: -57px;
+  left: -215px;
 }

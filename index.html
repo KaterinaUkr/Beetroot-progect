@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- <link href="./assets/fontawesome-free-6.4.0-web/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/font-awesome.min.css"> -->
+     
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous"> 
+
     <link href="./index.css" rel="stylesheet" type="text/css">
     
     <title>Monticello</title>
@@ -15,10 +21,13 @@
     <div>        
         <div class="header__bg">            
             <img class="header__bg__img gradient" src="./assets/image/header_bg.png" alt="foto">  
-            <h1 class="header__bg__title">Simple & MODERN</h1>         
-            <h5 class="header__bg__subscribe">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h5>
+            <div class="header__bg__block">
+                <h1 class="header__bg__title">Simple & MODERN</h1>         
+                <h5 class="header__bg__subscribe">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h5>
+            </div>
+            
             <a href="#">
-                <svg class="header__bg__item">
+                <svg class="header__bg__arrow">
                     <use xlink:href="./assets/icon/sprite.svg#arrow"></use>
                 </svg>
             </a>
@@ -55,13 +64,46 @@
 
     </div>
 </header>
-<section class="projects"></section>
-<section class="news"></section>
-<section class="gallery"></section>
+
+<section class="projects wrapper">
+    <h2 class="projects__title center">what we do</h2>
+    <div class="projects__block">
+        <div class="projects__block__section">
+            <img class="projects__block__img image-left" src="./assets/image/project1.jpg" alt="photo project work">
+            <div class="projects__article">
+                <h4 class="projects__article__subscribe">one world</h4>
+                <h3 class="projects__title">trade center</h3>
+                <p class="projects__article__text">Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</p>
+                <a class="projects__button" href="#">more details</a>
+                <div class="projects__location"><i class="fas fa-map-marker-alt"></i>New York City, United States - 1776 feet</div>
+            </div>
+        </div>
+        <div class="projects__block__section">
+            <img class="projects__block__img image-right" src="./assets/image/project2.jpg" alt="photo project work">
+            <div class="projects__article">
+                <h4 class="projects__article__subscribe">INTERNATIONAL</h4>
+                <h3 class="projects__title">COMMERCE CENTRE</h3>
+                <p class="projects__article__text">Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.</p>
+                <a class="projects__button" href="#">more details</a>
+                <div class="projects__location"><i class="fas fa-map-marker-alt"></i>Hong Kong - 1588 feet</div>
+            </div>
+        </div>
+        
+    </div>    
+</section>
+
+<section class="news">
+    <h2 class="title__title white">latest news</h2>
+</section>
+<section class="gallery">
+    <h2 class="title__title">gallery</h2>
+</section>
 <section class="map">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoCmyKICq07lTsF-fajorkeZCBgNUu5iA"></script> 
 </section>
-<section class="contact"></section>
+<section class="contact">
+    <h2 class="title__title">get in touch</h2>
+</section>
 <footer></footer>
     
     

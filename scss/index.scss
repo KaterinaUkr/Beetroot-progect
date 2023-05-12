@@ -5,9 +5,9 @@
 @use "./responsive" as *;
 /*@use "./hamburger" as *;*/
 
-body {
-	background-color: gray;
-}
+// body {
+// 	background-color: gray;
+// }
 
 .wrapper {
 	width: 75%;
@@ -16,33 +16,37 @@ body {
 }
 .header__bg {
 	width: 100%;
-
+	position: relative;
+	
 	&__img {
 		width: 100%;		
 	}
-	&__item {
+	&__arrow {
 		width: 40px;
 		height: 40px;
 		@include svg;
 		position: absolute;
-		top: 710px;
+		bottom: 6%;
+		left: 50%;
+		transform: translate(-50%);
+	}
+	&__block {
+		position: absolute;
+		height: fit-content;
+		width: 75%;
+		top: 41%;
+		text-align: center;
 		left: 50%;
 		transform: translate(-50%);
 	}
 	&__title {
 		@include title-header (700, 80px);		
-		position: absolute;
-		top: 330px;
-		left: 50%;
-		transform: translate(-50%);
+		letter-spacing: 0.1em;
 	}
 	&__subscribe {
 		@include title-header (400, 18px);		
 		letter-spacing: 0.3em;		
-		position: absolute;
-		top: 448px;
-		left: 50%;
-		transform: translate(-50%);
+		margin-top: 20px;
 	}
 
 .gradient {
@@ -90,8 +94,75 @@ body {
 		&__item {
 			width: 40px;
 			height: 40px;
-			@include svg;
-	
+			@include svg;	
 		}
 	}
+}
+
+.dark {
+	color: $dark-blue;
+}
+.white {
+	color: $white;
+}
+.center {
+	text-align: center;
+}
+
+.projects {
+	&__title {
+		@include title-section;
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+		row-gap: 120px;
+		&__section {
+			display: inline-flex;
+			justify-content: space-between;
+			&:nth-of-type(2) {
+				flex-direction: row-reverse;
+			}
+		}
+		&__img {
+			width: 54%;
+			max-width: 630px;				
+		}
+	}
+
+	&__article {
+		width: 41%;
+		max-width: 470px;
+		margin-top: 94px;
+		&__subscribe {
+			font: 400 22px $font-M;
+			text-transform: uppercase;
+			color: $dark-blue;
+		}		
+		&__text {
+			@include text;
+			margin-top: 19px;
+			margin-bottom: 40px;
+		}
+	}	
+	&__button {
+		width: 190px;
+		padding: 16px;
+		margin-bottom: 60px;
+		@include text-btn;
+	}
+	&__location {
+		font: italic 400 15px $font-OS;				
+	}
+}
+
+.image-left::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 585px;
+	height: 470px;
+	background-color: $blue;
+	top: -57px;
+	left: -215px;
 }

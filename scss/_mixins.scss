@@ -29,3 +29,31 @@
 	color: $white;
 	text-transform: uppercase;
 }
+
+@mixin title-section {
+	font-family: $font-M;
+	font-weight: 700;
+	font-size: 44px;	
+	text-transform: uppercase;
+	color: $dark-blue;
+}
+@mixin text {
+	font-family: $font-OS;
+	font-weight: 400;
+	font-size: 18px;	
+	color: $dark-blue;
+	line-height: 30px;
+}
+
+@mixin text-btn {
+		font-family: $font-M;
+		font-weight: 400;
+		font-size: 14px;
+		color: $black;
+		border: 1px solid $dark-blue;
+		text-decoration: none;
+		text-transform: uppercase;
+		display: block;
+		text-align: center;
+	}
+
