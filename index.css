@@ -875,11 +875,21 @@ i {
   height: 700px;
 }
 
+.about {
+  position: relative;
+}
+
 .contact {
   padding: 60px;
   width: 770px;
-  background: url("../assets/image/contact_bg.png") no-repeat;
+  background: url("../assets/image/contact_bg.png"), #ffffff;
+  background-repeat: no-repeat;
   background-position-y: bottom;
+  position: absolute;
+  top: 400px;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 .contact i {
   color: rgb(126, 90, 255);
@@ -955,4 +965,68 @@ footer {
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-size: 100%;
+}
+
+.footer {
+  width: 50%;
+  max-width: 770px;
+  margin: 0 auto;
+  padding-top: 203px;
+  padding-bottom: 234px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  row-gap: 40px;
+}
+.footer__social {
+  display: inline-flex;
+}
+.footer__social a:not(:first-child) {
+  margin-left: 20px;
+}
+.footer__social__item {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+.footer__social__item:hover {
+  fill: rgb(126, 90, 255);
+  stroke: rgb(126, 90, 255);
+}
+.footer__copy {
+  font: 400 14px "Montserrat";
+  color: #ffffff;
+}
+
+.slick-track:before {
+  content: url("../assets/icon/Left.svg");
+}
+
+.slick-track::after {
+  content: url("../assets/icon/Right.svg");
+}
+
+.slick-track {
+  display: inline-flex;
+  align-items: center;
+}
+
+.slick-dots {
+  width: 210px;
+  height: 10px;
+  margin: 0 auto;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.slick-dots li button::before {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  color: transparent;
+  opacity: 1;
 }
