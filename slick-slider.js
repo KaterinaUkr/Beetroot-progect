@@ -41,7 +41,7 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-  $('.single-item').slick({
+  $('.header-skick').slick({
     infinite: true,
     arrows: Boolean,
     // slidesToShow: 3,

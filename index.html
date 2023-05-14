@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <!-- <link href="./assets/fontawesome-free-6.4.0-web/css/fontawesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/font-awesome.min.css"> -->
+    
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
         integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous"> 
     
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-
+    <link rel="icon" href="./assets/icon/favicon-16x16.png" type="image/svg+xml">
     <link href="./index.css" rel="stylesheet" type="text/css">
     
     <title>Monticello</title>
@@ -24,25 +23,25 @@
 <header>
     <div>        
         <div class="header__bg">  
-            <div class="single-item">
-                <div>
+            <div class="header-skick">
+                <div class="slick-slide">
                     <img class="header__bg__img gradient" src="./assets/image/header_bg.png" alt="foto">                     
                     <div class="header__bg__block">
                         <h1 class="header__bg__title">Simple & MODERN</h1>         
                         <h5 class="header__bg__subscribe">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h5>
                     </div>
-                </div>        
-                <!-- <div>
-                    <img class="header__bg__img gradient" src="./assets/image/header_bg.png" alt="foto">
+                </div>         
+                <!-- <div class="slick-slide">
+                    <img class="header__bg__img gradient" src="./assets/image/header_bg3.jpg" alt="foto">
                     <div class="header__bg__block">
-                        <h1 class="header__bg__title">Simple & MODERN</h1>
+                        <h1 class="header__bg__title">Simple & MODERN 2</h1>
                         <h5 class="header__bg__subscribe">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h5>
                     </div>
                 </div>
-                <div>
-                    <img class="header__bg__img gradient" src="./assets/image/header_bg.png" alt="foto">
+                <div class="slick-slide">                    
+                    <img class="header__bg__img gradient" src="./assets/image/header_bg4.jpg" alt="foto">
                     <div class="header__bg__block">
-                        <h1 class="header__bg__title">Simple & MODERN</h1>
+                        <h1 class="header__bg__title">Simple & MODERN 3</h1>
                         <h5 class="header__bg__subscribe">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h5>
                     </div>
                 </div> -->
@@ -255,16 +254,14 @@
                 <div class="contact__data__item"><i class="fas fa-inbox"></i>montichello@service.com</div>
                 <div class="contact__data__item"><i class="far fa-clock"></i>From 07:05AM to 19:30PM</div>
             </div>
-            <form action="#" method="get">
-                <input type="text" name="name" id="name" placeholder="Name"><br>
-                <input type="email" name="email" id="email" placeholder="Email"><br>
-                <input class="contact__button" type="button" value="Submit">
+            <form action="#" method="post" id="data">
+                <input type="text" name="name" id="name" placeholder="Name" required><br>
+                <input type="email" name="email" id="email" placeholder="Email" required><br>
+                <button class="contact__button" type="submit" value="Submit" form_id="data" formmethod="post">Submit</button>                
             </form>
         </div>
     </div>
 </section>
-
-
 
 <footer>
     <div class="footer">

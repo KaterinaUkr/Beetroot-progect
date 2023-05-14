@@ -20,7 +20,7 @@ i {
 	margin: 0 auto;
 }
 .gradient {	
-	background: linear-gradient(60deg, rgba(85, 183, 255, 1) 0%, rgba(90, 104, 255, 1) 100%);
+	background: linear-gradient(60deg, $blue 0%, $purple 100%);
 }
 
 .header__bg {
@@ -71,8 +71,6 @@ i {
 		cursor: pointer;
 	}
 }
-
-
 
 .header {
 	top: 7%;
@@ -231,7 +229,7 @@ i {
 .news {
 	padding-top: 150px;
 	padding-bottom: 170px;	
-	background: url('../assets/image/news/bg.png'), linear-gradient(45deg, rgba(60, 127, 212, 1) 0%, rgba(36, 204, 250, 1) 100% );
+	background: url('../assets/image/news/bg.png'), linear-gradient(45deg, $dark-gradient 0%, $light-gradient 100% );
 	background-repeat: no-repeat;
 	background-position-y: bottom;	
 	background-size: 100%;
@@ -358,7 +356,7 @@ i {
 .contact {
 	padding: 60px;	
 	width: 770px;	
-	background: url('../assets/image/contact_bg.png'), #ffffff;
+	background: url('../assets/image/contact_bg.png'), $white;
 	background-repeat: no-repeat;
 	background-position-y: bottom;
 	position: absolute;
@@ -393,8 +391,7 @@ i {
 		margin-left: auto;
 		&:hover {
 				color: $white;
-				background-color: $dark-blue;
-			
+				background-color: $dark-blue;			
 		}
 	}
 	input[type=text],
@@ -471,7 +468,6 @@ footer {
 .slick-next:before {
 	content: url("../assets/icon/Right.svg");
 }
-
 
 .slick-dots li button:before {
 	content: url('../assets/icon/Dot.svg');
