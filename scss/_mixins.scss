@@ -17,8 +17,8 @@
 		stroke: $white;
 	
 		&:hover {
-			fill: $violet; // змінити колір hovera
-			stroke: $violet;
+			fill: $dark-blue; 
+			stroke: $dark-blue;
 		}
 }
 
@@ -36,6 +36,7 @@
 	font-size: 44px;	
 	text-transform: uppercase;
 	color: $dark-blue;
+	cursor: pointer;
 }
 @mixin text ($font) {
 	font-family: $font;
@@ -58,7 +59,11 @@
 	}
 	@mixin btn {
 		width: 190px;
-		padding: 16px;		
+		padding: 16px;	
+		&:hover {
+				color: $white;
+				background-color: $dark-blue;
+			}
 	}
 
 @mixin padding-article {

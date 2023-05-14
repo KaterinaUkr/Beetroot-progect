@@ -23,27 +23,45 @@
 
 <header>
     <div>        
-        <div class="header__bg">            
-            <img class="header__bg__img gradient" src="./assets/image/header_bg.png" alt="foto">  
-            <div class="header__bg__block">
-                <h1 class="header__bg__title">Simple & MODERN</h1>         
-                <h5 class="header__bg__subscribe">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h5>
-            </div>
-            
-            <a href="#">
+        <div class="header__bg">  
+            <div class="single-item">
+                <div>
+                    <img class="header__bg__img gradient" src="./assets/image/header_bg.png" alt="foto">                     
+                    <div class="header__bg__block">
+                        <h1 class="header__bg__title">Simple & MODERN</h1>         
+                        <h5 class="header__bg__subscribe">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h5>
+                    </div>
+                </div>        
+                <!-- <div>
+                    <img class="header__bg__img gradient" src="./assets/image/header_bg.png" alt="foto">
+                    <div class="header__bg__block">
+                        <h1 class="header__bg__title">Simple & MODERN</h1>
+                        <h5 class="header__bg__subscribe">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h5>
+                    </div>
+                </div>
+                <div>
+                    <img class="header__bg__img gradient" src="./assets/image/header_bg.png" alt="foto">
+                    <div class="header__bg__block">
+                        <h1 class="header__bg__title">Simple & MODERN</h1>
+                        <h5 class="header__bg__subscribe">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h5>
+                    </div>
+                </div> -->
+            </div>          
+                        
+            <a href="#project">
                 <svg class="header__bg__arrow">
                     <use xlink:href="./assets/icon/sprite.svg#arrow"></use>
                 </svg>
             </a>
         </div>
         <div class="header wrapper">
-            <img src="./assets/icon/Logo.svg" alt="">         
+            <img src="./assets/icon/Logo.svg" alt="logo icon" style="cursor: pointer;">         
             <nav class="header__nav">
                 <ul class="header__menu">
                     <li class="header__menu__item"><a class="header__menu__link" href="#">about us</a></li>
-                    <li class="header__menu__item"><a class="header__menu__link" href="#">projects</a></li>
-                    <li class="header__menu__item"><a class="header__menu__link" href="#">news</a></li>
-                    <li class="header__menu__item"><a class="header__menu__link" href="#">contact</a></li>
+                    <li class="header__menu__item"><a class="header__menu__link" href="#project">projects</a></li>
+                    <li class="header__menu__item"><a class="header__menu__link" href="#news">news</a></li>
+                    <li class="header__menu__item"><a class="header__menu__link" href="#contact">contact</a></li>
                 </ul>
             </nav>   
             <div class="header__social">
@@ -69,8 +87,8 @@
     </div>
 </header>
 
-<section class="projects wrapper">
-    <div class="block-title"><h2 class="projects__title center line">what we do</h2></div>
+<section id="project" class="projects wrapper">
+    <div class="block-title"><h2 class="projects__title center line padding">what we do</h2></div>
     <div class="projects__block">
         <div class="projects__block__section">
             <div class="projects__image">
@@ -103,7 +121,7 @@
     </div>    
 </section>
 
-<section class="news">
+<section id="news" class="news">
     <div class="block-title"><h2 class="news__title white center line">latest news</h2></div>
     <div class="slick wrapper">        
         <div class="news__block">
@@ -195,219 +213,8 @@
                 <h6 class="news__block__author">ALICE WARD</h6>
                 <p class="news__block__date">30 Nov 2019</p>
             </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_1.jpg" alt="build photo">
-            <h5 class="news__block__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h5>
-            <p class="news__block__text">Free directories: directories are perfect for customers that are searching for...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon1.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALJA BRUN</h6>
-                <p class="news__block__date">20 Jan 2020</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_2.jpg" alt="build photo">
-            <h5 class="news__block__title">EFFECTIVE ADVERTISING POINTERS.</h5>
-            <p class="news__block__text">Having a home based business is a wonderful asset to your life...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon2.jpg" alt="icon profile">
-                <h6 class="news__block__author">DOMINIC FREEMAN</h6>
-                <p class="news__block__date">13 Dec 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_3.jpg" alt="build photo">
-            <h5 class="news__block__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h5>
-            <p class="news__block__text">There are many things that are important to catalog design...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon3.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALICE WARD</h6>
-                <p class="news__block__date">30 Nov 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_1.jpg" alt="build photo">
-            <h5 class="news__block__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h5>
-            <p class="news__block__text">Free directories: directories are perfect for customers that are searching for...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon1.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALJA BRUN</h6>
-                <p class="news__block__date">20 Jan 2020</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_2.jpg" alt="build photo">
-            <h5 class="news__block__title">EFFECTIVE ADVERTISING POINTERS.</h5>
-            <p class="news__block__text">Having a home based business is a wonderful asset to your life...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon2.jpg" alt="icon profile">
-                <h6 class="news__block__author">DOMINIC FREEMAN</h6>
-                <p class="news__block__date">13 Dec 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_3.jpg" alt="build photo">
-            <h5 class="news__block__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h5>
-            <p class="news__block__text">There are many things that are important to catalog design...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon3.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALICE WARD</h6>
-                <p class="news__block__date">30 Nov 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_1.jpg" alt="build photo">
-            <h5 class="news__block__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h5>
-            <p class="news__block__text">Free directories: directories are perfect for customers that are searching for...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon1.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALJA BRUN</h6>
-                <p class="news__block__date">20 Jan 2020</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_2.jpg" alt="build photo">
-            <h5 class="news__block__title">EFFECTIVE ADVERTISING POINTERS.</h5>
-            <p class="news__block__text">Having a home based business is a wonderful asset to your life...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon2.jpg" alt="icon profile">
-                <h6 class="news__block__author">DOMINIC FREEMAN</h6>
-                <p class="news__block__date">13 Dec 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_3.jpg" alt="build photo">
-            <h5 class="news__block__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h5>
-            <p class="news__block__text">There are many things that are important to catalog design...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon3.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALICE WARD</h6>
-                <p class="news__block__date">30 Nov 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_1.jpg" alt="build photo">
-            <h5 class="news__block__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h5>
-            <p class="news__block__text">Free directories: directories are perfect for customers that are searching for...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon1.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALJA BRUN</h6>
-                <p class="news__block__date">20 Jan 2020</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_2.jpg" alt="build photo">
-            <h5 class="news__block__title">EFFECTIVE ADVERTISING POINTERS.</h5>
-            <p class="news__block__text">Having a home based business is a wonderful asset to your life...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon2.jpg" alt="icon profile">
-                <h6 class="news__block__author">DOMINIC FREEMAN</h6>
-                <p class="news__block__date">13 Dec 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_3.jpg" alt="build photo">
-            <h5 class="news__block__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h5>
-            <p class="news__block__text">There are many things that are important to catalog design...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon3.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALICE WARD</h6>
-                <p class="news__block__date">30 Nov 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_1.jpg" alt="build photo">
-            <h5 class="news__block__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h5>
-            <p class="news__block__text">Free directories: directories are perfect for customers that are searching for...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon1.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALJA BRUN</h6>
-                <p class="news__block__date">20 Jan 2020</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_2.jpg" alt="build photo">
-            <h5 class="news__block__title">EFFECTIVE ADVERTISING POINTERS.</h5>
-            <p class="news__block__text">Having a home based business is a wonderful asset to your life...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon2.jpg" alt="icon profile">
-                <h6 class="news__block__author">DOMINIC FREEMAN</h6>
-                <p class="news__block__date">13 Dec 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_3.jpg" alt="build photo">
-            <h5 class="news__block__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h5>
-            <p class="news__block__text">There are many things that are important to catalog design...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon3.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALICE WARD</h6>
-                <p class="news__block__date">30 Nov 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_1.jpg" alt="build photo">
-            <h5 class="news__block__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h5>
-            <p class="news__block__text">Free directories: directories are perfect for customers that are searching for...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon1.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALJA BRUN</h6>
-                <p class="news__block__date">20 Jan 2020</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_2.jpg" alt="build photo">
-            <h5 class="news__block__title">EFFECTIVE ADVERTISING POINTERS.</h5>
-            <p class="news__block__text">Having a home based business is a wonderful asset to your life...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon2.jpg" alt="icon profile">
-                <h6 class="news__block__author">DOMINIC FREEMAN</h6>
-                <p class="news__block__date">13 Dec 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_3.jpg" alt="build photo">
-            <h5 class="news__block__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h5>
-            <p class="news__block__text">There are many things that are important to catalog design...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon3.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALICE WARD</h6>
-                <p class="news__block__date">30 Nov 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_1.jpg" alt="build photo">
-            <h5 class="news__block__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h5>
-            <p class="news__block__text">Free directories: directories are perfect for customers that are searching for...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon1.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALJA BRUN</h6>
-                <p class="news__block__date">20 Jan 2020</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_2.jpg" alt="build photo">
-            <h5 class="news__block__title">EFFECTIVE ADVERTISING POINTERS.</h5>
-            <p class="news__block__text">Having a home based business is a wonderful asset to your life...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon2.jpg" alt="icon profile">
-                <h6 class="news__block__author">DOMINIC FREEMAN</h6>
-                <p class="news__block__date">13 Dec 2019</p>
-            </div>
-        </div>
-        <div class="news__block">
-            <img class="news__block__image" src="/assets/image/news/news_3.jpg" alt="build photo">
-            <h5 class="news__block__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h5>
-            <p class="news__block__text">There are many things that are important to catalog design...</p>
-            <div class="news__block__data">
-                <img class="news__block__photo" src="/assets/image/news/photos-icon3.jpg" alt="icon profile">
-                <h6 class="news__block__author">ALICE WARD</h6>
-                <p class="news__block__date">30 Nov 2019</p>
-            </div>
-        </div>
-    </div>
-    
+        </div>             
+    </div>  
     
 </section>
 
@@ -435,11 +242,9 @@
     <a class="gallery__button" href="#">see more</a>
 </section>
 
-
-
 <section class="about">
     <div id="map"></div>
-    <div class="contact">
+    <div id="contact" class="contact">
         <div class="block-title">
             <h2 class="contact__title center line">get in touch</h2>
         </div>
@@ -463,7 +268,7 @@
 
 <footer>
     <div class="footer">
-        <img class="footer__logo" src="./assets/icon/Logo.svg" alt="logo icon">
+        <img class="footer__logo" src="./assets/icon/Logo.svg" alt="logo icon" style="cursor: pointer;">
         
         <div class="footer__social">
             <a href="#">

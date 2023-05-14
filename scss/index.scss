@@ -19,13 +19,27 @@ i {
 	max-width: 1170px;
 	margin: 0 auto;
 }
+.gradient {	
+	background: linear-gradient(60deg, rgba(85, 183, 255, 1) 0%, rgba(90, 104, 255, 1) 100%);
+}
+
 .header__bg {
 	width: 100%;
 	position: relative;
 	
 	&__img {
-		width: 100%;		
+		width: 100%;				
 	}
+	.slick-dots {
+			display: flex;
+			position: absolute;
+			top: 37%;
+			right: 52px;
+			flex-direction: column;
+			width: 10px;
+			height: 210px;
+	}
+
 	&__arrow {
 		width: 40px;
 		height: 40px;
@@ -43,21 +57,22 @@ i {
 		text-align: center;
 		left: 50%;
 		transform: translate(-50%);
+
 	}
 	&__title {
 		@include title-header (700, 80px);		
 		letter-spacing: 0.1em;
+		cursor: pointer;
 	}
 	&__subscribe {
 		@include title-header (400, 18px);		
 		letter-spacing: 0.3em;		
 		margin-top: 20px;
+		cursor: pointer;
 	}
+}
 
-.gradient {
-			background: linear-gradient(60deg, rgba(85, 183, 255, 1) 0%, rgba(90, 104, 255, 1) 100%);	
-		}
-} 
+
 
 .header {
 	top: 7%;
@@ -70,13 +85,18 @@ i {
 
 	&__menu {
 		@include flex;
-		&__item {
-		list-style-type: circle;
+		&__item {		
 		color: $white;
 		cursor: pointer;
-		// &:hover {
-		// 	list-style-type: disk;
-		// }
+		&::before {
+			content: url('../assets/icon/Dot.svg');
+			width: 9px;
+			height: 9px;
+			margin-right: 14px;
+		}
+		&:hover:before {			
+			content: url('../assets/icon/Dot_hover.svg');					
+		}
 		}
 		li:not(:first-child) {
 				margin-left: 70px;
@@ -132,8 +152,11 @@ i {
 	padding-top: 130px;
 	padding-bottom: 150px;
 	&__title {
-		@include title-section;			
-		margin-bottom: 142px;	
+		@include title-section;	
+		
+		&.padding {
+			margin-bottom: 142px;
+		}			
 	}
 	&__block {
 		display: flex;
@@ -197,9 +220,11 @@ i {
 		@include btn;
 		margin-bottom: 60px;
 		@include text-btn;
+		
 	}
 	&__location {
-		font: italic 400 15px $font-OS;				
+		font: italic 400 15px $font-OS;		
+		cursor: pointer;		
 	}
 }
 
@@ -218,6 +243,10 @@ i {
 	&__block {
 		background: $white;
 		padding-bottom: 30px;
+		&:not(:first-child) {
+				margin-left: 20px;
+			}
+		
 		&__image {
 			width: 370px;
 			height: 240px;
@@ -229,6 +258,7 @@ i {
 			margin-top: 30px;
 			margin-bottom: 15px;
 			@include padding-article;
+			cursor: pointer;
 		}
 		&__text {
 			@include text ($font-OS);
@@ -257,6 +287,15 @@ i {
 			color: $blue;
 		}
 	}	
+	.slick-dots {
+		width: 210px;
+		height: 10px;
+		margin: 0 auto;
+		bottom: -40px;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
 }
 
 .white {
@@ -352,6 +391,11 @@ i {
 		padding: 11px;
 		background-color: transparent;
 		margin-left: auto;
+		&:hover {
+				color: $white;
+				background-color: $dark-blue;
+			
+		}
 	}
 	input[type=text],
 	input[type=email] {
@@ -414,39 +458,30 @@ footer {
 }
 
 //Slick
-.slick-track:before {
-	content: url("../assets/icon/Left.svg");
+.slick-prev {
+	left: -100px;
 }
-.slick-track::after {
+.slick-prev:before {
+	content: url("../assets/icon/Left.svg");	
+}
+
+.slick-next {
+	right: -80px;
+}
+.slick-next:before {
 	content: url("../assets/icon/Right.svg");
 }
-// .slick-slider {
-// 	padding: 0px 60px; // поля між стрілками та слайдером
-// }
-.slick-track {
-	display: inline-flex;
-	align-items: center;
-}
-.slick-dots {
-	width: 210px;
+
+
+.slick-dots li button:before {
+	content: url('../assets/icon/Dot.svg');
+	fill: none;
+	color: transparent;
+	opacity: 1;
+	width: 10px;
 	height: 10px;
-	margin: 0 auto;
-	bottom: -40px;
-	left: 0;
-	right: 0;
-	margin: auto;
-	& li button::before{
-		border: 1px solid white;
-		border-radius: 50%;
-		width: 10px;
-		height: 10px;
-		color: transparent;
-		opacity: 1;
-	}
-	// & li.slick-active button::before {
-	// 	color: transparent;
-	// }
-	// & li.slick-active button:hover:before {
-	// 	color: $white;
-	// }
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+	content: url('../assets/icon/Dot_hover.svg');
 }
