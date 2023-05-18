@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
+// const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 
 // function buildStyles() {
@@ -10,7 +11,9 @@ const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('minify-css', () => {
   return gulp.src('./style.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    // .pipe(sourcemaps.init())
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('./'));
 });
 
@@ -21,7 +24,7 @@ gulp.task('styles', function(){
         overrideBrowserslist: ['last 5 version'],
         cascade: false
       }))
-      // .pipe(cleanCSS({compatibility: 'ie8'}))
+      // .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream());
 });
