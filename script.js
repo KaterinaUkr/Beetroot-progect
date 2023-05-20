@@ -42,4 +42,45 @@
 // number.long()
 
 
-// 2)Реалізуй клас, що описує канцелярський маркер
+// // 2)Реалізуй клас, що описує канцелярський маркер
+
+// class Marker {
+
+// 	constructor(color, quantity) {
+// 		this.color = color;
+// 		this.quantity = quantity;
+// 	}
+
+// 	render() {
+// 		let lenght
+// 		let div = document.querySelector('div');
+// 		div.innerHTML = 'Here must be a new text'
+// 		lenght = (100 % - this.quantity * 2)
+// 		div.style.color = this.color
+// 		div.style.fontSize = 40 + 'px';
+// 		// div.lenght = 8
+// 		// div.substr(0, 5)
+// 	}
+
+// 	// start() {
+// 	// 	this.render();
+// 	// }
+
+// }
+
+// const red = new Marker('red', '5%');
+// console.log(red)
+// red.render();
+
+
+
+// 3)Реалізуй клас Employee, що описує працівника
+
+class EmpTable {
+
+	constructor(name, lastname) {
+		this.name = name
+		this.lastname = lastname
+	}
+
+}
