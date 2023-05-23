@@ -86,3 +86,48 @@
 
 
 // Середній рівень
+
+class WorldClock {
+	constructor(template) {
+		this.template = template;
+		// this.date = date;
+	}
+
+	//час у текстовому варіанті
+	getCurrentDate() {
+		
+		window.setInterval(function(){
+			let date = new Date();
+			let clock = document.getElementById("clock");
+			clock.innerHTML = date.toLocaleTimeString();
+		}, 1000);		
+	}
+
+	//поточна дата та час у текстовому варіанті
+	getCurrentDateTime() {
+		let date = new Date();
+		console.log(date)
+	}
+	
+	//видалення годинника
+	deleteClock() {
+		
+	}
+}
+
+let clockKiev = new WorldClock('h:m:s');
+let clock2 = new WorldClock('h:m:s');
+
+let btnTime = document.querySelector('#time');
+let btnTimeDate = document.querySelector('#timeDate');
+let btnDelete = document.querySelector('#delete');
+
+clockKiev.getCurrentDate();
+clock2.getCurrentDate()
+
+// btnTime.addEventListener("click", clock.getCurrentDate());
+// btnTimeDate.addEventListener("click", clock.getCurrentDateTime());
+
+// clock.getCurrentDateTime();
+
+
