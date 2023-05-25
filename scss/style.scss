@@ -9,6 +9,14 @@
 	font-size: 60px;
 	color: blue;
 }
-button {
-	ba
+.addClock {
+		padding: 10px 20px;
+		font-size: 30px;
+		color: rgb(43, 39, 39);
+		background-color: beige;
+		border: 1px solid grey;
+		&:hover {
+			background-color: rgb(43, 39, 39);
+			color: white;
+		}
 }

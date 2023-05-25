@@ -88,19 +88,20 @@
 // Середній рівень
 
 class WorldClock {
-	constructor(template) {
-		this.template = template;
-		// this.date = date;
+	constructor(city, offset, timezone) {
+		this.city = city;
+		this.offset = offset;
+		this.timezone = timezone;
+		
 	}
 
 	//час у текстовому варіанті
 	getCurrentDate() {
-		
 		window.setInterval(function(){
 			let date = new Date();
 			let clock = document.getElementById("clock");
 			clock.innerHTML = date.toLocaleTimeString();
-		}, 1000);		
+		}, 1000);
 	}
 
 	//поточна дата та час у текстовому варіанті
@@ -115,19 +116,30 @@ class WorldClock {
 	}
 }
 
-let clockKiev = new WorldClock('h:m:s');
-let clock2 = new WorldClock('h:m:s');
+let GreatBritain = new WorldClock('Great Britain', 0, 'Great Britain');
+let Kyiv = new WorldClock('Kyiv', 120, 'Europe/Kiev');
+let NewYork = new WorldClock('NewYork', -240, 'NewYork');
+let London = new WorldClock('London', 60, 'London');
+let Tokyo = new WorldClock('Tokyo', 540, 'Tokyo');
 
-let btnTime = document.querySelector('#time');
-let btnTimeDate = document.querySelector('#timeDate');
-let btnDelete = document.querySelector('#delete');
+let btnAdd = document.getElementById("addClock");
+btnAdd.onclick = () => Kyiv.getCurrentDate();
 
-clockKiev.getCurrentDate();
-clock2.getCurrentDate()
+
+
+
+// let clockKiev = new WorldClock('h:m:s');
+// let clock2 = new WorldClock('h:m:s');
+
+// let btnTime = document.querySelector('#time');
+// let btnTimeDate = document.querySelector('#timeDate');
+// let btnDelete = document.querySelector('#delete');
+
+// clockKiev.getCurrentDate();
+// clock2.getCurrentDate()
 
 // btnTime.addEventListener("click", clock.getCurrentDate());
 // btnTimeDate.addEventListener("click", clock.getCurrentDateTime());
 
 // clock.getCurrentDateTime();
-
-
+	
