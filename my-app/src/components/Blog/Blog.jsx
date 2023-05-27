@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import { Blogitem } from './Blogitem/Blogitem';
 
 // export const Blog = () => {
@@ -23,8 +24,13 @@ export const Blog = () => {
 	const [BlogData, setBlogData] = useState([])
 
 	useEffect(() => {
-		fetch('https://jsonplaceholder.typicode.com/posts').then(res =>res.json()).then(data =>setBlogData(data))
+		// fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json()).then(data => setBlogData(data))
+		
+		axios('https://jsonplaceholder.typicode.com/posts').then(res => setBlogData(res.data))
 	}, []);
+
+
+
 
 	// 	return <div className="blog">
 	// 		{BlogData.map(item => <Blogitem title={item.title} body={item.body}></Blogitem>)}

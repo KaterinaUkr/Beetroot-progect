@@ -6,8 +6,12 @@ import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 
 import { Blog } from './components/Blog/Blog';
+import { News } from './components/News/News';
 
 import React, { useState } from "react";
+
+import { Col, Row} from 'react-bootstrap';
+import { Main } from './components/Main/Main';
 
 const data = [
 {
@@ -106,10 +110,19 @@ function App() {
             <h1>Brand name</h1>
           </div>
         </Header>
-        <button onClick={letChangeTitle}>Change title</button>
-        <button onClick={toggleFooterShown}>Toogle footer</button>
-        <main className='main'>
-          <Blog></Blog>
+        {/* <button onClick={letChangeTitle}>Change title</button>
+        <button onClick={toggleFooterShown}>Toogle footer</button> */}
+
+        <Main>
+          <Row>
+            <Col sm="8">
+              <Blog></Blog>
+            </Col>
+            <Col md="2">
+              <News></News>
+            </Col>
+          </Row>
+          
           {/* {data.map(({ title, id }) => <Title key={id} title={title} />)} */}
           
 
@@ -117,11 +130,12 @@ function App() {
           <Title title="Second title" />
           <Title title="Some other title" /> */}
 
-
-        </main>
-        {
+          
+        </Main>
+        <Footer></Footer>
+        {/* {
           isShowFooter && <Footer></Footer>
-          }
+          } */}
 
         {/* <Footer></Footer> */}
       </>
