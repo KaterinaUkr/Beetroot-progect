@@ -3,7 +3,9 @@ import './App.scss';
 import { Header } from './components/Header/Header'
 import {Banner} from './components/Banner/Banner'
 import { Blog } from './components/Blog/Blog';
+import { Main } from './components/Main/Main';
 import News from './components/News/News';
+// import Blogitem from './components/News/News';
 
 
 function App() {
@@ -11,10 +13,10 @@ function App() {
     <>
       <Header></Header>
       <Banner></Banner>
-      <div className='article'>
+      <Main>
         <Blog></Blog>
         <News></News>
-      </div>          
+      </Main>          
     </>
   );
 }
