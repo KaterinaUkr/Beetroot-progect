@@ -1,6 +1,8 @@
 import './Header.scss'
 
-export const Header = () => <header className='header'>
+export const Header = ({children}) => <header className='header'>
+	Some header staff
+	{children}
 	Some header staff
 </header>;
 
