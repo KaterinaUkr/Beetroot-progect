@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons'
 
 export const MonthlyRevenue = () =>
-	<Card style={{ width: '18rem' }}>
+	<Card className="col-md-3 mb-3 h-25">
 		<Button variant="primary"><FontAwesomeIcon icon={faDollarSign} /></Button>
       {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
       <Card.Body>

@@ -1,17 +1,21 @@
 import Card from 'react-bootstrap/Card';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+// import imgAbout from '.About';
 
 export const About = () =>
- <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+ <Card className="col-md-5">
+      <Card.Img variant="top" src='../../public/Images/About.jpg' />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Welcome to react-admin demo</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </Card.Text>
       </Card.Body>      
       <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <FontAwesomeIcon icon={faHome} /> <Card.Link href="#"> React-admin site</Card.Link> 
+        <FontAwesomeIcon icon={faAngleLeft} /><FontAwesomeIcon icon={faAngleRight} /> <Card.Link href="#">Source for this demo</Card.Link>
       </Card.Body>
-    </Card>
+  </Card>
+
+// src = "../Components/Images/About.jpg" 

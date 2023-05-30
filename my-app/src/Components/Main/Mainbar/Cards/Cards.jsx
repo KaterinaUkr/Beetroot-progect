@@ -6,7 +6,7 @@ import { NewCustomers } from './New_Customers/NewCustomers'
 
 import './Cards.scss'
 export const Cards = () => 
-	<div className="cards">
+	<div className="cards gap-4">
 		<MonthlyRevenue></MonthlyRevenue>
 		<NewOrders></NewOrders>
 		<PendingReviews></PendingReviews>

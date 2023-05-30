@@ -12,8 +12,8 @@ import { faRedo, faUserCircle, faBars } from '@fortawesome/free-solid-svg-icons'
 export const Header = () =>
 	
 	
-	<Navbar expand="lg" variant="light" bg="light" className='header'>			
-		<Container>
+	<Navbar expand="lg" variant="light" bg="primary" className='header'>			
+		<Container >
 			<Nav className="me-auto">
 					<Nav.Link href="#home"><FontAwesomeIcon icon={faBars} style={{color: "#ffffff",}} /></Nav.Link>							
 			</Nav>
