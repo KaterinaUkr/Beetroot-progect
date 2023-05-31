@@ -1,32 +1,33 @@
 
 import './App.scss';
 
-import Title from './components/Title/Title';
+// import Title from './components/Title/Title';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 
-import { Blog } from './components/Blog/Blog';
-import { News } from './components/News/News';
+// import { Blog } from './components/Blog/Blog';
+// import { News } from './components/News/News';
 
-import React, { useState } from "react";
+import  { React, useState } from "react";
 
 import { Col, Row} from 'react-bootstrap';
 import { Main } from './components/Main/Main';
+import { UserForm } from './components/UserForm/UserForm';
 
-const data = [
-{
-  id: 1,
-  title: "title 1"
-},
-{
-  id: 2,
-  title: "title 2"
-},
-{
-  id: 3,
-  title: "title 3"
-},
-];
+// const data = [
+// {
+//   id: 1,
+//   title: "title 1"
+// },
+// {
+//   id: 2,
+//   title: "title 2"
+// },
+// {
+//   id: 3,
+//   title: "title 3"
+// },
+// ];
 
 // const element = (textToShow) => <div> {textToShow} </div>
 
@@ -116,10 +117,13 @@ function App() {
         <Main>
           <Row>
             <Col sm="8">
-              <Blog></Blog>
+              {/* <Blog></Blog> */}
             </Col>
             <Col md="2">
-              <News></News>
+              {/* <News></News> */}
+            <UserForm></UserForm>
+
+
             </Col>
           </Row>
           
