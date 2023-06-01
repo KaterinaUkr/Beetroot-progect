@@ -17,7 +17,9 @@ export const UserForm = () => {
 		// console.log(formValue)
 	};
 
-	const submitHandler = () => {
+	const submitHandler = (event) => {
+		console.log(event)
+		event.preventDefault();
 		setUser(formValue);
 		setFormValue(defaultFormValue);
 	}
