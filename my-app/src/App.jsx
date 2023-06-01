@@ -13,6 +13,9 @@ import  { React, useState } from "react";
 import { Col, Row} from 'react-bootstrap';
 import { Main } from './components/Main/Main';
 import { UserForm } from './components/UserForm/UserForm';
+import { UserInfo } from './components/UserInfo/UserInfo';
+import { UserProvider } from './context/user.context';
+
 
 // const data = [
 // {
@@ -106,6 +109,7 @@ function App() {
   
     return (
       <>
+        <UserProvider>
         <Header>
           <div>
             <h1>Brand name</h1>
@@ -118,11 +122,11 @@ function App() {
           <Row>
             <Col sm="8">
               {/* <Blog></Blog> */}
+              <UserInfo></UserInfo>
             </Col>
             <Col md="2">
               {/* <News></News> */}
-            <UserForm></UserForm>
-
+              <UserForm></UserForm>
 
             </Col>
           </Row>
@@ -141,7 +145,8 @@ function App() {
           isShowFooter && <Footer></Footer>
           } */}
 
-        {/* <Footer></Footer> */}
+          {/* <Footer></Footer> */}
+          </UserProvider>
       </>
     );
   }

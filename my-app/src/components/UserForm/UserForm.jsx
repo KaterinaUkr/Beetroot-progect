@@ -1,5 +1,6 @@
-import { useState } from "react"
-import { Button } from "react-bootstrap"
+import { useContext, useState } from "react"
+import { Button, Form } from "react-bootstrap"
+import { UserContext } from "../../context/user.context";
 
 const defaultFormValue = {
 	firstName: '',
@@ -9,6 +10,7 @@ const defaultFormValue = {
 
 export const UserForm = () => {
 	const [formValue, setFormValue] = useState(defaultFormValue);
+	const { setUser } = useContext(UserContext);
 
 	const inputChangeHandler = (value, formControlName) => {
 		setFormValue((state) => ({ ...state, [formControlName]: value }));
@@ -16,14 +18,20 @@ export const UserForm = () => {
 	};
 
 	const submitHandler = () => {
-		console.log(formValue);
+		setUser(formValue);
 		setFormValue(defaultFormValue);
 	}
 
 	return (
 	
-	<form onSubmit={submitHandler}>
-		<div className="mb-3">
+		<Form onSubmit={submitHandler}>
+			
+			<Form.Group className="mb-3" >
+        <Form.Label>First Name</Form.Label>
+        <Form.Control type="text" placeholder="Enter First Name" onChange={({ target: { value } }) => inputChangeHandler(value, 'firstName')} value={formValue.firstName}/>        
+			</Form.Group>
+			
+		{/* <div className="mb-3">
 			<label>First Name
 				<input
 					onChange={({ target: { value } }) => inputChangeHandler(value, 'firstName')}
@@ -31,28 +39,21 @@ export const UserForm = () => {
 					type="text"
 					placeholder="Enter First Name" />
 			</label>
-		</div>
-		<div className="mb-3">
-			<label>Last Name
-				<input
-					type="text"
-					placeholder="Enter Last Name"
-					value={formValue.lastName}
-					onChange={({ target: { value } }) => inputChangeHandler(value, 'lastName')} />
-			</label>
-		</div>
-		<div className="mb-3">
-			<label>Age
-				<input
-					type="number"
-					placeholder="Enter Age"
-					value={formValue.age}
-					onChange={({ target: { value } }) => inputChangeHandler(Number(value), 'age')} />
-			</label>
-		</div>
+		</div> */}
+			
+			<Form.Group className="mb-3" >
+        <Form.Label>Last Name</Form.Label>
+        <Form.Control type="text" placeholder="Enter Last Name" onChange={({ target: { value } }) => inputChangeHandler(value, 'lastName')} value={formValue.lastName}/>        
+			</Form.Group>
+
+			<Form.Group className="mb-3" >
+        <Form.Label>Age</Form.Label>
+        <Form.Control type="number" placeholder="Enter Age" onChange={({ target: { value } }) => inputChangeHandler(value, 'age')} value={formValue.age}/>        
+			</Form.Group>
+		
 		<Button type="submit" >Save</Button>
 
-	</form>
+	</Form>
 	);
 	
 };
