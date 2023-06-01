@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useRef, useState } from "react"
 import { Button, Form } from "react-bootstrap"
 import { UserContext } from "../../context/user.context";
 
@@ -8,9 +8,14 @@ const defaultFormValue = {
 	age: '',
 }
 
+// export const UserForm = () => {
+// 	const [formValue, setFormValue] = useState(defaultFormValue);
+// 	const { setUser } = useContext(UserContext);
+
 export const UserForm = () => {
-	const [formValue, setFormValue] = useState(defaultFormValue);
-	const { setUser } = useContext(UserContext);
+	const [formValue, setFormValue] = useState(user);
+	const { user, setUser } = useContext(UserContext);
+	const firstInput = useRef();
 
 	const inputChangeHandler = (value, formControlName) => {
 		setFormValue((state) => ({ ...state, [formControlName]: value }));
@@ -27,6 +32,8 @@ export const UserForm = () => {
 	return (
 	
 		<Form onSubmit={submitHandler}>
+			<input ref={firstInput} type="text" placeholder="Some placeholder"></input>
+			
 			
 			<Form.Group className="mb-3" >
         <Form.Label>First Name</Form.Label>
