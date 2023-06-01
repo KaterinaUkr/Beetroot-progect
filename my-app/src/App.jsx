@@ -15,6 +15,8 @@ import { Main } from './components/Main/Main';
 import { UserForm } from './components/UserForm/UserForm';
 import { UserInfo } from './components/UserInfo/UserInfo';
 import { UserProvider } from './context/user.context';
+import { FormFirst } from './components/FormFirst/FormFirst';
+
 
 
 // const data = [
@@ -118,16 +120,21 @@ function App() {
         {/* <button onClick={letChangeTitle}>Change title</button>
         <button onClick={toggleFooterShown}>Toogle footer</button> */}
 
-        <Main>
+          <Main>
+          
+            <FormFirst></FormFirst> 
+            
           <Row>
             <Col sm="8">
               {/* <Blog></Blog> */}
-              <UserInfo></UserInfo>
+              {/* <UserInfo></UserInfo> */}
             </Col>
             <Col md="2">
               {/* <News></News> */}
-              <UserForm></UserForm>
+              {/* <UserForm></UserForm> */}
 
+              
+                
             </Col>
           </Row>
           
