@@ -1,6 +1,9 @@
 import React from 'react';
 import { useField, Form, Formik, RadioGroup } from "formik";
 import * as Yup from 'yup';
+import './FormFirst.scss'
+import { Button } from 'react-bootstrap';
+// import { Form } from 'react-bootstrap';
 // import { useFormik, ErrorMessage, Field } from "formik";
 
 
@@ -122,32 +125,17 @@ export const FormFirst = () => {
 			}}
 		>
 				<Form>
-					<MyTextInput
-             label="First Name"
+					<MyTextInput 						
+             label="First Name" 
              name="firstName"
              type="text"
             //  placeholder="Jane"
 					/> 
- 					<br />
-
+ 					
 					<MyTextInput
              label="Last Name"
              name="lastName"
              type="text"             
-					/>
-					<br />
-
-					<MyTextInput
-             label="Email"
-             name="email"
-             type="email"             
-					/>
-					<br />
-
-					<MyTextInput
-             label="Phone Number"
-             name="phoneNumber"
-             type="number"             
 					/>
 					<br />
 
@@ -157,8 +145,7 @@ export const FormFirst = () => {
 						type="date"     
 						
 					/>
-					<br />
-
+					
 					<label>Gender</label>
 					<input 						
 						type="radio" 
@@ -177,7 +164,20 @@ export const FormFirst = () => {
 					/>
 					<label htmlFor="female">Female</label>
 					<br />
-						
+
+					<MyTextInput
+             label="Email"
+             name="email"
+             type="email"             
+					/>
+					
+					<MyTextInput
+             label="Phone Number"
+             name="phoneNumber"
+             type="number"             
+					/>
+					<br />
+									
 
            <MySelect label="Subject" name="Subject">
              <option value="">Choose option</option>
@@ -207,7 +207,7 @@ export const FormFirst = () => {
 				<Field name="email" type="email"></Field>
 				<ErrorMessage name="email"></ErrorMessage> */}
 
-				<button type="submit">Submit</button>
+				<Button type="submit">Submit</Button>
 			</Form>
 
 		</Formik>

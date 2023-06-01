@@ -127,11 +127,11 @@ function App() {
           <Row>
             <Col sm="8">
               {/* <Blog></Blog> */}
-              {/* <UserInfo></UserInfo> */}
+              <UserInfo></UserInfo>
             </Col>
             <Col md="2">
               {/* <News></News> */}
-              {/* <UserForm></UserForm> */}
+              <UserForm></UserForm>
 
               
                 
