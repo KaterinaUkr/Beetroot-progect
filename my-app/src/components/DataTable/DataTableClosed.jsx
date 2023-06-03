@@ -1,37 +1,34 @@
-import './DataTable.scss'
-import { Counter } from "../Counter/Counter"
+import './DataTableClosed.scss'; 
+import { Counter } from "../Counter/Counter";
 import { PropertyStatus } from './PropertyStatus/PropertyStatus';
 import { Button } from 'react-bootstrap';
-// import { table } from 'console'
-
-
 
 const data = [
 	{
-	property: '771 Lost Round',
+	property: '1694 Noble Cape',
 	data: 'Fri Jun 02 2023 11:00:30 GMT+0300 (за східноєвропейським літнім часом)',
-	rent: 3000,
-	deposite: 9000,
-	status: 0
+	rent: 3300,
+	deposite: 6900,
+	status: 1
 	},
 	{
-	property: '1491 Jagged Arbor',
+	property: '1141 Tawny Maze',
 	data: 'Fri Jun 02 2023 11:00:30 GMT+0300 (за східноєвропейським літнім часом)',
-	rent: 2300,
-	deposite: 4600,
+	rent: 2700,
+	deposite: 7500,
 	status: 2
 	}
 ]
 
-export const DataTable = () => {
+export const DataTableClosed = () => {
 	return ( 
-	<div className="data-table">
-		<div className="data-table__header">
-			<h3 className="data-table__label">Active Deposits</h3>{""}<Counter value={2}></Counter>
+	<div className="table-closed">
+		<div className="table-closed__header">
+			<h3 className="table-closed__label">Closed Deposits</h3>{""}<Counter value={8}></Counter>
 		</div>
 
 		<table>
-				<tr className='data-table__head'>
+				<tr className='table-closed__head'>
 					<th>Property</th>
 					<th>Move in Date</th>
 					<th>Rent</th>
@@ -40,7 +37,7 @@ export const DataTable = () => {
 				</tr>
 
 				{
-					data.map(({ property, data, rent, deposite, status }) =><tr className='data-table__row'>
+					data.map(({ property, data, rent, deposite, status }) =><tr className='table-closed__row'>
 						<td>{property}</td>
 						<td>{ new Date(data).toLocaleString() }</td>
 						<td>${rent}</td>
@@ -51,8 +48,9 @@ export const DataTable = () => {
 				
 
 		</table>
-		<Button className='data-table__btn'>ALL ACTIVE DEPOSITS</Button>
+		<Button className='table-closed__btn'>ALL closed DEPOSITS</Button>
 
 	</div>	
 	)
+
 }

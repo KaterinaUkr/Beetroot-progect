@@ -1,10 +1,16 @@
 
 import './App.css';
 import { DataTable } from './components/DataTable/DataTable';
+import { DataTableClosed } from './components/DataTable/DataTableClosed';
+import { Sidebar } from './components/Sidebar/Sidebar';
 
 function App() {
   return (
-    <DataTable></DataTable>
+    <>
+      <Sidebar></Sidebar>
+      <DataTable></DataTable>
+      <DataTableClosed></DataTableClosed>
+    </>
   );
 }
 
